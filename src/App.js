@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Hero from "./Components/Hero";
+import tiger from './assets/images/tiger.png';
+import WhyZzoppers from "./Components/WhyZzoppers";
+import Utils from "./Components/Utils";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Hero/>
+            <div style={{width: '100%'}}>
+                <img src={tiger} style={{width: '100%'}}/>
+            </div>
+            <WhyZzoppers />
+            <Utils />
+        </>
+    );
 }
 
 export default App;
