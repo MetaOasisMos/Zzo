@@ -19,6 +19,7 @@ import RoadMap from "./Components/RoadMap";
 import Create from "./Components/Create";
 import JoinUs from "./Components/JoinUs";
 import Faq from "./Components/FAQ";
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
 
             <Faq />
 
+            <Footer />
         </>
     );
 }

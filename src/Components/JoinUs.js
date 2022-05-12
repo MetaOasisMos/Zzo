@@ -1,5 +1,5 @@
 import {BsDiscord} from "react-icons/bs";
-import {FaDiscord, FaMedium, FaMediumM, FaTelegram, FaTelegramPlane, FaTwitter} from "react-icons/fa";
+import {FaDiscord, FaMediumM, FaTelegramPlane, FaTwitter} from "react-icons/fa";
 import joinus from '../assets/images/join us img.png'
 
 const JoinUs = () => {
