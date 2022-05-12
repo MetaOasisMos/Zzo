@@ -36,7 +36,7 @@ const Utils = () => {
                             <div className={'side-bar-container'}>
                                 {selected === "Exciting Experience" &&
                                 <>
-                                    <img src={exciting_experience_image}/>
+                                    <img src={exciting_experience_image} style={{width: '100%'}}/>
                                     <p className={'side-bar-header'}>Welcome here</p>
                                     <p className={'side-bar-para'}>Through Zzoopers, you will come along with us and explore the limitless ocean in
                                         the metaverse. </p>
@@ -47,8 +47,8 @@ const Utils = () => {
                                 {selected === "NFT Airdrop" &&
                                 <>
                                     <div style={{display: 'flex'}}>
-                                        <img src={nftairdropleftimg} style={{margin: '0 auto 0 0'}}/>
-                                        <img src={nftairdroprightimg} style={{margin: '0 0 0 auto'}}/>
+                                        <img src={nftairdropleftimg} className={'nftleftimg'} style={{margin: '0 auto 0 0'}} />
+                                        <img src={nftairdroprightimg} className={'nftrightimg'} style={{margin: '0 0 0 auto'}}/>
                                     </div>
                                     <p className={'side-bar-header'}>NFT Airdrop</p>
                                     <p className={'side-bar-para'}>Alongside with the exciting experience, you will encounter with exclusive airdrop when we enter into some unknown metaverse.</p>
@@ -57,14 +57,14 @@ const Utils = () => {
                                 }
                                 {selected === "Staking & Harvesting" &&
                                 <>
-                                   <img src={stakingandharvestingimg}/>
+                                   <img src={stakingandharvestingimg} style={{width: '100%'}}/>
                                     <p className={'side-bar-para'}>In the wonderful journey, somewhere is for you to stake your Zzoopers NFT to harvest something pretty cool. </p>
                                     <p className={'side-bar-para'}>Let's play and harvest together! Coming soon!</p>
                                 </>
                                 }
                                  {selected === "Physical Zzoopers Airdrop" &&
                                 <>
-                                   <img src={PhysicalZzoopersAirdropImg}/>
+                                   <img src={PhysicalZzoopersAirdropImg} style={{width: '100%'}}/>
                                     <p className={'side-bar-para'}>To enhance the IP branding and community culture vibe, we are to develop physical Zzoopers. </p>
                                     <p className={'side-bar-para'}>Bring our Web3 spirit to the real life and we will airdrop them to our lovely owners as special gifts!</p>
                                 </>

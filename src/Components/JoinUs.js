@@ -1,5 +1,6 @@
 import {BsDiscord} from "react-icons/bs";
 import {FaDiscord, FaMedium, FaMediumM, FaTelegram, FaTelegramPlane, FaTwitter} from "react-icons/fa";
+import joinus from '../assets/images/join us img.png'
 
 const JoinUs = () => {
     return (
@@ -22,7 +23,7 @@ const JoinUs = () => {
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div style={{display: 'flex'}}>
                             <div style={{margin: 'auto 0 auto auto'}}>
-                                <button className={'btn join-discord-btn'}><BsDiscord/> Join our Discord</button>
+                                <img src={joinus} style={{width: '100%'}} className={'join-img'}/>
                             </div>
                         </div>
                     </div>

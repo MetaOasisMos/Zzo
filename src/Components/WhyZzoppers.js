@@ -6,7 +6,7 @@ const WhyZzoppers = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <div style={{width: '100%', height: '100%', display: 'flex'}}>
+                        <div style={{width: '100%', height: '100%', display: 'flex', paddingBottom: 50}}>
                             <div style={{margin: 'auto'}}>
                                 <p className={'why-heading-1'}>Why</p>
                                 <p className={'why-heading-2'}>Zzoopers?</p>
@@ -20,7 +20,7 @@ const WhyZzoppers = () => {
                         </div>
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <img src={why_img} style={{width: '100%'}}/>
+                        <img src={why_img} style={{width: '100%'}} className={'why-zzopper-img'}/>
                     </div>
                 </div>
             </div>

@@ -11,18 +11,18 @@ const RoadMap = () => {
                 <p className={'roadmap-heading'}>Roadmap</p>
                 <p className={'roadmap-metatext'}>The future we envision and the landscape we are to explore.</p>
 
-                <div className={'row'}>
+                <div className={'row mt-5'}>
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div style={{display: 'flex'}}>
                             <div className={'roadmap-index-container'}>
                                 <p className={'roadmap-index-text'}>1</p>
                             </div>
-                            <div style={{marginLeft: 20, color: 'white'}}>
+                            <div style={{ color: 'white'}}>
                                 <div style={{display: 'flex'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon1}/>
-                                    <p>Mint & Reveal</p>
+                                    <p className={'road-map-name'}>Mint & Reveal</p>
                                 </div>
-                                <p>Mystery Boxes available for mint
+                                <p className={'road-map-text'}>Mystery Boxes available for mint
                                     Unlock Mystery Boxes to reveal the Zzoopers NFTs</p>
                             </div>
                         </div>
@@ -33,12 +33,13 @@ const RoadMap = () => {
                             <div className={'roadmap-index-container'}>
                                 <p className={'roadmap-index-text'}>2</p>
                             </div>
-                            <div style={{marginLeft: 20, color: 'white'}}>
+                            <div style={{ color: 'white'}}>
                                 <div style={{display: 'flex'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon2}/>
-                                    <p>Stake & Harvest</p>
+                                    <p className={'road-map-name'}>Stake & Harvest</p>
                                 </div>
-                                <p>Stake Zzoopers NFTs and harvest something ineresting/unknown</p>
+                                <p className={'road-map-text'}>Stake Zzoopers NFTs and harvest something
+                                    ineresting/unknown</p>
                             </div>
                         </div>
                     </div>
@@ -48,13 +49,15 @@ const RoadMap = () => {
                             <div className={'roadmap-index-container'}>
                                 <p className={'roadmap-index-text'}>3</p>
                             </div>
-                            <div style={{marginLeft: 20, color: 'white'}}>
+                            <div style={{color: 'white'}}>
                                 <div style={{display: 'flex'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon3}/>
-                                    <p>Play & Earn</p>
+                                    <p className={'road-map-name'}>Play & Earn</p>
                                 </div>
-                                <p>Holders of Zzoopers NFTs can claim/be airdropped Sandbox Voxel Avatar versions of
-                                    their Zzoopers.<br />
+                                <p className={'road-map-text'}>Holders of Zzoopers NFTs can claim/be airdropped Sandbox</p>
+                                <p className={'road-map-text'}>Voxel Avatar versions of
+                                    their Zzoopers.</p>
+                                <p>
                                     Holders of Zzoopers NFTs can play and earn in some mini-games launched by MetaOasis
                                     DAO</p>
                             </div>
@@ -66,12 +69,12 @@ const RoadMap = () => {
                             <div className={'roadmap-index-container'}>
                                 <p className={'roadmap-index-text'}>4</p>
                             </div>
-                            <div style={{marginLeft: 20, color: 'white'}}>
+                            <div style={{ color: 'white'}}>
                                 <div style={{display: 'flex'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon4}/>
-                                    <p>Co-created Event</p>
+                                    <p className={'road-map-name'}>Co-created Event</p>
                                 </div>
-                                <p>Launch the "Physical Zzoopers Coloring" Competition</p>
+                                <p className={'road-map-text'}>Launch the "Physical Zzoopers Coloring" Competition</p>
                             </div>
                         </div>
                     </div>

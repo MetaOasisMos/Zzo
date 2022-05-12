@@ -49,7 +49,7 @@ const Faq = () => {
         <div className={'faq-container'}>
             <div className="container">
                 <p className={'faq-container-text'}>ZZOOPERS</p>
-                <p className={'faq-container-heading'}>Roadmap</p>
+                <p className={'faq-container-heading'}>FAQ</p>
             </div>
 
             {faqs.map((faq, index) => {
