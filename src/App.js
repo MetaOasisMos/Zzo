@@ -20,18 +20,57 @@ import Create from "./Components/Create";
 import JoinUs from "./Components/JoinUs";
 import Faq from "./Components/FAQ";
 import Footer from "./Components/Footer";
-
+import Header from './Components/header';
+import {useRef, useState} from "react";
 
 function App() {
+    const heroRef = useRef(null)
+    const whyRef = useRef(null)
+    const meetRef = useRef(null)
+    const detailRef = useRef(null)
+    const revealRef = useRef(null)
+    const mapRef = useRef(null)
+    const joinUsRef = useRef(null)
+    const faqRef = useRef(null)
+
+    const [openHeader, setOpenHeader] = useState(false)
+
+    const scroll = (ref) => {
+        setOpenHeader(false)
+        ref.current.scrollIntoView({behavior: 'smooth'})
+    }
+
     return (
         <>
-            <Hero/>
+            <Header
+                openHeader={openHeader}
+                setOpenHeader={setOpenHeader}
+                scroll={scroll}
+                heroRef={heroRef}
+                whyRef={whyRef}
+                meetRef={meetRef}
+                detailRef={detailRef}
+                revealRef={revealRef}
+                mapRef={mapRef}
+                joinUsRef={joinUsRef}
+                faqRef={faqRef}
+            />
+
+            <div ref={heroRef}>
+                <Hero/>
+            </div>
             <div style={{width: '100%'}}>
                 <img src={tiger} style={{width: '100%'}}/>
             </div>
-            <WhyZzoppers/>
+            <div ref={whyRef}>
+                <WhyZzoppers/>
+            </div>
+
             <Utils/>
-            <Meet/>
+
+            <div ref={meetRef}>
+                <Meet/>
+            </div>
             <Scrollers
                 scroller_images={[slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9]}/>
             <Scrollers
@@ -39,19 +78,28 @@ function App() {
             <Scrollers
                 scroller_images={[slider2, slider1, slider5, slider6, slider3, slider9, slider4, slider7, slider8]}/>
 
-            <MintDetails />
+            <div ref={detailRef}>
+                <MintDetails/>
+            </div>
+            <div ref={revealRef}>
+                <Reveal/>
+            </div>
 
-            <Reveal />
+            <div ref={mapRef}>
+                <RoadMap/>
+            </div>
 
-            <RoadMap />
+            <Create/>
 
-            <Create />
+            <div ref={joinUsRef}>
+                <JoinUs/>
+            </div>
 
-            <JoinUs />
+            <div ref={faqRef}>
+                <Faq/>
+            </div>
 
-            <Faq />
-
-            <Footer />
+            <Footer/>
         </>
     );
 }

@@ -689,3 +689,67 @@ body {
         margin: auto;
     }
 }
+
+
+/* Header */
+.header {
+    background-color: black;
+    padding: 15px 0;
+    border-bottom: 1px solid #1A1B1D;
+}
+
+.metaoasis-btn {
+    background-color: black;
+    border-radius: 20px;
+    border: 2px solid #1A1B1D;
+    color: white;
+    margin-left: auto;
+    height: 45px;
+}
+
+.connect-btn {
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    margin-left: 20px;
+    height: 45px;
+}
+
+.header-btn {
+    cursor: pointer;
+}
+
+.header-body {
+    background-image: url("./assets/images/header-body-bg.png");
+    background-position: center;
+    background-color: black;
+    background-size: cover;
+    position: absolute;
+}
+
+.header-body-close {
+    width: 100%;
+    height: 0;
+    transition: 0.01s ease-in-out;
+}
+
+.header-body-close > * {
+    display: none;
+}
+
+.header-body-open {
+    width: 100%;
+    height: calc(100vh - 87px);
+    transition: 0.5s ease-in-out;
+    padding: 50px 0;
+}
+
+
+.header-link {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+    margin: auto 0;
+    text-transform: uppercase;
+}
