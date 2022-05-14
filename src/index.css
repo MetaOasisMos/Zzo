@@ -627,6 +627,7 @@ body {
 
     .reveal-container {
         padding: 50px 0;
+        height: 100%;
     }
 
     .reveal-zzoppers-heading-lg {

@@ -11,6 +11,10 @@
 # production
 /build
 
+/fiverr
+
+fiverr.zip
+
 # misc
 .DS_Store
 .env.local
