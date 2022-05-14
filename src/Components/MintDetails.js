@@ -10,14 +10,14 @@ import Failed from "./Modals/Failed";
 
 const MintDetails = () => {
 
-    const [modalOpen, setModalOpen] = useState(true)
+    const [modalOpen, setModalOpen] = useState(false)
 
     const body = (
         <div className={'modal-body'}>
-            {/*<Purchase />*/}
+            <Purchase modalOpen={modalOpen} setModalOpen={setModalOpen}/>
             {/*<Waiting />*/}
             {/*<ConfirmPurchase />*/}
-            <Failed />
+            {/*<Failed />*/}
         </div>
     )
 
@@ -81,7 +81,7 @@ const MintDetails = () => {
                     </div>
                     <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
                         <div>
-                            <button className={'btn mint-btn'}>Mint</button>
+                            <button className={'btn mint-btn'} onClick={() => {setModalOpen(true)}}>Mint</button>
                         </div>
                         <div>
                             <button className={'btn time-btn'}>19h 52m 33s</button>
