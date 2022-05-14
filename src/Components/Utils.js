@@ -15,9 +15,9 @@ const Utils = () => {
 
     const options = [
         "Cross-metaverse Experience",
+        "Future Drops",
         "Have Fun and Earn",
-        "Staking & Harvesting",
-        "Physical Zzoopers Airdrop"
+        "Physical Zzoopers"
     ]
 
     const options_sm = [
@@ -43,7 +43,7 @@ const Utils = () => {
         },
     ]
 
-    const [selected, setSelected] = useState('Exciting Experience')
+    const [selected, setSelected] = useState('Cross-metaverse Experience')
 
     return (
         <div className={'utils-container'}>
@@ -75,7 +75,7 @@ const Utils = () => {
                                         MetaOasis DAO HQ is entirely completed, you can get early access to there!</p>
                                 </>
                                 }
-                                {selected === "Have Fun and Earn" &&
+                                {selected === "Future Drops" &&
                                 <>
                                     <div style={{display: 'flex'}}>
                                         <img src={nftairdropleftimg} className={'nftleftimg'}
@@ -90,7 +90,7 @@ const Utils = () => {
                                         key to embrace a new world.</p>
                                 </>
                                 }
-                                {selected === "Staking & Harvesting" &&
+                                {selected === "Have Fun and Earn" &&
                                 <>
                                     <img src={stakingandharvestingimg} style={{width: '100%'}}/>
                                     <p className={'side-bar-para'}>In the wonderful journey, somewhere is for you to
@@ -98,7 +98,7 @@ const Utils = () => {
                                     <p className={'side-bar-para'}>Let's play and harvest together! Coming soon!</p>
                                 </>
                                 }
-                                {selected === "Physical Zzoopers Airdrop" &&
+                                {selected === "Physical Zzoopers" &&
                                 <>
                                     <img src={PhysicalZzoopersAirdropImg} style={{width: '100%'}}/>
                                     <p className={'side-bar-para'}>To enhance the IP branding and community culture

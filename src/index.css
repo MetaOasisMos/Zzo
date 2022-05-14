@@ -1166,3 +1166,33 @@ body {
         display: none;
     }
 }
+
+
+/* slider */
+.swiper-sm > .swiper-wrapper > .swiper-slide > div > div > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-sm > .swiper-wrapper > .swiper-slide {
+    width: 200px !important;
+}
+
+.swiper-sm > .swiper-wrapper > .swiper-slide > div {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .swiper-sm > .swiper-wrapper > .swiper-slide {
+        width: 54.17px !important;
+    }
+
+    .swiper-sm > .swiper-wrapper > .swiper-slide > div {
+        width: 54.17px;
+        height: 54.17px;
+    }
+}
