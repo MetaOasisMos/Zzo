@@ -12,7 +12,7 @@ const RoadMap = () => {
                 <p className={'roadmap-metatext'}>The future we envision and the landscape we are to explore.</p>
 
                 <div className={'row mt-5'}>
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 road-map-container">
                         <div style={{display: 'flex'}}>
                             <div className={'roadmap-index-container'}>
                                 <p className={'roadmap-index-text'}>1</p>
@@ -20,15 +20,14 @@ const RoadMap = () => {
                             <div style={{ color: 'white'}}>
                                 <div style={{display: 'flex'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon1}/>
-                                    <p className={'road-map-name'}>Mint & Reveal</p>
+                                    <p className={'road-map-name'}>Mint and Reveal - May to June 2022</p>
                                 </div>
-                                <p className={'road-map-text'}>Mystery Boxes available for mint
-                                    Unlock Mystery Boxes to reveal the Zzoopers NFTs</p>
+                                <p className={'road-map-text'}>Mint event for Zzoopers Evo and the revelation of Zzoopers Genesis.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 road-map-container">
                         <div style={{display: 'flex'}}>
                             <div className={'roadmap-index-container'}>
                                 <p className={'roadmap-index-text'}>2</p>
@@ -36,15 +35,14 @@ const RoadMap = () => {
                             <div style={{ color: 'white'}}>
                                 <div style={{display: 'flex'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon2}/>
-                                    <p className={'road-map-name'}>Stake & Harvest</p>
+                                    <p className={'road-map-name'}>Have Fun and Earn – Q2 to Q3 2022</p>
                                 </div>
-                                <p className={'road-map-text'}>Stake Zzoopers NFTs and harvest something
-                                    ineresting/unknown</p>
+                                <p className={'road-map-text'}>Launch of various games to have fun and earn with Zzoopers.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 road-map-container">
                         <div style={{display: 'flex'}}>
                             <div className={'roadmap-index-container'}>
                                 <p className={'roadmap-index-text'}>3</p>
@@ -52,19 +50,14 @@ const RoadMap = () => {
                             <div style={{color: 'white'}}>
                                 <div style={{display: 'flex'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon3}/>
-                                    <p className={'road-map-name'}>Play & Earn</p>
+                                    <p className={'road-map-name'}>Exclusive Airdrops – Q3 2022</p>
                                 </div>
-                                <p className={'road-map-text'}>Holders of Zzoopers NFTs can claim/be airdropped Sandbox</p>
-                                <p className={'road-map-text'}>Voxel Avatar versions of
-                                    their Zzoopers.</p>
-                                <p>
-                                    Holders of Zzoopers NFTs can play and earn in some mini-games launched by MetaOasis
-                                    DAO</p>
+                                <p className={'road-map-text'}>Airdrops of utility NFTs interoperable in leading metaverses.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 road-map-container">
                         <div style={{display: 'flex'}}>
                             <div className={'roadmap-index-container'}>
                                 <p className={'roadmap-index-text'}>4</p>
@@ -72,7 +65,7 @@ const RoadMap = () => {
                             <div style={{ color: 'white'}}>
                                 <div style={{display: 'flex'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon4}/>
-                                    <p className={'road-map-name'}>Co-created Event</p>
+                                    <p className={'road-map-name'}>Journey to Different Metaverses – Q3 2022</p>
                                 </div>
                                 <p className={'road-map-text'}>Launch the "Physical Zzoopers Coloring" Competition</p>
                             </div>

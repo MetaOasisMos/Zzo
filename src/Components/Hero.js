@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <div className={'hero'}>
             <div className="container">
-                <div className="row">
+                <div className="row hero-content">
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div style={{width: '100%', height: '100%', display: 'flex'}}>
                             <div style={{margin: 'auto'}}>

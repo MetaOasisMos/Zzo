@@ -7,7 +7,7 @@ const WhyZzoppers = () => {
                 <div className="row" style={{height: '100%'}}>
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div style={{width: '100%', height: '100%', display: 'flex'}}>
-                            <div className={'zzopper-text-container'} >
+                            <div className={'zzopper-text-container'}>
                                 <p className={'why-heading-1'}>Why</p>
                                 <p className={'why-heading-2'}>Zzoopers?</p>
                                 <p className={'why-meta'}>Creatures full of curiosity, Zzoopers do not settle in any one

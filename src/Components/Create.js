@@ -6,10 +6,18 @@ const Create = () => {
             <div className="container">
                 <p className={'create-container-text'}>Who creates</p>
                 <p className={'create-container-header'}>the Zzoopers?</p>
-                <p className={'create-container-body'}>MetaOasis DAO, one of the first DAOs focusing on the investment and development of metaverse real
-                    estate, together with Season Studio, a top-class metaverse designing house with 50+ seasoned 3D
-                    voxel artists and creators.</p>
-                <button className={'btn metaoasis-btn'}><img src={vector} style={{marginRight: 5}}/>Go to MetaOasis DAO</button>
+
+                <p className={'create-container-body'}>MetaOasis DAO, one of the first DAOs focusing on the investment
+                    and development of metaverse real estate, together with Season Studio, a top-class metaverse
+                    designing house with 50+ seasoned 3D voxel artists and creators. </p>
+
+                <p className={'create-container-body'}>Zzoopers Genesis is created by all the artists and developers
+                    with the dream to free you from any ONE place to the MANY metaverses.</p>
+
+                <button className={'btn metaoasis-btn'}>
+                    <img src={vector} style={{marginRight: 5}}/>
+                    Go to MetaOasis DAO
+                </button>
             </div>
         </div>
     );

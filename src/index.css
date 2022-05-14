@@ -35,7 +35,8 @@ body {
 
 @media screen and (max-width: 576px) {
     .hero {
-        padding: 80px 0;
+        padding: 20px 0;
+        height: 100%;
     }
 
     .hero-heading-1 {
@@ -51,9 +52,14 @@ body {
     }
 
     .hero-meta {
-        margin-top: 30px;
-        font-size: 17px;
+        font-size: 16px;
+        line-height: 24px;
     }
+
+    .hero-content {
+        flex-direction: column-reverse;
+    }
+
 }
 
 /* Why Zzopper */
@@ -62,7 +68,7 @@ body {
     background-image: url("./assets/images/whyzzooper base.png");
     background-position: center;
     background-size: cover;
-    padding: 50px 0 0 0;
+    padding: 50px 0;
     height: 100vh;
 }
 
@@ -542,9 +548,11 @@ body {
     height: 20px;
     border: 2px solid black;
 }
+
 .count-min-container {
     border: 2px solid #CBCCCC;
 }
+
 .count-min > path {
     stroke: #CBCCCC !important;
 }
@@ -576,6 +584,7 @@ body {
     background-position: center;
     background-size: cover;
     padding: 100px 0;
+    height: 100vh;
 }
 
 .reveal-zzoppers-text {
@@ -584,15 +593,19 @@ body {
     font-weight: 700;
 }
 
-.reveal-zzoppers-heading {
+.reveal-zzoppers-heading-sm {
     color: #FFC233;
-    font-size: 80px;
+    display: none;
+    font-size: 36px;
     font-weight: 700;
+    line-height: 43px;
+    letter-spacing: -1.600000023841858px;
 }
 
 .reveal-zzoppers-body {
     color: white;
-    font-size: 17px;
+    font-size: 24px;
+    line-height: 28px;
     font-weight: 400;
 }
 
@@ -605,13 +618,28 @@ body {
     font-weight: 700;
 }
 
+.reveal-zzoppers-heading-lg {
+    display: block;
+    width: 55%;
+}
+
 @media screen and (max-width: 576px) {
-    .reveal-zzoppers-heading {
-        font-size: 45px;
+
+    .reveal-container {
+        padding: 50px 0;
+    }
+
+    .reveal-zzoppers-heading-lg {
+        display: none;
+    }
+
+    .reveal-zzoppers-heading-sm {
+        display: block;
     }
 
     .reveal-zzoppers-body {
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
@@ -622,6 +650,7 @@ body {
     background-position: center;
     background-size: cover;
     padding: 100px 0;
+    min-height: 100vh;
 }
 
 .roadmap-zzoopers-text {
@@ -632,7 +661,9 @@ body {
 
 .roadmap-heading {
     color: #FFC233;
-    font-size: 80px;
+    font-size: 100px;
+    line-height: 120px;
+    letter-spacing: -1.6px;
     font-weight: 700;
 }
 
@@ -640,15 +671,16 @@ body {
     color: #FFFFFF;
     font-size: 24px;
     font-weight: 400;
+    line-height: 36px;
 }
 
 .roadmap-index-container {
     display: flex;
     border: 2px solid white;
-    height: 50px !important;
-    min-width: 55px !important;
+    height: 72px !important;
+    min-width: 72px !important;
     border-radius: 12px;
-    margin-right: 10px;
+    margin-right: 22px;
 }
 
 .roadmap-index-text {
@@ -658,34 +690,68 @@ body {
 }
 
 .roadmap-icon {
-    height: 20px;
-    width: 20px;
-    margin-right: 10px;
+    height: 24px;
+    width: 24px;
+    margin: auto 10px auto 0;
 }
 
 .road-map-name {
-    font-size: 17px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.4px;
+    margin: auto 0;
 }
 
 .road-map-text {
-    font-size: 17px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    margin-top: 20px;
+}
+
+.road-map-container {
+    margin-bottom: 90px;
 }
 
 @media screen and (max-width: 576px) {
+    .roadmap-container {
+        padding: 50px 0;
+    }
+
     .roadmap-heading {
-        font-size: 40px;
+        font-size: 36px;
+        line-height: 43px;
+        letter-spacing: -1.6px;
+    }
+
+    .road-map-container {
+        margin-bottom: 20px;
     }
 
     .roadmap-metatext {
-        font-size: 17px;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    .roadmap-icon {
+        width: 20px;
+        height: 20px;
     }
 
     .road-map-name {
         font-size: 14px;
+        line-height: 16.8px;
     }
 
     .road-map-text {
-        font-size: 14px;
+        font-size: 12px;
+        line-height: 15.51px;
+        margin-top: 5px;
+        font-weight: 400;
+        letter-spacing: -0.2px;
     }
 
     .roadmap-index-text {
@@ -693,8 +759,9 @@ body {
     }
 
     .roadmap-index-container {
-        min-height: 30px !important;
-        min-width: 50px !important;
+        max-height: 40px !important;
+        min-width: 40px !important;
+        margin-right: 10px;
     }
 }
 
@@ -704,57 +771,68 @@ body {
     background-image: url("./assets/images/create-base.png");
     background-position: center;
     background-size: cover;
-    padding: 150px 0;
+    padding: 100px 0;
+    min-height: 100vh;
 }
 
 .metaoasis-btn {
     color: black;
     background-color: #FFC233;
-    padding: 10px;
+    padding: 10px 15px;
     font-weight: 700;
-    font-size: 12px;
-    border-radius: 20px;
+    font-size: 16px;
+    letter-spacing: -0.36px;
+    line-height: 26px;
+    border-radius: 30px;
 }
 
 .create-container-text {
     color: white;
     font-size: 60px;
     font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 4px;
 }
 
 .create-container-header {
     color: #FFC233;
     font-size: 100px;
     font-weight: 700;
-    line-height: 100px;
+    line-height: 120px;
+    letter-spacing: -1.6px;
 }
 
 .create-container-body {
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
+    line-height: 36px;
     width: 65%;
     margin: 30px 0;
 }
 
 @media screen and (max-width: 576px) {
     .create-container {
-        padding: 80px 0;
+        padding: 50px 0;
+        min-height: 100%;
     }
 
     .create-container-text {
-        font-size: 30px;
-        line-height: 1px;
+        font-size: 15px;
+        letter-spacing: 2px;
+        line-height: 18px;
     }
 
     .create-container-header {
-        font-size: 50px;
-        line-height: 80px;
+        font-size: 36px;
+        line-height: 43.2px;
+        letter-spacing: -1.6px;
     }
 
     .create-container-body {
         width: 100%;
-        font-size: 17px;
+        font-size: 16px;
+        line-height: 24px;
     }
 
     .join-img {
@@ -768,24 +846,81 @@ body {
     background-color: black;
     background-size: cover;
     padding: 100px 0;
+    min-height: 100%;
 }
 
 .join-us-text {
-    color: white;
+    color: #FFC234;
     font-weight: 700;
     font-size: 60px;
+    line-height: 72px;
+    letter-spacing: 4px;
 }
 
 .join-us-body {
     color: white;
     font-weight: 400;
     font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.36px;
 }
 
 .join-us-icon {
-    font-size: 25px;
+    font-size: 30px;
     color: white;
-    margin-right: 15px;
+    margin-right: 35px;
+}
+
+.joinus-btn-lg {
+    display: block;
+}
+
+.joinus-btn-sm {
+    display: none;
+}
+
+.icon-container {
+    display: flex;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 576px) {
+    .join-us-container {
+        padding: 50px 0;
+        min-height: 100%;
+    }
+
+    .join-us-icon {
+        font-size: 35px;
+        margin-right: 30px;
+    }
+
+    .icon-container {
+        margin-top: 20px;
+    }
+
+    .joinus-btn-lg {
+        display: none;
+    }
+
+    .joinus-btn-sm {
+        margin-top: 50px;
+        display: block;
+    }
+
+    .join-us-text {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43px;
+        letter-spacing: -1.600000023841858px;
+    }
+
+    .join-us-body {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0px;
+    }
 }
 
 /* Faq container*/
@@ -795,19 +930,23 @@ body {
     background-position: center;
     background-color: black;
     background-size: cover;
-    padding: 150px 0;
+    padding: 100px 0;
 }
 
 .faq-container-text {
     color: #80807E;
     font-size: 14px;
     font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 4px;
 }
 
 .faq-container-heading {
     color: #111111;
-    font-size: 100px;
+    font-size: 60px;
     font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 4px;
 }
 
 .faq-body-inactive {
@@ -819,7 +958,7 @@ body {
 }
 
 .index-container {
-    margin-right: 20px;
+    margin: auto 20px auto 0;
     border-radius: 20px;
     background-color: #FFC233;
     display: flex;
@@ -844,15 +983,24 @@ body {
 }
 
 .faq-heading {
-    font-size: 24px;
+    font-size: 30px;
+    line-height: 44px;
+    letter-spacing: -2%;
     font-weight: 700;
+    margin: auto 0;
 }
 
 .faq-body {
-    font-size: 17px;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -2%;
     font-weight: 400;
 }
 
+.faq-sub-container {
+    display: flex;
+    padding: 25px 0;
+}
 
 @media screen and (max-width: 576px) {
     .faq-container-heading {
@@ -860,11 +1008,14 @@ body {
     }
 
     .faq-heading {
-        font-size: 17px;
+        font-size: 14px;
+        line-height: 16.8px;
     }
 
     .faq-body {
         font-size: 14px;
+        line-height: 16.8px;
+        letter-spacing: -2%;
     }
 
     .faq-container {
@@ -883,12 +1034,31 @@ body {
 }
 
 .footer-logo {
+    width: 50.79px;
+    height: 21.77px;
     margin: auto 0;
+}
+
+.footer-center-text {
+    font-size: 14px;
+    color: #808080;
+    margin: auto;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.3px;
+    font-weight: 400;
+    color: #808080;
+    margin: auto 10px;
 }
 
 @media screen and (max-width: 576px) {
     .footer-logo {
         margin: auto;
+        width: 40px;
+        height: 17px;
     }
 }
 
@@ -947,7 +1117,7 @@ body {
 
 .header-body-open {
     width: 100%;
-    height: calc(100vh - 87px);
+    height: calc(100vh - 75px);
     transition: 0.5s ease-in-out;
     padding: 50px 0;
 }
@@ -989,4 +1159,10 @@ body {
     margin-top: 20px;
     font-weight: 700;
     font-size: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    .metaoasis-header-btn {
+        display: none;
+    }
 }

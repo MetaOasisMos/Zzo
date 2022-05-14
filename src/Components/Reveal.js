@@ -1,12 +1,14 @@
 import {BsDiscord} from "react-icons/bs";
+import heading from '../assets/images/reveal-heading.png'
 
 const Reveal = () => {
     return (
         <div className={'reveal-container'}>
             <div className="container">
                 <p className={'reveal-zzoppers-text'}>ZZOOPERS</p>
-                <p className={'reveal-zzoppers-heading'}>When to reveal?</p>
-                <p className={'reveal-zzoppers-body'}>The collection of 5555 NFTs will be divided into 5 rounds to
+                <p className={'reveal-zzoppers-heading-sm'}>When to reveal?</p>
+                <img className={'reveal-zzoppers-heading-lg'} src={heading} />
+                <p style={{marginTop: 30}} className={'reveal-zzoppers-body'}>The collection of 5555 NFTs will be divided into 5 rounds to
                     reveal the Zzoopers <br/>
                     NFTs after thepublic mint.
                 </p>

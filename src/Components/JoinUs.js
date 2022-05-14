@@ -9,11 +9,13 @@ const JoinUs = () => {
                 <div className="row">
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <div>
-                            <p className={'join-us-text'}>join us</p>
-                            <p className={'join-us-body'}>Special thanks to Season Studio, the design team behind the Zzoopers.
-                                Looking forward to seeing your brilliant achitecture work in the metaverse!</p>
-                            <div style={{display: 'flex'}}>
-                                <FaDiscord className={'join-us-icon'} />
+                            <p className={'join-us-text'}>Join Us</p>
+                            <p className={'join-us-body'}>Special thanks to Season Studio, the design team behind the
+                                Zzoopers.</p>
+                            <p className={'join-us-body'}>Looking forward to seeing your brilliant achitecture work in
+                                the metaverse!</p>
+                            <div className={'icon-container'}>
+                                <FaDiscord className={'join-us-icon'}/>
                                 <FaTwitter className={'join-us-icon'}/>
                                 <FaTelegramPlane className={'join-us-icon'}/>
                                 <FaMediumM className={'join-us-icon'}/>
@@ -21,11 +23,14 @@ const JoinUs = () => {
                         </div>
                     </div>
                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div style={{display: 'flex'}}>
-                            <div style={{margin: 'auto 0 auto auto'}}>
-                                <img src={joinus} style={{width: '100%'}} className={'join-img'}/>
+                        <div className={'joinus-btn-lg'}>
+                            <div style={{display: 'flex'}}>
+                                <div style={{margin: 'auto 0 auto auto'}}>
+                                    <img src={joinus} style={{width: '100%'}} className={'join-img'}/>
+                                </div>
                             </div>
                         </div>
+                        <button className={'btn join-discord-btn joinus-btn-sm'}><BsDiscord/> Join our Discord</button>
                     </div>
                 </div>
             </div>
