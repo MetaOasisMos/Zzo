@@ -1,0 +1,46 @@
+
+	GETCART            = "/api/v2/cart-management/cart"
+	GETCARTDETAILED    = "/api/v2/cart-management/cart/detailed"
+	GETCARTSCOUNT      = "/api/v2/cart-management/cart/count"
+	ADMINGETCARTFILTER = "/api/v2/int/cart-management/cart"
+	GETCARTINTERNAL    = "/api/v2/int/cart-management/cart/{uid}"
+
+	GETBOOKEDCARTINTERNAL     = "/api/v2/int/cart-management/cart/subscriptions"
+	GETSUBSCRIPTIONDETAILS    = "/api/v2/int/cart-management/cart/subscriptions/{sid}/detail"
+	ADMINGSUBSCRIPTIONADDRESS = "/api/v2/int/cart-management/cart/subscriptions/{sid}/address"
+	ADMINTXNTOTAL             = "/api/v2/int/cart-management/cart/subscriptions/{sid}/transactionTotal"
+
+	CREATECARTS  = "/api/v2/cart-management/cart"
+	GETACART     = "/api/v2/cart-management/cart/{cid}"
+	DELETECART   = "/api/v2/cart-management/cart/{cid}"
+	UPDATESTATUS = "/api/v2/cart-management/cart/{cid}/status/{state}"
+
+	// Address
+	UPDATEADDRESS = "/api/v2/cart-management/cart/{cid}/address/{id}"
+	// Package Add-on
+	UPDATEADDON = "/api/v2/cart-management/cart/{cid}/addon/{id}"
+	DELETEADDON = "/api/v2/cart-management/cart/{cid}/addon/{id}"
+
+	// update_schedule
+	UPDATESCHEDULE = "/api/v2/cart-management/cart/{cid}/schedule"
+
+	//update QNA
+	UPDATEQNA = "/api/v2/cart-management/cart/{cid}/qna/{qid}"
+	DELETEQNA = "/api/v2/cart-management/cart/{cid}/qna/{aid}"
+
+	//post razor pay
+	BOOKING    = "/api/v2/cart-management/cart/{cid}/book"
+	GETBOOKING = "/api/v2/cart-management/cart/{cid}/book"
+
+	// subscription modification
+	GETSCHEDULE           = "/api/v2/cart-management/subscription/{sid}/schedule"
+	SCHEDULEUPDATE        = "/api/v2/cart-management/subscription/{sid}/schedule"
+	NEWADDON              = "/api/v2/cart-management/subscription/{sid}/addoncreate"
+	EXTENDADDON           = "/api/v2/cart-management/subscription/{sid}/extendaddon/{aid}"
+	SUBSCRIPTIONUPDATEQNA = "/api/v2/cart-management/subscription/{sid}/qna/{qid}"
+	ANSWERQNA             = "/api/v2/cart-management/subscription/{sid}/qna/{qid}"
+	EXTRAPAY              = "/api/v2/cart-management/subscription/{sid}/extrapay"
+	ADDPAYMENT            = "/api/v2/cart-management/subscription/{sid}/addpayment"
+
+
+
