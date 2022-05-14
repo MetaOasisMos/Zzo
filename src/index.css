@@ -11,7 +11,7 @@ body {
     background-image: url(./assets/images/Base.png);
     background-position: center;
     background-size: cover;
-    padding: 100px 0;
+    height: 90vh;
 }
 
 .hero-heading-1 {
@@ -39,12 +39,15 @@ body {
     }
 
     .hero-heading-1 {
-        font-size: 22px;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 2px;
     }
 
     .hero-heading-2 {
-        font-size: 60px;
-        line-height: 40px;
+        font-size: 32px;
+        line-height: 43.2px;
+        letter-spacing: -1.6px;
     }
 
     .hero-meta {
@@ -59,38 +62,72 @@ body {
     background-image: url("./assets/images/whyzzooper base.png");
     background-position: center;
     background-size: cover;
-    padding: 100px 0 0 0;
+    padding: 50px 0 0 0;
+    height: 100vh;
 }
 
 .why-heading-1 {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 700;
+    letter-spacing: 4px;
     color: white;
 }
 
+.why-zzopper-img {
+    width: 100%;
+    height: 100%;
+}
+
 .why-heading-2 {
-    font-size: 80px;
-    font-weight: bold;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 120px;
+    letter-spacing: -1.6px;
     color: #FFC234;
 }
 
 .why-meta {
-    font-size: 17px;
+    font-size: 20px;
     color: white;
+    line-height: 30px;
+}
+
+.zzopper-text-container {
+    margin: auto;
 }
 
 @media screen and (max-width: 576px) {
+    .why-zzopper-container {
+        background-image: url("./assets/images/whyzzooper base2.png.png");
+    }
+
+    .zzopper-text-container {
+        margin: auto 0 60px 0;
+    }
+
     .why-heading-1 {
-        font-size: 20px;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: 2px;
     }
 
     .why-heading-2 {
-        font-size: 50px;
-        line-height: 40px;
+        font-size: 36px;
+        line-height: 43.2px;
+        letter-spacing: -1.6px;
+    }
+
+    .why-meta {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
 /* utils */
+.utils-container-lg {
+    display: block;
+}
 
 .utils-container {
     background-image: url("./assets/images/utils_base.png");
@@ -100,16 +137,20 @@ body {
 }
 
 .utils-heading {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28.8px;
     color: #FFC234;
 }
 
 .option {
-    font-size: 35px;
-    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -1.6px;
+    font-weight: 700;
     color: #9182AD;
     cursor: pointer;
+    margin: auto 0;
 }
 
 .selected-option {
@@ -139,6 +180,31 @@ body {
     color: #594D6D;
 }
 
+.utils-container-sm {
+    display: none;
+}
+
+.option-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.option-text {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
+    color: white;
+}
+
+.option-body {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: white;
+}
+
 @media screen and (max-width: 576px) {
     .option {
         font-size: 22px;
@@ -160,6 +226,14 @@ body {
         height: 450px;
         width: 370px;
     }
+
+    .utils-container-lg {
+        display: none;
+    }
+
+    .utils-container-sm {
+        display: block;
+    }
 }
 
 /* Lets meets component */
@@ -174,13 +248,15 @@ body {
 .meet-text-1 {
     color: #979797;
     font-size: 29px;
+    line-height: 34.8px;
+    letter-spacing: 4px;
     font-weight: bold;
 }
 
 .meet-text-2 {
     color: #A09AAA;
     font-size: 80px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 56px;
 }
 
@@ -189,15 +265,44 @@ body {
     font-size: 45px;
     font-weight: 400;
     line-height: 32px;
+    letter-spacing: -0.4px;
     margin-top: 20px;
 }
 
 .meet-meta-text {
     color: #12022F;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 32px;
+    letter-spacing: -0.4px;
+    line-height: 30px;
 }
+
+@media screen and (max-width: 576px) {
+    .meet-text-1 {
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 4px;
+    }
+
+    .meet-text-2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    .meet-text-3 {
+        font-size: 12px;
+        line-height: 14.4px;
+        letter-spacing: -0.4px;;
+    }
+
+    .meet-meta-text {
+        font-size: 12px;
+        line-height: 14.4px;
+        letter-spacing: -0.4px;
+    }
+}
+
+/* scroller */
 
 .scroller {
     display: flex;
@@ -214,22 +319,10 @@ body {
 }
 
 @media screen and (max-width: 576px) {
-    .meet-text-1 {
-        font-size: 22px;
-        line-height: 1px;
-    }
-
-    .meet-text-2 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-
-    .meet-text-3 {
-        font-size: 20px;
-    }
-
-    .meet-meta-text {
-        font-size: 14px;
+    .scroller-img {
+        margin-right: 10px;
+        width: 60px;
+        height: 60px;
     }
 }
 
@@ -244,61 +337,75 @@ body {
 .mint-btn {
     color: black;
     background-color: #FFC233;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 200px;
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 10px;
+    letter-spacing: -0.36px;
+    line-height: 26px;
     padding: 10px;
 }
 
 .time-btn {
     color: black;
     background-color: #E5E5E5;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 200px;
     font-size: 16px;
     font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.36px;
+    line-height: 26px;
     padding: 10px;
 }
 
 .goto-btn {
     color: white;
     background-color: black;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 200px;
     font-size: 16px;
     font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.36px;
+    line-height: 26px;
     padding: 10px;
+    display: flex;
 }
 
 .mint-header {
     font-size: 48px;
     line-height: 56px;
     font-weight: 700;
+    letter-spacing: -2px;
 }
 
 .mint-meta-text {
     font-size: 20px;
     line-height: 28px;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .mint-phase {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
-    line-height: 40px;
+    line-height: 32px;
+    letter-spacing: -0.4px;
 }
 
 .mint-name {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1px;
+    line-height: 42px;
+    letter-spacing: -0.4px;
 }
 
 .mint-details {
     color: #979797;
-    font-size: 15px;
+    font-size: 18px;
+    line-height: 42px;
+    letter-spacing: -0.4px;
     font-weight: 400;
 }
 
@@ -309,16 +416,17 @@ body {
 
 .mint-phase-icon {
     margin: auto 10px auto 0;
-    font-size: 15px;
+    font-size: 24px;
     font-weight: 700;
     line-height: 24px;
 }
 
 .mint-phase-detail-name {
     margin: auto 0;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+    letter-spacing: -0.3px;
 }
 
 .mint-phase-detail-text {
@@ -326,13 +434,19 @@ body {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
+    letter-spacing: -0.3px;
 }
 
 .eth-amount {
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
-    line-height: 43px;
+    line-height: 43.57px;
+    letter-spacing: -0.3px;
     text-align: center;
+}
+
+.goto-btn-img {
+    width: 100px;
 }
 
 @media screen and (max-width: 576px) {
@@ -351,20 +465,108 @@ body {
     }
 
     .eth-amount {
-        font-size: 22px;
+        font-size: 15px;
+        line-height: 18.15px;
+        letter-spacing: -0.3px;
     }
 
     .mint-btn {
+        font-size: 12px;
+        line-height: 26px;
+        letter-spacing: -0.36px;
         width: 100%;
+        padding: 5px;
     }
 
     .time-btn {
-        width: 100%;;
+        font-size: 12px;
+        line-height: 26px;
+        letter-spacing: -0.36px;
+        width: 100%;
+        padding: 5px;
     }
 
     .goto-btn {
+        font-size: 12px;
+        line-height: 26px;
+        letter-spacing: -0.36px;
         width: 100%;
+        padding: 5px;
     }
+
+    .goto-btn-img {
+        width: 70%;
+        margin: auto 0;
+    }
+
+    .mint-phase-details-container {
+        width: 70px;
+    }
+
+    .mint-phase-icon {
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
+    .mint-phase-detail-name {
+        font-size: 12px;
+        line-height: 14.4px;
+        letter-spacing: -0.15px
+    }
+
+    .mint-phase-detail-text {
+        font-size: 12px;
+        line-height: 14.4px;
+        letter-spacing: -0.15px;
+    }
+}
+
+/* Modal */
+
+.modal-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 370px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: none !important;
+}
+
+.count-container {
+    margin: auto;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+}
+.count-min-container {
+    border: 2px solid #CBCCCC;
+}
+.count-min > path {
+    stroke: #CBCCCC !important;
+}
+
+.count-symbol {
+    margin: auto;
+    font-weight: 700;
+}
+
+.count-number {
+    margin: auto 0;
+    font-weight: 700;
+}
+
+.confirm-purchase-btn {
+    background-color: #FFC233;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 30px;
 }
 
 /* Reveal container */
@@ -510,7 +712,7 @@ body {
     background-color: #FFC233;
     padding: 10px;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 12px;
     border-radius: 20px;
 }
 
@@ -698,25 +900,31 @@ body {
     border-bottom: 1px solid #1A1B1D;
 }
 
-.metaoasis-btn {
+.metaoasis-header-btn {
     background-color: black;
-    border-radius: 20px;
+    border-radius: 30px;
     border: 2px solid #1A1B1D;
     color: white;
     margin-left: auto;
+    font-size: 12px;
+    font-weight: 600;
     height: 45px;
 }
 
-.connect-btn {
+.connect-header-btn {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 30px;
     color: black;
+    font-size: 12px;
+    font-weight: 600;
     margin-left: 20px;
     height: 45px;
 }
 
 .header-btn {
     cursor: pointer;
+    width: 45px;
+    height: 45px;
 }
 
 .header-body {
@@ -730,7 +938,7 @@ body {
 .header-body-close {
     width: 100%;
     height: 0;
-    transition: 0.01s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .header-body-close > * {

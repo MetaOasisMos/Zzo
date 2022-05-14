@@ -48,11 +48,11 @@ const Header = ({openHeader,setOpenHeader, scroll,heroRef, whyRef, meetRef, deta
                                 setOpenHeader(!openHeader)
                             }} src={close_header} className={'header-btn'}/>
                         }
-                        <img src={logo} style={{margin: 'auto 0 auto 20px', height: 20, width: 30}}/>
-                        <button className={'btn metaoasis-btn'}>
+                        <img src={logo} style={{margin: 'auto 0 auto 20px', height: 15, width: 30}}/>
+                        <button className={'btn metaoasis-header-btn'}>
                             Back to MetaOasis DAO
                         </button>
-                        <button className={'btn connect-btn'}>Connect</button>
+                        <button className={'btn connect-header-btn'}>Connect</button>
                     </div>
                 </div>
             </div>

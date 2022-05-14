@@ -6,22 +6,51 @@ import nftairdroprightimg from '../assets/images/nftairdroprightimg.png';
 import stakingandharvestingimg from '../assets/images/stakingandharvestingimg.png'
 import PhysicalZzoopersAirdropImg from '../assets/images/PhysicalZzoopersAirdropImg.png'
 
+import utilicon1 from '../assets/images/utils-icon-1.png'
+import utilicon2 from '../assets/images/utils-icon-2.png'
+import utilicon3 from '../assets/images/utils-icon-3.png'
+import utilicon4 from '../assets/images/utils-icon-4.png'
+
 const Utils = () => {
 
     const options = [
-        "Exciting Experience",
-        "NFT Airdrop",
+        "Cross-metaverse Experience",
+        "Have Fun and Earn",
         "Staking & Harvesting",
         "Physical Zzoopers Airdrop"
+    ]
+
+    const options_sm = [
+        {
+            text: 'Cross-metaverse Experience',
+            icon: utilicon1,
+            body: 'Which metaverse would you like to explore? The Sandbox, NFT Worlds, Decentraland, Worldwide Webb, Arcade land,…? Name it! Buckle up and LFG!'
+        },
+        {
+            text: 'Future Drops',
+            icon: utilicon4,
+            body: 'How to travel to different metaverses? Holding your Zzoopers is all you need to do! Exclusive airdrops will facilitate your cross-metaverse journeys. '
+        },
+        {
+            text: 'Have Fun and Earn',
+            icon: utilicon3,
+            body: 'What happens if you hold more than one Zzoopers? Different Zzoopers may have different chemistry ganged together. Collect more and hold on to unravel all the fun behind.'
+        },
+        {
+            text: 'Physical Zzoopers',
+            icon: utilicon2,
+            body: 'Some Zzoopers may drop to you from the metaverse to the real world. Be ready to meet these creatures physically in the near future! '
+        },
     ]
 
     const [selected, setSelected] = useState('Exciting Experience')
 
     return (
         <div className={'utils-container'}>
-            <div className="container">
+            <div className="container utils-container-lg">
                 <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12"
+                         style={{display: 'flex', flexDirection: 'column'}}>
                         <p className={'utils-heading'}>Unlock Unlimited Utilities</p>
                         {options.map((option) => {
                             return (
@@ -34,43 +63,70 @@ const Utils = () => {
                     <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
                         <div style={{display: 'flex'}}>
                             <div className={'side-bar-container'}>
-                                {selected === "Exciting Experience" &&
+                                {selected === "Cross-metaverse Experience" &&
                                 <>
                                     <img src={exciting_experience_image} style={{width: '100%'}}/>
                                     <p className={'side-bar-header'}>Welcome here</p>
-                                    <p className={'side-bar-para'}>Through Zzoopers, you will come along with us and explore the limitless ocean in
+                                    <p className={'side-bar-para'}>Through Zzoopers, you will come along with us and
+                                        explore the limitless ocean in
                                         the metaverse. </p>
-                                    <p className={'side-bar-para'}>Let's unlock many different kinds of metaverse experiences together! When
+                                    <p className={'side-bar-para'}>Let's unlock many different kinds of metaverse
+                                        experiences together! When
                                         MetaOasis DAO HQ is entirely completed, you can get early access to there!</p>
                                 </>
                                 }
-                                {selected === "NFT Airdrop" &&
+                                {selected === "Have Fun and Earn" &&
                                 <>
                                     <div style={{display: 'flex'}}>
-                                        <img src={nftairdropleftimg} className={'nftleftimg'} style={{margin: '0 auto 0 0'}} />
-                                        <img src={nftairdroprightimg} className={'nftrightimg'} style={{margin: '0 0 0 auto'}}/>
+                                        <img src={nftairdropleftimg} className={'nftleftimg'}
+                                             style={{margin: '0 auto 0 0'}}/>
+                                        <img src={nftairdroprightimg} className={'nftrightimg'}
+                                             style={{margin: '0 0 0 auto'}}/>
                                     </div>
                                     <p className={'side-bar-header'}>NFT Airdrop</p>
-                                    <p className={'side-bar-para'}>Alongside with the exciting experience, you will encounter with exclusive airdrop when we enter into some unknown metaverse.</p>
-                                    <p className={'side-bar-para'}>A brand new NFT airdrop is a new identity either a key to embrace a new world.</p>
+                                    <p className={'side-bar-para'}>Alongside with the exciting experience, you will
+                                        encounter with exclusive airdrop when we enter into some unknown metaverse.</p>
+                                    <p className={'side-bar-para'}>A brand new NFT airdrop is a new identity either a
+                                        key to embrace a new world.</p>
                                 </>
                                 }
                                 {selected === "Staking & Harvesting" &&
                                 <>
-                                   <img src={stakingandharvestingimg} style={{width: '100%'}}/>
-                                    <p className={'side-bar-para'}>In the wonderful journey, somewhere is for you to stake your Zzoopers NFT to harvest something pretty cool. </p>
+                                    <img src={stakingandharvestingimg} style={{width: '100%'}}/>
+                                    <p className={'side-bar-para'}>In the wonderful journey, somewhere is for you to
+                                        stake your Zzoopers NFT to harvest something pretty cool. </p>
                                     <p className={'side-bar-para'}>Let's play and harvest together! Coming soon!</p>
                                 </>
                                 }
-                                 {selected === "Physical Zzoopers Airdrop" &&
+                                {selected === "Physical Zzoopers Airdrop" &&
                                 <>
-                                   <img src={PhysicalZzoopersAirdropImg} style={{width: '100%'}}/>
-                                    <p className={'side-bar-para'}>To enhance the IP branding and community culture vibe, we are to develop physical Zzoopers. </p>
-                                    <p className={'side-bar-para'}>Bring our Web3 spirit to the real life and we will airdrop them to our lovely owners as special gifts!</p>
+                                    <img src={PhysicalZzoopersAirdropImg} style={{width: '100%'}}/>
+                                    <p className={'side-bar-para'}>To enhance the IP branding and community culture
+                                        vibe, we are to develop physical Zzoopers. </p>
+                                    <p className={'side-bar-para'}>Bring our Web3 spirit to the real life and we will
+                                        airdrop them to our lovely owners as special gifts!</p>
                                 </>
                                 }
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container utils-container-sm">
+                <div className="row">
+                    <div className="col-sm-12 col-xs-12">
+                        <p className={'utils-heading'}>Unlock Unlimited Utilities</p>
+                        {options_sm.map((option) => {
+                            return (
+                                <div>
+                                    <div style={{display: 'flex'}}>
+                                        <img src={option.icon} className={'option-icon'}/>
+                                        <p className={'option-text'}>{option.text}</p>
+                                    </div>
+                                    <p className={'option-body'}>{option.body}</p>
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
             </div>
