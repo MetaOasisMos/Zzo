@@ -1,11 +1,11 @@
-import why_img from "../assets/images/whyimage.svg";
+import why_fox from "../assets/images/why fox.png";
 
 const WhyZzoppers = () => {
     return (
         <div className={'why-zzopper-container'}>
             <div className="container" style={{height: '100%'}}>
                 <div className="row" style={{height: '100%'}}>
-                    <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div className="col-xl-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                         <div style={{width: '100%', height: '100%', display: 'flex'}}>
                             <div className={'zzopper-text-container'}>
                                 <p className={'why-heading-1'}>Why</p>

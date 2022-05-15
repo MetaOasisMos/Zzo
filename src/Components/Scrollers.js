@@ -6,16 +6,15 @@ import "swiper/css/pagination";
 import {Pagination, Autoplay} from "swiper";
 
 
-const Scrollers = ({scroller_images, delay}) => {
+const Scrollers = ({scroller_images}) => {
     return (
         <>
             <Swiper
                 slidesPerView={"auto"}
-                autoplay={{delay: delay}}
-                spaceBetween={30}
-                pagination={{
-                    clickable: true,
-                }}
+                autoplay={{delay: 0}}
+                loop={true}
+                spaceBetween={20}
+                speed={2500}
                 modules={[Autoplay]}
                 className={"mySwiper my-3 swiper-sm"}
             >

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import exciting_experience_image from '../assets/images/exciting experience image.png'
 import nftairdropleftimg from '../assets/images/nftairdropleftimg.png';
 import nftairdroprightimg from '../assets/images/nftairdroprightimg.png';
-import stakingandharvestingimg from '../assets/images/stakingandharvestingimg.png'
+import stakingandharvestingimg from '../assets/images/hello.gif'
 import PhysicalZzoopersAirdropImg from '../assets/images/PhysicalZzoopersAirdropImg.png'
 
 import utilicon1 from '../assets/images/utils-icon-1.png'

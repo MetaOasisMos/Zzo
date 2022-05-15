@@ -24,6 +24,7 @@ import Faq from "./Components/FAQ";
 import Footer from "./Components/Footer";
 import Header from './Components/header';
 import {useEffect, useRef, useState} from "react";
+import cube from './assets/images/box.gif'
 
 function App() {
     const heroRef = useRef(null)
@@ -86,6 +87,8 @@ function App() {
                     </div>
                 :
                 <>
+                    <img src={cube} className={'floating-cube'}/>
+
                     <Header
                         openHeader={openHeader}
                         setOpenHeader={setOpenHeader}
@@ -115,15 +118,21 @@ function App() {
                     <div ref={meetRef}>
                         <Meet/>
                     </div>
-                    <Scrollers
-                        scroller_images={[slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9]}
-                    delay={2000}/>
-                    <Scrollers
-                        scroller_images={[slider9, slider4, slider5, slider6, slider7, slider8, slider1, slider2, slider3]}
-                    delay={3000}/>
-                    <Scrollers
-                        scroller_images={[slider2, slider1, slider5, slider6, slider3, slider9, slider4, slider7, slider8]}
-                    delay={2500}/>
+                    <div className={'mb-3'}>
+                        <Scrollers
+                            scroller_images={[slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9]}
+                            />
+                    </div>
+                    <div className={'mb-3'}>
+                        <Scrollers
+                            scroller_images={[slider9, slider4, slider5, slider6, slider7, slider8, slider1, slider2, slider3]}
+                            />
+                    </div>
+                    <div className={'mb-3'}>
+                        <Scrollers
+                            scroller_images={[slider2, slider1, slider5, slider6, slider3, slider9, slider4, slider7, slider8]}
+                            />
+                    </div>
 
                     <div ref={detailRef}>
                         <MintDetails/>
