@@ -1361,33 +1361,35 @@ body {
 
 
 /* slider */
-.mySwiper > .swiper-wrapper {
+.swiper-wrapper {
+    -webkit-transition-timing-function: linear !important;
+    -o-transition-timing-function: linear !important;
     transition-timing-function: linear !important;
 }
 
-.swiper-sm > .swiper-wrapper > .swiper-slide > div > div > img {
+.swiper-wrapper > .swiper-slide > img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.swiper-sm > .swiper-wrapper > .swiper-slide {
+.swiper-wrapper > .swiper-slide {
     width: 200px !important;
 }
 
-.swiper-sm > .swiper-wrapper > .swiper-slide > div {
+.swiper-wrapper > .swiper-slide > div {
     width: 200px;
     height: 200px;
     background-color: white;
 }
 
 @media screen and (max-width: 576px) {
-    .swiper-sm > .swiper-wrapper > .swiper-slide {
+    .swiper-wrapper > .swiper-slide {
         width: 54.17px !important;
     }
 
-    .swiper-sm > .swiper-wrapper > .swiper-slide > div {
+    .swiper-wrapper > .swiper-slide > div {
         width: 54.17px;
         height: 54.17px;
     }

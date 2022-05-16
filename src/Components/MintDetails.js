@@ -80,11 +80,11 @@ const MintDetails = () => {
                         <p className={'eth-amount'}>0.1 ETH</p>
                     </div>
                     <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
+                        {/*<div>*/}
+                        {/*    <button className={'btn mint-btn'} onClick={() => {setModalOpen(true)}}>Mint</button>*/}
+                        {/*</div>*/}
                         <div>
-                            <button className={'btn mint-btn'} onClick={() => {setModalOpen(true)}}>Mint</button>
-                        </div>
-                        <div>
-                            <button className={'btn time-btn'}>19h 52m 33s</button>
+                            <button className={'btn time-btn'} disabled>19h 52m 33s</button>
                         </div>
                     </div>
                 </div>

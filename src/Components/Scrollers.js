@@ -7,14 +7,15 @@ import {Autoplay} from "swiper";
 
 
 const Scrollers = ({scroller_images, reverse = false}) => {
+
     return (
         <>
             <Swiper
-                slidesPerView={"auto"}
-                autoplay={{delay: 0, reverseDirection: reverse}}
+                slidesPerView={6}
+                autoplay={{delay: 0, disableOnInteraction: false, reverseDirection: reverse}}
                 loop={true}
                 spaceBetween={20}
-                speed={2500}
+                speed={3500}
                 noSwiping={true}
                 modules={[Autoplay]}
                 className={"mySwiper my-3 swiper-sm"}
@@ -22,11 +23,7 @@ const Scrollers = ({scroller_images, reverse = false}) => {
                 {scroller_images.map((slide) => {
                     return (
                         <SwiperSlide>
-                            <div>
-                                <div>
-                                    <img src={slide} alt={'offer-img'}/>
-                                </div>
-                            </div>
+                            <img src={slide} alt={'offer-img'}/>
                         </SwiperSlide>
                     )
                 })}

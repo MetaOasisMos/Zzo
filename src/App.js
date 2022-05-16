@@ -12,7 +12,7 @@ import slider5 from "./assets/images/slider 5.png";
 import slider6 from "./assets/images/slider 6.png";
 import slider7 from "./assets/images/slider 7.png";
 import slider8 from "./assets/images/slider 8.png";
-import slider9 from "./assets/images/slider 9.png";
+// import slider2 from "./assets/images/slider 9.png";
 import loaderimg from './assets/images/loader.png'
 import welcome_text from './assets/images/welcome-text.png';
 import MintDetails from "./Components/MintDetails";
@@ -27,6 +27,7 @@ import {useEffect, useRef, useState} from "react";
 import cube from './assets/images/box.gif'
 
 function App() {
+    // Refs for scrolls to funcationality
     const heroRef = useRef(null)
     const whyRef = useRef(null)
     const meetRef = useRef(null)
@@ -36,6 +37,7 @@ function App() {
     const joinUsRef = useRef(null)
     const faqRef = useRef(null)
 
+    // variable that control the header close and open funcationality
     const [openHeader, setOpenHeader] = useState(false)
 
     const scroll = (ref) => {
@@ -48,13 +50,15 @@ function App() {
             setRpressed(true)
         }
     }
-
+    // listing for R key press
     document.addEventListener('keydown', logKey);
 
     const [rPressed, setRpressed] = useState(false)
     const [loader, setLoader] = useState(false)
 
     useEffect(() => {
+        // when R is pressed a 2 sec wait is added to show the loading screen, and then when loader is set to true,
+        // new screen gets loaded
         if (rPressed) {
             setTimeout(
                 () => {
@@ -72,6 +76,7 @@ function App() {
     return (
         <>
             {rPressed ?
+                // when R is pressed this section loads
                 !loader ?
                     <div className={'loader-container'}>
                         <div style={{margin: 'auto'}}>
@@ -82,13 +87,22 @@ function App() {
                     <div className={'welcome-page'}>
                         <div style={{margin: 'auto', textAlign: 'center'}}>
                             <img src={welcome_text} style={{width: '100%'}}/>
+                            {/* when enter click, will be sent back to home page*/}
                             <button className={'btn enter-btn'} onClick={enter_clicked}>Enter</button>
                         </div>
                     </div>
                 :
+                // this home page loads by default, when R is pressed the above section loads
                 <>
-                    <img src={cube} className={'floating-cube'}/>
+                    {/* Floating Cude */}
+                    <img src={cube} className={'floating-cube'}
+                         onClick={() => {
+                             scroll(detailRef)
+                         }}
+                    />
 
+
+                    {/* Header */}
                     <Header
                         openHeader={openHeader}
                         setOpenHeader={setOpenHeader}
@@ -103,58 +117,85 @@ function App() {
                         faqRef={faqRef}
                     />
 
+                    {/* Hero Section */}
                     <div ref={heroRef}>
                         <Hero/>
                     </div>
+
+
+                    {/* Tiger Image*/}
                     <div style={{width: '100%'}}>
                         <img src={tiger} style={{width: '100%'}}/>
                     </div>
+
+                    {/* Why Zzoppers section */}
                     <div ref={whyRef}>
                         <WhyZzoppers/>
                     </div>
 
+                    {/* Unlock Unlimited Utilities Section */}
                     <Utils/>
 
+                    {/* MEET 5555 Section*/}
                     <div ref={meetRef}>
                         <Meet/>
                     </div>
+
+                    {/* Three scrollers for gallery*/}
                     <div className={'mb-3'}>
                         <Scrollers
-                            scroller_images={[slider1, slider2, slider3, slider4, slider5, slider6, slider7, slider8, slider9,
-                            slider1, slider2, slider3, slider4, slider5]}/>
-                    </div>
-                    <div className={'mb-3'}>
-                        <Scrollers
-                            scroller_images={[slider9, slider4, slider5, slider6, slider7, slider8, slider1, slider2, slider3,slider1, slider2, slider3, slider4, slider5]}
+                            scroller_images={[slider2, slider1, slider5, slider6, slider3, slider2, slider4, slider7,
+                                slider8, slider1, slider2, slider3, slider4, slider5]}
+                            reverse={true}
                         />
                     </div>
                     <div className={'mb-3'}>
                         <Scrollers
-                            scroller_images={[slider2, slider1, slider5, slider6, slider3, slider9, slider4, slider7, slider8, slider1, slider2, slider3, slider4, slider5]} reverse={true}
+                            scroller_images={[slider2, slider1, slider5, slider6, slider3, slider2, slider4, slider7,
+                                slider8, slider1, slider2, slider3, slider4, slider5]}
+                        />
+                    </div>
+                    <div className={'mb-3'}>
+                        <Scrollers
+                            scroller_images={[slider2, slider1, slider5, slider6, slider3, slider2, slider4, slider7,
+                                slider8, slider1, slider2, slider3, slider4, slider5]}
                         />
                     </div>
 
+
+                    {/* Mint Details Section */}
                     <div ref={detailRef}>
                         <MintDetails/>
                     </div>
+
+
+                    {/* When to Reveal Section */}
                     <div ref={revealRef}>
                         <Reveal/>
                     </div>
 
+
+                    {/* Roadmap Section*/}
                     <div ref={mapRef}>
                         <RoadMap/>
                     </div>
 
+
+                    {/* Who creates the Zzoopers? Section*/}
                     <Create/>
 
+                    {/* Join Us Section*/}
                     <div ref={joinUsRef}>
                         <JoinUs/>
                     </div>
 
+
+                    {/* FAQ */}
                     <div ref={faqRef}>
                         <Faq/>
                     </div>
 
+                    {/* Footer */}
                     <Footer/>
                 </>
             }
