@@ -1,4 +1,5 @@
 import hero_img from '../assets/images/hero image.svg'
+import hero_img_sm from '../assets/images/hero image sm.svg'
 
 const Hero = () => {
     return (
@@ -17,7 +18,8 @@ const Hero = () => {
                         </div>
                     </div>
                     <div className="col-xl-6 col-lg-7 col-md-12 col-sm-12 col-xs-12">
-                        <img src={hero_img} style={{width: '100%'}}/>
+                        {/*<img src={hero_img} style={{width: '100%'}} />*/}
+                        <img src={hero_img_sm} style={{width: '100%'}}/>
                     </div>
                 </div>
             </div>

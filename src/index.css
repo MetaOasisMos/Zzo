@@ -34,6 +34,14 @@ body {
     color: white;
 }
 
+.hero-img-lg {
+    display: block;
+}
+
+.hero-img-sm {
+    display: none;
+}
+
 @media screen and (max-width: 1100px) {
     .hero-heading-1 {
         font-size: 40px;
@@ -62,7 +70,7 @@ body {
 
     .hero-heading-1 {
         font-size: 15px;
-        line-height: 18px;
+        line-height: 0;
         letter-spacing: 2px;
     }
 
@@ -76,15 +84,22 @@ body {
         font-size: 16px;
         line-height: 24px;
     }
+
+    .hero-img-lg {
+        display: none;
+    }
+
+    .hero-img-sm {
+        display: block;
+    }
 }
 
 /* Why Zzopper */
 
 .why-zzopper-container {
-    background-image: url("./assets/images/whyzzooper base.png");
+    background-image: url("./assets/images/why base.jpg");
     background-position: center;
     background-size: cover;
-    padding: 200px 0;
 }
 
 .why-heading-1 {
@@ -115,8 +130,16 @@ body {
 }
 
 .zzopper-text-container {
-    margin: auto;
+    margin: 230px 0;
+    width: 55%;
 }
+
+.right-fox {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 
 @media screen and (max-width: 1100px) {
     .why-heading-1 {
@@ -131,10 +154,12 @@ body {
 @media screen and (max-width: 576px) {
     .why-zzopper-container {
         background-image: url("./assets/images/whyzzooper base2.png.png");
+        height: 100vh;
     }
 
     .zzopper-text-container {
-        margin: auto 0 60px 0;
+        margin: auto 0 80px 0;
+        width: 100%;
     }
 
     .why-heading-1 {
@@ -153,6 +178,11 @@ body {
         font-size: 16px;
         line-height: 24px;
     }
+
+    .right-fox {
+        display: none;
+    }
+
 }
 
 /* utils */
@@ -273,7 +303,7 @@ body {
     background-image: url("./assets/images/Frame 427320168.png");
     background-position: center;
     background-size: cover;
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .meet-text-1 {
@@ -309,6 +339,10 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+    .meet-component {
+        padding: 50px 0 0 0;
+    }
+
     .meet-text-1 {
         font-size: 20px;
         line-height: 24px;
@@ -478,6 +512,7 @@ body {
 
 .goto-btn-img {
     width: 100px;
+    margin-left: 10px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -522,7 +557,7 @@ body {
     }
 
     .mint-details-container {
-        padding: 80px 0;
+        padding: 50px 0;
     }
 
     .eth-amount {
@@ -1129,7 +1164,7 @@ body {
 
 .faq-sub-container {
     display: flex;
-    padding: 25px 0;
+    padding: 35px 0;
 }
 
 @media screen and (max-width: 1100px) {
@@ -1172,6 +1207,11 @@ body {
     .faq-container {
         padding: 50px 0;
     }
+
+    /*.faq-sub-container {*/
+    /*    padding: 5px 0;*/
+    /*}*/
+
 }
 
 /* Footer */
@@ -1192,7 +1232,8 @@ body {
 
 .footer-center-text {
     font-size: 14px;
-    color: #808080;
+    color: white;
+    font-weight: 700;
     margin: auto;
 }
 
@@ -1356,5 +1397,7 @@ body {
     position: fixed;
     z-index: 10;
     right: 10%;
-    bottom: 2%
+    bottom: 2%;
+    width: 140px;
+    height: 140px;
 }

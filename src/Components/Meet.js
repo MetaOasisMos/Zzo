@@ -1,4 +1,4 @@
-import zzoppers from '../assets/images/zoopers img.png'
+import zzoppers from '../assets/images/zoopers img.svg'
 
 const Meet = () => {
     return (

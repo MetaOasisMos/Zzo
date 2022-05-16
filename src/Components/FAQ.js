@@ -54,9 +54,9 @@ const Faq = () => {
 
             {faqs.map((faq, index) => {
                 return (
-                    <div className={faq.open && 'faq-container-active'} style={{borderBottom: '1px solid #E7E7E1'}}>
-                        <div className={'container py-4'}>
-                            <div className={'faq-sub-container'} style={{display: 'flex', padding: '20px 0'}} onClick={() => {
+                    <div className={faq.open && 'faq-container-active'} >
+                        <div className={'container'} style={{borderBottom: '1px solid #E7E7E1'}}>
+                            <div className={'faq-sub-container'} onClick={() => {
                                 make_active(faq)
                             }}>
                                 <div className={clsx(!faq.open ? 'index-container-close' : 'index-container-open', 'index-container')}>

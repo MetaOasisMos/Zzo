@@ -1,6 +1,6 @@
 import {RiCalendar2Line, RiStackLine} from "react-icons/ri";
 import {BiStopwatch, BiTime} from "react-icons/bi";
-import btn_img from '../assets/images/btn-image.png';
+import btn_img from '../assets/images/btn-image.svg';
 import {useState} from "react";
 import Modal from '@mui/material/Modal';
 import Purchase from "./Modals/purchase";
@@ -40,7 +40,7 @@ const MintDetails = () => {
 
                 <hr/>
 
-                <div className="row">
+                <div className="row g-0">
                     <div className="col-xl-3 col-lg-3 col-md-12 col-xs-12 col-sm-12">
                         <p className={'mint-phase'}>Phase 1</p>
                         <p className={'mint-name'}>Whitelist Premint</p>
@@ -91,7 +91,7 @@ const MintDetails = () => {
 
                 <hr/>
 
-                <div className="row">
+                <div className="row g-0">
                     <div className="col-xl-3 col-lg-3 col-md-12 col-xs-12 col-sm-12">
                         <p className={'mint-phase'}>Phase 2</p>
                         <p className={'mint-name'}>Public Mint</p>
