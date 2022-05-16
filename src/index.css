@@ -1398,8 +1398,8 @@ body {
 .floating-cube {
     position: fixed;
     z-index: 10;
-    right: 10%;
+    right: 12%;
     bottom: 2%;
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
 }
