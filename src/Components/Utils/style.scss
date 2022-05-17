@@ -26,4 +26,16 @@
             color: rgba(255, 255, 255, 1);
         }
     }
+    @media (max-width: 992px) {
+        padding: 72px 0;
+        .content {
+            flex-direction: column;
+            .left {
+                width: 100%;
+            }
+            .right {
+                width: 100%;
+            }
+        }
+    }
 }

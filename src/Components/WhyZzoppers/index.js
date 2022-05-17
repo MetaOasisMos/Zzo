@@ -17,7 +17,7 @@ const WhyZzoppers = () => {
               MANY!
             </p>
           </div>
-          <img src={why_fox} className={"right-fox right"} />
+          <img src={why_fox} className={"right"} />
         </div>
       </div>
     </div>

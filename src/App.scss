@@ -11,6 +11,17 @@
   margin-bottom: 20px;
 }
 
+.text-right{
+  text-align: right;
+}
+
+.hover-move {
+  transition: transform 0.3s;
+  &:hover {
+      transform: translateY(-4px);
+  }
+}
+
 img{
   max-width: 100%;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { Web3ContextProvider } from "./context/Web3Context";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -8,9 +9,11 @@ import reportWebVitals from "./reportWebVitals";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ParallaxProvider>
-      <App />
-    </ParallaxProvider>
+    <Web3ContextProvider>
+      <ParallaxProvider>
+        <App />
+      </ParallaxProvider>
+    </Web3ContextProvider>
   </React.StrictMode>
 );
 

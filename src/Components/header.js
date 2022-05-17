@@ -1,6 +1,8 @@
+import { useContext } from "react";
 import header_nav from "../assets/images/header-nav.svg";
 import close_header from "../assets/images/header-close.svg";
 import logo from "../assets/images/logo.svg";
+import { Web3Context } from "../context/Web3Context";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
@@ -18,6 +20,8 @@ const Header = ({
   faqRef,
 }) => {
   const [displayLinks, setDisplayLinks] = useState(false);
+
+  const { account, connectWallet } = useContext(Web3Context);
 
   const header_links = [
     { text: "What is Zzoopers?", ref: heroRef },
@@ -67,7 +71,13 @@ const Header = ({
             <button className={"btn metaoasis-header-btn"}>
               Back to MetaOasis DAO
             </button>
-            <button className={"btn connect-header-btn"}>Connect</button>
+            {account ? (
+              <button className={"btn connect-header-btn"}>
+                {account.slice(0, 4)}...{account.slice(-4)}
+              </button>
+            ) : (
+              <button className={"btn connect-header-btn"}>Connect</button>
+            )}
           </div>
         </div>
       </div>

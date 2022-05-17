@@ -1,8 +1,13 @@
-import {useDraggable} from "react-use-draggable-scroll";
-import {useRef} from "react";
-import {Swiper, SwiperSlide} from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
+// import {useDraggable} from "react-use-draggable-scroll";
+// import {useRef} from "react";
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
+// import {Swiper, SwiperSlide} from "swiper/react";
+// import "swiper/swiper.scss";
+
+import 'swiper/swiper.scss'; // core Swiper
+import 'swiper/modules/navigation/navigation.scss'; // Navigation module
+import 'swiper/modules/pagination/pagination.scss'; // Pagination module
+// import "swiper/css/pagination";
 import {Autoplay} from "swiper";
 
 

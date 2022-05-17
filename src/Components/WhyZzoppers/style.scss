@@ -32,4 +32,39 @@
         line-height: 150%;
         color: #ffffff;
     }
+    @media (max-width: 992px) {
+        padding: 72px 0 0;
+        .zzopper-text-container {
+            margin: 32px auto;
+        }
+        .content {
+            flex-direction: column;
+            .left {
+                width: 100%;
+            }
+            .right {
+                width: 240px;
+            }
+        }
+        .subtitle {
+            font-size: 44px;
+            letter-spacing: 2px;
+        }
+        .title {
+            font-size: 64px;
+            margin-bottom: 12px;
+        }
+        .desc {
+            font-size: 20px;
+            line-height: 1.2;
+        }
+    }
+    @media (max-width: 576px) {
+        // padding: 144px 0 0;
+        .content{
+            .right{
+                display: none;
+            }
+        }
+    }
 }
