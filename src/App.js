@@ -17,7 +17,7 @@ import loaderimg from "./assets/images/loader.png";
 import welcome_text from "./assets/images/welcome-text.png";
 import MintDetails from "./Components/MintDetails";
 import Reveal from "./Components/Reveal";
-import RoadMap from "./Components/RoadMap";
+import RoadMap from "./Components/Roadmaps";
 import Create from "./Components/Create";
 import JoinUs from "./Components/JoinUs";
 import Faq from "./Components/FAQ";

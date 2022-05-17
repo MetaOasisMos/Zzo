@@ -54,4 +54,25 @@
             line-height: 1.2;
         }
     }
+
+    @media (max-width: 576px) {
+        padding: 50px 0;
+        .hero-content {
+            .right {
+                width: 100%;
+            }
+        }
+        .subtitle {
+            font-size: 15px;
+            line-height: 120%;
+        }
+        .title {
+            font-size: 36px;
+            line-height: 120%;
+        }
+        .desc {
+            font-size: 16px;
+            line-height: 150%;
+        }
+    }
 }

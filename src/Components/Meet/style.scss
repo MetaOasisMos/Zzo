@@ -41,4 +41,60 @@
         letter-spacing: -0.4px;
         color: #12022f;
     }
+    @media (max-width: 992px) {
+        padding: 100px 0;
+        .meet-text-1 {
+            font-size: 24px;
+            line-height: 120%;
+            margin-bottom: 16px;
+        }
+        .meet-text-2 {
+            font-size: 44px;
+            margin-bottom: 24px;
+        }
+
+        .zzoppers-img {
+            width: 100%;
+            margin: 0 auto 24px;
+        }
+
+        .meet-text-3 {
+            font-size: 32px;
+            line-height: 44px;
+            margin-bottom: 24px;
+        }
+
+        .meet-meta-text {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    @media (max-width: 576px) {
+        padding: 40px 0 32px;
+        .meet-text-1 {
+            font-size: 20px;
+            line-height: 120%;
+            margin-bottom: 10px;
+        }
+        .meet-text-2 {
+            font-size: 30px;
+            line-height: 120%;
+            margin-bottom: 13px;
+        }
+
+        .zzoppers-img {
+            margin: 0 auto 10px;
+        }
+
+        .meet-text-3 {
+            font-size: 12px;
+            line-height: 120%;
+            margin-bottom: 10px;
+        }
+
+        .meet-meta-text {
+            font-size: 12px;
+            line-height: 120%;
+        }
+    }
 }

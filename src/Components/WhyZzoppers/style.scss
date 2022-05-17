@@ -61,10 +61,25 @@
     }
     @media (max-width: 576px) {
         // padding: 144px 0 0;
-        .content{
-            .right{
+        padding: 0 0 44px;
+        .content {
+            justify-content: flex-end;
+            height: 620px;
+            .right {
                 display: none;
             }
+        }
+        .subtitle {
+            font-size: 15px;
+            line-height: 120%;
+        }
+        .title {
+            font-size: 36px;
+            line-height: 120%;
+        }
+        .desc {
+            font-size: 16px;
+            line-height: 150%;
         }
     }
 }

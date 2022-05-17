@@ -1,0 +1,25 @@
+.faq-container {
+    .faq-sub-container {
+        cursor: pointer;
+        align-items: flex-start;
+    }
+    .index-container {
+        margin: 8px 20px 0 0;
+    }
+    .faq-body {
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: -0.02em;
+        color: #494e5b;
+        margin-top: 20px;
+    }
+
+    @media (max-width: 992px){
+        .faq-container-heading{
+            font-size: 36px;
+        }
+        .index-container {
+            margin: -6px 12px 0 0;
+        }
+    }
+}

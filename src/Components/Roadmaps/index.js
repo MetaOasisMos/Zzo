@@ -1,13 +1,14 @@
-import roadmapicon1 from '../assets/images/roadmap-icon1.png';
-import roadmapicon2 from '../assets/images/roadmap-icon2.png';
-import roadmapicon3 from '../assets/images/roadmap-icon3.png';
-import roadmapicon4 from '../assets/images/roadmap-icon4.png';
+import roadmapicon1 from '../../assets/images/roadmap-icon1.svg';
+import roadmapicon2 from '../../assets/images/roadmap-icon2.svg';
+import roadmapicon3 from '../../assets/images/roadmap-icon3.svg';
+import roadmapicon4 from '../../assets/images/roadmap-icon4.svg';
+import './style.scss'
 
 const RoadMap = () => {
     return (
         <div className={'roadmap-container'}>
             <div className="container">
-                <p className={'roadmap-zzoopers-text'}>ZZOOPERS</p>
+                <p className={'roadmap-zzoopers-text small-title'}>ZZOOPERS</p>
                 <p className={'roadmap-heading'}>Roadmap</p>
                 <p className={'roadmap-metatext'}>The future we envision and the landscape we are to explore.</p>
 
@@ -18,7 +19,7 @@ const RoadMap = () => {
                                 <p className={'roadmap-index-text'}>1</p>
                             </div>
                             <div style={{ color: 'white'}}>
-                                <div style={{display: 'flex'}}>
+                                <div style={{display: 'flex', alignItems: 'center'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon1}/>
                                     <p className={'road-map-name'}>Mint and Reveal - May to June 2022</p>
                                 </div>
@@ -33,7 +34,7 @@ const RoadMap = () => {
                                 <p className={'roadmap-index-text'}>2</p>
                             </div>
                             <div style={{ color: 'white'}}>
-                                <div style={{display: 'flex'}}>
+                                <div style={{display: 'flex', alignItems: 'center'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon2}/>
                                     <p className={'road-map-name'}>Have Fun and Earn – Q2 to Q3 2022</p>
                                 </div>
@@ -48,7 +49,7 @@ const RoadMap = () => {
                                 <p className={'roadmap-index-text'}>3</p>
                             </div>
                             <div style={{color: 'white'}}>
-                                <div style={{display: 'flex'}}>
+                                <div style={{display: 'flex', alignItems: 'center'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon3}/>
                                     <p className={'road-map-name'}>Exclusive Airdrops – Q3 2022</p>
                                 </div>
@@ -63,7 +64,7 @@ const RoadMap = () => {
                                 <p className={'roadmap-index-text'}>4</p>
                             </div>
                             <div style={{ color: 'white'}}>
-                                <div style={{display: 'flex'}}>
+                                <div style={{display: 'flex', alignItems: 'center'}}>
                                     <img className={'roadmap-icon'} src={roadmapicon4}/>
                                     <p className={'road-map-name'}>Journey to Different Metaverses – Q3 2022</p>
                                 </div>

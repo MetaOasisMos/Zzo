@@ -4,7 +4,7 @@ import "./style.scss";
 const WhyZzoppers = () => {
   return (
     <div className={"why-zzopper-container"}>
-      <div className="container" style={{ height: "100%" }}>
+      <div className="container">
         <div className="content">
           <div className={"zzopper-text-container left"}>
             <p className={"subtitle"}>Why</p>

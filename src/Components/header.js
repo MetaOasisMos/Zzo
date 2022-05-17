@@ -71,12 +71,18 @@ const Header = ({
             <button className={"btn metaoasis-header-btn"}>
               Back to MetaOasis DAO
             </button>
+
             {account ? (
               <button className={"btn connect-header-btn"}>
                 {account.slice(0, 4)}...{account.slice(-4)}
               </button>
             ) : (
-              <button className={"btn connect-header-btn"}>Connect</button>
+              <button
+                className={"btn connect-header-btn hover-move"}
+                onClick={connectWallet}
+              >
+                Connect
+              </button>
             )}
           </div>
         </div>

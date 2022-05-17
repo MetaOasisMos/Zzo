@@ -170,7 +170,7 @@ body {
 @media screen and (max-width: 576px) {
     .why-zzopper-container {
         background-image: url("./assets/images/whyzzooper base2.png.png");
-        height: 100vh;
+        // height: 100vh;
     }
 
     .zzopper-text-container {
@@ -329,7 +329,6 @@ body {
     .meet-component {
         padding: 50px 0 0 0;
     }
- 
 }
 
 /* scroller */
@@ -461,7 +460,7 @@ body {
 
 .mint-phase-detail-text {
     margin: auto 0;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     letter-spacing: -0.3px;
@@ -750,7 +749,7 @@ body {
 .roadmap-icon {
     height: 24px;
     width: 24px;
-    margin: 0 10px auto 0;
+    margin-right: 10px;
 }
 
 .road-map-name {
@@ -766,7 +765,7 @@ body {
     line-height: 20px;
     font-weight: 400;
     letter-spacing: -0.36px;
-    margin-top: 20px;
+    margin-top: 6px;
 }
 
 .road-map-container {
@@ -803,7 +802,7 @@ body {
     .roadmap-icon {
         height: 20px;
         width: 20px;
-        margin: 0 5px auto 0;
+        margin-right: 5px;
     }
 
     .road-map-name {
@@ -1177,7 +1176,7 @@ body {
 /* Footer */
 .footer {
     background-color: #000000;
-    padding: 20px 0;
+    padding: 48px 0;
 }
 
 .footer-logo-container {
@@ -1233,6 +1232,11 @@ body {
     font-weight: 700;
     height: 45px;
     cursor: pointer;
+    box-shadow: none !important;
+
+    &:hover {
+        color: white;
+    }
 }
 
 .connect-header-btn {
@@ -1256,6 +1260,7 @@ body {
     cursor: pointer;
     width: 45px;
     height: 45px;
+    z-index: 999999;
 }
 
 .header-body {
@@ -1366,8 +1371,15 @@ body {
     cursor: pointer;
     position: fixed;
     z-index: 10;
-    right: 16px;
-    bottom: 4px;
+    right: 24px;
+    bottom: 6px;
     width: 150px;
     height: 150px;
+}
+
+@media (max-width: 576px) {
+    .floating-cube {
+        width: 100px;
+        height: 100px;
+    }
 }

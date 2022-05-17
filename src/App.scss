@@ -11,6 +11,10 @@
   margin-bottom: 20px;
 }
 
+.header-body-open{
+  z-index: 1000;
+}
+
 .text-right{
   text-align: right;
 }
@@ -57,7 +61,7 @@ img{
 }
 
 .container {
-  font-family: "poppins", "dm", -apple-system, BlinkMacSystemFont, "PingFang SC", "Myriad Pro", "Hiragino Sans GB",
+  font-family:"DM Sans", "poppins", -apple-system, BlinkMacSystemFont, "PingFang SC", "Myriad Pro", "Hiragino Sans GB",
       "Microsoft YaHei", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
       "Helvetica Neue", sans-serif;
   width: 100%;

@@ -1,4 +1,5 @@
 import {useState} from "react";
+import './style.scss'
 import {MdOutlineKeyboardArrowDown} from "react-icons/md";
 import clsx from "clsx";
 
