@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import header_nav from "../assets/images/header-nav.svg";
-import close_header from "../assets/images/header-close.svg";
-import logo from "../assets/images/logo.svg";
-import { Web3Context } from "../context/Web3Context";
+import header_nav from "../../assets/images/header-nav.svg";
+import close_header from "../../assets/images/header-close.svg";
+import logo from "../../assets/images/logo.svg";
+import { Web3Context } from "../../context/Web3Context";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 
