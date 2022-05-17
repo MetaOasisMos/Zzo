@@ -14,12 +14,21 @@
         margin-top: 20px;
     }
 
-    @media (max-width: 992px){
-        .faq-container-heading{
+    @media (max-width: 992px) {
+        .faq-container-heading {
             font-size: 36px;
+        }
+        .faq-sub-container{
+            padding: 16px 0;
         }
         .index-container {
             margin: -6px 12px 0 0;
+        }
+        .faq-body {
+            font-size: 12px;
+            line-height: 157.5%;
+            margin-top: 6px;
+            margin-bottom: 0;
         }
     }
 }
