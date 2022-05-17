@@ -1,5 +1,5 @@
 import Hero from "./Components/Hero";
-import tiger from './assets/images/tiger.png';
+import tiger from "./assets/images/tiger.png";
 import WhyZzoppers from "./Components/WhyZzoppers";
 import Utils from "./Components/Utils";
 import Meet from "./Components/Meet";
@@ -13,8 +13,8 @@ import slider6 from "./assets/images/slider 6.png";
 import slider7 from "./assets/images/slider 7.png";
 import slider8 from "./assets/images/slider 8.png";
 // import slider2 from "./assets/images/slider 9.png";
-import loaderimg from './assets/images/loader.png'
-import welcome_text from './assets/images/welcome-text.png';
+import loaderimg from "./assets/images/loader.png";
+import welcome_text from "./assets/images/welcome-text.png";
 import MintDetails from "./Components/MintDetails";
 import Reveal from "./Components/Reveal";
 import RoadMap from "./Components/RoadMap";
@@ -22,185 +22,222 @@ import Create from "./Components/Create";
 import JoinUs from "./Components/JoinUs";
 import Faq from "./Components/FAQ";
 import Footer from "./Components/Footer";
-import Header from './Components/header';
-import {useEffect, useRef, useState} from "react";
-import cube from './assets/images/box.gif'
+import Header from "./Components/Header";
+import { useEffect, useRef, useState } from "react";
+import cube from "./assets/images/box.gif";
+import "./App.scss";
 
 function App() {
-    // Refs for scrolls to funcationality
-    const heroRef = useRef(null)
-    const whyRef = useRef(null)
-    const meetRef = useRef(null)
-    const detailRef = useRef(null)
-    const revealRef = useRef(null)
-    const mapRef = useRef(null)
-    const joinUsRef = useRef(null)
-    const faqRef = useRef(null)
+  // Refs for scrolls to funcationality
+  const heroRef = useRef(null);
+  const whyRef = useRef(null);
+  const meetRef = useRef(null);
+  const detailRef = useRef(null);
+  const revealRef = useRef(null);
+  const mapRef = useRef(null);
+  const joinUsRef = useRef(null);
+  const faqRef = useRef(null);
 
-    // variable that control the header close and open funcationality
-    const [openHeader, setOpenHeader] = useState(false)
+  // variable that control the header close and open funcationality
+  const [openHeader, setOpenHeader] = useState(false);
 
-    const scroll = (ref) => {
-        setOpenHeader(false)
-        ref.current.scrollIntoView({behavior: 'smooth'})
+  const scroll = (ref) => {
+    setOpenHeader(false);
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const logKey = (e) => {
+    if (e.code === "KeyR") {
+      setRpressed(true);
     }
+  };
+  // listing for R key press
+  document.addEventListener("keydown", logKey);
 
-    const logKey = (e) => {
-        if (e.code === 'KeyR') {
-            setRpressed(true)
-        }
+  const [rPressed, setRpressed] = useState(false);
+  const [loader, setLoader] = useState(false);
+
+  useEffect(() => {
+    // when R is pressed a 2 sec wait is added to show the loading screen, and then when loader is set to true,
+    // new screen gets loaded
+    if (rPressed) {
+      setTimeout(() => {
+        setLoader(true);
+      }, 2000);
     }
-    // listing for R key press
-    document.addEventListener('keydown', logKey);
+  }, [rPressed]);
 
-    const [rPressed, setRpressed] = useState(false)
-    const [loader, setLoader] = useState(false)
+  const enter_clicked = () => {
+    setLoader(false);
+    setRpressed(false);
+  };
 
-    useEffect(() => {
-        // when R is pressed a 2 sec wait is added to show the loading screen, and then when loader is set to true,
-        // new screen gets loaded
-        if (rPressed) {
-            setTimeout(
-                () => {
-                    setLoader(true)
-                }, 2000
-            );
-        }
-    }, [rPressed])
-
-    const enter_clicked = () => {
-        setLoader(false)
-        setRpressed(false)
-    }
-
-    return (
+  return (
+    <>
+      {rPressed ? (
+        // when R is pressed this section loads
+        !loader ? (
+          <div className={"loader-container"}>
+            <div style={{ margin: "auto" }}>
+              <img src={loaderimg} style={{ width: "100%" }} />
+            </div>
+          </div>
+        ) : (
+          <div className={"welcome-page"}>
+            <div style={{ margin: "auto", textAlign: "center" }}>
+              <img src={welcome_text} style={{ width: "100%" }} />
+              {/* when enter click, will be sent back to home page*/}
+              <button className={"btn enter-btn"} onClick={enter_clicked}>
+                Enter
+              </button>
+            </div>
+          </div>
+        )
+      ) : (
+        // this home page loads by default, when R is pressed the above section loads
         <>
-            {rPressed ?
-                // when R is pressed this section loads
-                !loader ?
-                    <div className={'loader-container'}>
-                        <div style={{margin: 'auto'}}>
-                            <img src={loaderimg} style={{width: '100%'}}/>
-                        </div>
-                    </div>
-                    :
-                    <div className={'welcome-page'}>
-                        <div style={{margin: 'auto', textAlign: 'center'}}>
-                            <img src={welcome_text} style={{width: '100%'}}/>
-                            {/* when enter click, will be sent back to home page*/}
-                            <button className={'btn enter-btn'} onClick={enter_clicked}>Enter</button>
-                        </div>
-                    </div>
-                :
-                // this home page loads by default, when R is pressed the above section loads
-                <>
-                    {/* Floating Cude */}
-                    <img src={cube} className={'floating-cube'}
-                         onClick={() => {
-                             scroll(detailRef)
-                         }}
-                    />
+          {/* Floating Cude */}
+          <img
+            src={cube}
+            className={"floating-cube"}
+            onClick={() => {
+              scroll(detailRef);
+            }}
+          />
 
+          {/* Header */}
+          <Header
+            openHeader={openHeader}
+            setOpenHeader={setOpenHeader}
+            scroll={scroll}
+            heroRef={heroRef}
+            whyRef={whyRef}
+            meetRef={meetRef}
+            detailRef={detailRef}
+            revealRef={revealRef}
+            mapRef={mapRef}
+            joinUsRef={joinUsRef}
+            faqRef={faqRef}
+          />
 
-                    {/* Header */}
-                    <Header
-                        openHeader={openHeader}
-                        setOpenHeader={setOpenHeader}
-                        scroll={scroll}
-                        heroRef={heroRef}
-                        whyRef={whyRef}
-                        meetRef={meetRef}
-                        detailRef={detailRef}
-                        revealRef={revealRef}
-                        mapRef={mapRef}
-                        joinUsRef={joinUsRef}
-                        faqRef={faqRef}
-                    />
+          {/* Hero Section */}
+          <div ref={heroRef}>
+            <Hero />
+          </div>
 
-                    {/* Hero Section */}
-                    <div ref={heroRef}>
-                        <Hero/>
-                    </div>
+          {/* Tiger Image*/}
+          <img src={tiger} style={{ width: "100%", display: 'block' }} />
+          {/* Why Zzoppers section */}
+          <div ref={whyRef}>
+            <WhyZzoppers />
+          </div>
 
+          {/* Unlock Unlimited Utilities Section */}
+          <Utils />
 
-                    {/* Tiger Image*/}
-                    <div style={{width: '100%'}}>
-                        <img src={tiger} style={{width: '100%'}}/>
-                    </div>
+          {/* MEET 5555 Section*/}
+          <div ref={meetRef}>
+            <Meet />
+          </div>
 
-                    {/* Why Zzoppers section */}
-                    <div ref={whyRef}>
-                        <WhyZzoppers/>
-                    </div>
+          {/* Three scrollers for gallery*/}
+          <div className={"mb-20"}>
+            <Scrollers
+              scroller_images={[
+                slider2,
+                slider1,
+                slider5,
+                slider6,
+                slider3,
+                slider2,
+                slider4,
+                slider7,
+                slider8,
+                slider1,
+                slider2,
+                slider3,
+                slider4,
+                slider5,
+              ]}
+              reverse={true}
+            />
+          </div>
+          <div className={"mb-20"}>
+            <Scrollers
+              scroller_images={[
+                slider2,
+                slider1,
+                slider5,
+                slider6,
+                slider3,
+                slider2,
+                slider4,
+                slider7,
+                slider8,
+                slider1,
+                slider2,
+                slider3,
+                slider4,
+                slider5,
+              ]}
+            />
+          </div>
+          <div className={"mb-20"}>
+            <Scrollers
+              scroller_images={[
+                slider2,
+                slider1,
+                slider5,
+                slider6,
+                slider3,
+                slider2,
+                slider4,
+                slider7,
+                slider8,
+                slider1,
+                slider2,
+                slider3,
+                slider4,
+                slider5,
+              ]}
+              reverse={true}
+            />
+          </div>
 
-                    {/* Unlock Unlimited Utilities Section */}
-                    <Utils/>
+          {/* Mint Details Section */}
+          <div ref={detailRef}>
+            <MintDetails />
+          </div>
 
-                    {/* MEET 5555 Section*/}
-                    <div ref={meetRef}>
-                        <Meet/>
-                    </div>
+          {/* When to Reveal Section */}
+          <div ref={revealRef}>
+            <Reveal />
+          </div>
 
-                    {/* Three scrollers for gallery*/}
-                    <div className={'mb-3'}>
-                        <Scrollers
-                            scroller_images={[slider2, slider1, slider5, slider6, slider3, slider2, slider4, slider7,
-                                slider8, slider1, slider2, slider3, slider4, slider5]}
-                            reverse={true}
-                        />
-                    </div>
-                    <div className={'mb-3'}>
-                        <Scrollers
-                            scroller_images={[slider2, slider1, slider5, slider6, slider3, slider2, slider4, slider7,
-                                slider8, slider1, slider2, slider3, slider4, slider5]}
-                        />
-                    </div>
-                    <div className={'mb-3'}>
-                        <Scrollers
-                            scroller_images={[slider2, slider1, slider5, slider6, slider3, slider2, slider4, slider7,
-                                slider8, slider1, slider2, slider3, slider4, slider5]}
-                        />
-                    </div>
+          {/* Roadmap Section*/}
+          <div ref={mapRef}>
+            <RoadMap />
+          </div>
 
+          {/* Who creates the Zzoopers? Section*/}
+          <Create />
 
-                    {/* Mint Details Section */}
-                    <div ref={detailRef}>
-                        <MintDetails/>
-                    </div>
+          {/* Join Us Section*/}
+          <div ref={joinUsRef}>
+            <JoinUs />
+          </div>
 
+          {/* FAQ */}
+          <div ref={faqRef}>
+            <Faq />
+          </div>
 
-                    {/* When to Reveal Section */}
-                    <div ref={revealRef}>
-                        <Reveal/>
-                    </div>
-
-
-                    {/* Roadmap Section*/}
-                    <div ref={mapRef}>
-                        <RoadMap/>
-                    </div>
-
-
-                    {/* Who creates the Zzoopers? Section*/}
-                    <Create/>
-
-                    {/* Join Us Section*/}
-                    <div ref={joinUsRef}>
-                        <JoinUs/>
-                    </div>
-
-
-                    {/* FAQ */}
-                    <div ref={faqRef}>
-                        <Faq/>
-                    </div>
-
-                    {/* Footer */}
-                    <Footer/>
-                </>
-            }
+          {/* Footer */}
+          <Footer />
         </>
-    );
+      )}
+    </>
+  );
 }
 
 export default App;

@@ -1,6 +1,23 @@
+@font-face {
+    font-family: "DM Sans";
+    font-weight: 400;
+    src: url("./assets/fonts/DM_Sans/DMSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: "DM Sans";
+    font-weight: 700;
+    src: url("./assets/fonts/DM_Sans/DMSans-Bold.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -26,7 +43,7 @@ body {
     font-size: 100px;
     font-weight: bold;
     line-height: 140px;
-    color: #FFC234;
+    color: #ffc234;
 }
 
 .hero-meta {
@@ -120,7 +137,7 @@ body {
     font-weight: 700;
     line-height: 120px;
     letter-spacing: -1.6px;
-    color: #FFC234;
+    color: #ffc234;
 }
 
 .why-meta {
@@ -131,7 +148,7 @@ body {
 
 .zzopper-text-container {
     margin: 230px 0;
-    width: 55%;
+    width: 60%;
 }
 
 .right-fox {
@@ -139,7 +156,6 @@ body {
     right: 0;
     bottom: 0;
 }
-
 
 @media screen and (max-width: 1100px) {
     .why-heading-1 {
@@ -182,7 +198,6 @@ body {
     .right-fox {
         display: none;
     }
-
 }
 
 /* utils */
@@ -201,7 +216,7 @@ body {
     font-size: 24px;
     font-weight: 400;
     line-height: 28.8px;
-    color: #FFC234;
+    color: #ffc234;
 }
 
 .option {
@@ -209,7 +224,7 @@ body {
     line-height: 48px;
     letter-spacing: -1.6px;
     font-weight: 700;
-    color: #9182AD;
+    color: #9182ad;
     cursor: pointer;
     margin: auto 0;
 }
@@ -223,22 +238,26 @@ body {
     height: 500px;
     width: 500px;
     background-color: white;
-    border-radius: 20px;
+    border-radius: 24px;
     margin: auto;
     padding: 20px;
 }
 
 .side-bar-header {
+    font-weight: 700;
     font-size: 18px;
-    font-weight: bold;
-    color: #12022F;
-    margin-top: 10px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: #12022f;
+    margin: 20px 0 0;
 }
 
 .side-bar-para {
     font-size: 16px;
-    font-weight: 400;
-    color: #594D6D;
+    line-height: 20px;
+    letter-spacing: -0.355556px;
+    color: #594d6d;
+    margin-top: 8px;
 }
 
 .utils-container-sm {
@@ -306,65 +325,11 @@ body {
     padding: 100px 0;
 }
 
-.meet-text-1 {
-    color: #979797;
-    font-size: 29px;
-    line-height: 34.8px;
-    letter-spacing: 4px;
-    font-weight: bold;
-}
-
-.meet-text-2 {
-    color: #A09AAA;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 56px;
-}
-
-.meet-text-3 {
-    color: #12022F;
-    font-size: 45px;
-    font-weight: 400;
-    line-height: 50px;
-    letter-spacing: -0.4px;
-    margin-top: 20px;
-}
-
-.meet-meta-text {
-    color: #12022F;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: -0.4px;
-    line-height: 30px;
-}
-
 @media screen and (max-width: 576px) {
     .meet-component {
         padding: 50px 0 0 0;
     }
-
-    .meet-text-1 {
-        font-size: 20px;
-        line-height: 24px;
-        letter-spacing: 4px;
-    }
-
-    .meet-text-2 {
-        font-size: 30px;
-        line-height: 36px;
-    }
-
-    .meet-text-3 {
-        font-size: 12px;
-        line-height: 14.4px;
-        letter-spacing: -0.4px;;
-    }
-
-    .meet-meta-text {
-        font-size: 12px;
-        line-height: 14.4px;
-        letter-spacing: -0.4px;
-    }
+ 
 }
 
 /* scroller */
@@ -401,7 +366,7 @@ body {
 
 .mint-btn {
     color: black;
-    background-color: #FFC233;
+    background-color: #ffc233;
     border-radius: 30px;
     width: 200px;
     font-size: 16px;
@@ -414,7 +379,7 @@ body {
 
 .time-btn {
     color: black;
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
     border-radius: 30px;
     width: 200px;
     font-size: 16px;
@@ -541,9 +506,7 @@ body {
         line-height: 32px;
         letter-spacing: -0.3px;
     }
-
 }
-
 
 @media screen and (max-width: 576px) {
     .mint-header {
@@ -607,7 +570,7 @@ body {
     .mint-phase-detail-name {
         font-size: 12px;
         line-height: 14.4px;
-        letter-spacing: -0.15px
+        letter-spacing: -0.15px;
     }
 
     .mint-phase-detail-text {
@@ -640,11 +603,11 @@ body {
 }
 
 .count-min-container {
-    border: 2px solid #CBCCCC;
+    border: 2px solid #cbcccc;
 }
 
 .count-min > path {
-    stroke: #CBCCCC !important;
+    stroke: #cbcccc !important;
 }
 
 .count-symbol {
@@ -658,7 +621,7 @@ body {
 }
 
 .confirm-purchase-btn {
-    background-color: #FFC233;
+    background-color: #ffc233;
     color: black;
     width: 100%;
     padding: 10px;
@@ -677,13 +640,13 @@ body {
 }
 
 .reveal-zzoppers-text {
-    color: #8BBEE0;
+    color: #8bbee0;
     font-size: 14px;
     font-weight: 700;
 }
 
 .reveal-zzoppers-heading-sm {
-    color: #FFC233;
+    color: #ffc233;
     display: none;
     font-size: 36px;
     font-weight: 700;
@@ -701,7 +664,7 @@ body {
 .join-discord-btn {
     color: black;
     margin-top: 15px;
-    background-color: #FFC233;
+    background-color: #ffc233;
     padding: 10px;
     border-radius: 20px;
     font-weight: 700;
@@ -720,7 +683,6 @@ body {
 }
 
 @media screen and (max-width: 576px) {
-
     .reveal-container {
         padding: 50px 0;
         height: 100%;
@@ -750,13 +712,13 @@ body {
 }
 
 .roadmap-zzoopers-text {
-    color: #CF9EB5;
+    color: #cf9eb5;
     font-size: 14px;
     font-weight: 700;
 }
 
 .roadmap-heading {
-    color: #FFC233;
+    color: #ffc233;
     font-size: 100px;
     line-height: 120px;
     letter-spacing: -1.6px;
@@ -764,7 +726,7 @@ body {
 }
 
 .roadmap-metatext {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
@@ -823,7 +785,7 @@ body {
     }
 
     .roadmap-metatext {
-        color: #FFFFFF;
+        color: #ffffff;
         font-size: 20px;
         font-weight: 400;
         line-height: 30px;
@@ -856,7 +818,6 @@ body {
         letter-spacing: -0.36px;
         margin-top: 10px;
     }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -920,7 +881,7 @@ body {
 
 .metaoasis-btn {
     color: black;
-    background-color: #FFC233;
+    background-color: #ffc233;
     padding: 10px 15px;
     font-weight: 700;
     font-size: 16px;
@@ -938,7 +899,7 @@ body {
 }
 
 .create-container-header {
-    color: #FFC233;
+    color: #ffc233;
     font-size: 100px;
     font-weight: 700;
     line-height: 120px;
@@ -1015,7 +976,7 @@ body {
 }
 
 .join-us-text {
-    color: #FFC234;
+    color: #ffc234;
     font-weight: 700;
     font-size: 60px;
     line-height: 72px;
@@ -1099,7 +1060,7 @@ body {
 }
 
 .faq-container-text {
-    color: #80807E;
+    color: #80807e;
     font-size: 14px;
     font-weight: 700;
     line-height: 24px;
@@ -1125,7 +1086,7 @@ body {
 .index-container {
     margin: auto 20px auto 0;
     border-radius: 20px;
-    background-color: #FFC233;
+    background-color: #ffc233;
     display: flex;
 }
 
@@ -1144,7 +1105,7 @@ body {
 }
 
 .faq-container-active {
-    background-color: #F6F6F6;
+    background-color: #f6f6f6;
 }
 
 .faq-heading {
@@ -1211,7 +1172,6 @@ body {
     /*.faq-sub-container {*/
     /*    padding: 5px 0;*/
     /*}*/
-
 }
 
 /* Footer */
@@ -1254,33 +1214,42 @@ body {
     }
 }
 
-
 /* Header */
 .header {
     background-color: black;
     padding: 15px 0;
-    border-bottom: 1px solid #1A1B1D;
+    border-bottom: 1px solid #1a1b1d;
 }
 
 .metaoasis-header-btn {
-    background-color: black;
-    border-radius: 30px;
-    border: 2px solid #1A1B1D;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    background: transparent;
     color: white;
+    padding: 0 20px;
+
     margin-left: auto;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     height: 45px;
+    cursor: pointer;
 }
 
 .connect-header-btn {
-    background-color: white;
-    border-radius: 30px;
-    color: black;
-    font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.36px;
+    color: #12022f;
+    background: #ffffff;
+    border-radius: 28px;
+    padding: 0 30px;
+    border: none;
+
     margin-left: 20px;
     height: 45px;
+    cursor: pointer;
 }
 
 .header-btn {
@@ -1313,7 +1282,6 @@ body {
     transition: 0.5s ease-in-out;
     padding: 50px 0;
 }
-
 
 .header-link {
     color: white;
@@ -1359,7 +1327,6 @@ body {
     }
 }
 
-
 /* slider */
 .swiper-wrapper {
     -webkit-transition-timing-function: linear !important;
@@ -1396,10 +1363,11 @@ body {
 }
 
 .floating-cube {
+    cursor: pointer;
     position: fixed;
     z-index: 10;
-    right: 12%;
-    bottom: 2%;
+    right: 16px;
+    bottom: 4px;
     width: 150px;
     height: 150px;
 }

@@ -1,15 +1,16 @@
 import {useState} from "react";
 import clsx from 'clsx'
-import exciting_experience_image from '../assets/images/exciting experience image.png'
-import nftairdropleftimg from '../assets/images/nftairdropleftimg.png';
-import nftairdroprightimg from '../assets/images/nftairdroprightimg.png';
-import stakingandharvestingimg from '../assets/images/hello.gif'
-import PhysicalZzoopersAirdropImg from '../assets/images/PhysicalZzoopersAirdropImg.png'
+import './style.scss'
+import exciting_experience_image from '../../assets/images/exciting experience image.png'
+import nftairdropleftimg from '../../assets/images/nftairdropleftimg.png';
+import nftairdroprightimg from '../../assets/images/nftairdroprightimg.png';
+import stakingandharvestingimg from '../../assets/images/hello.gif'
+import PhysicalZzoopersAirdropImg from '../../assets/images/PhysicalZzoopersAirdropImg.png'
 
-import utilicon1 from '../assets/images/utils-icon-1.png'
-import utilicon2 from '../assets/images/utils-icon-2.png'
-import utilicon3 from '../assets/images/utils-icon-3.png'
-import utilicon4 from '../assets/images/utils-icon-4.png'
+import utilicon1 from '../../assets/images/utils-icon-1.png'
+import utilicon2 from '../../assets/images/utils-icon-2.png'
+import utilicon3 from '../../assets/images/utils-icon-3.png'
+import utilicon4 from '../../assets/images/utils-icon-4.png'
 
 const Utils = () => {
 
@@ -48,10 +49,9 @@ const Utils = () => {
     return (
         <div className={'utils-container'}>
             <div className="container utils-container-lg">
-                <div className="row">
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12"
-                         style={{display: 'flex', flexDirection: 'column'}}>
-                        <p className={'utils-heading'}>Unlock Unlimited Utilities</p>
+                <div className="content">
+                    <div className="left">
+                        <p className={'main-title'}>Unlock Unlimited Utilities</p>
                         {options.map((option) => {
                             return (
                                 <p onClick={() => {
@@ -60,7 +60,7 @@ const Utils = () => {
                             )
                         })}
                     </div>
-                    <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <div className="right">
                         <div style={{display: 'flex'}}>
                             <div className={'side-bar-container'}>
                                 {selected === "Cross-metaverse Experience" &&

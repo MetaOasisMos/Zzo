@@ -1,0 +1,44 @@
+.meet-component {
+    padding: 120px 0;
+    text-align: center;
+
+    .meet-text-1 {
+        font-weight: 700;
+        font-size: 29px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: rgba(151, 151, 151, 0.5);
+        margin-bottom: 20px;
+    }
+    .meet-text-2 {
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 56px;
+        text-transform: uppercase;
+        color: rgba(18, 2, 47, 0.4);
+        margin-bottom: 30px;
+    }
+
+    .zzoppers-img {
+        width: 90%;
+        display: block;
+        margin: 0 auto 30px;
+    }
+
+    .meet-text-3 {
+        font-size: 45px;
+        line-height: 32px;
+        letter-spacing: -0.4px;
+        color: #12022f;
+        margin-bottom: 30px;
+    }
+
+    .meet-meta-text {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.4px;
+        color: #12022f;
+    }
+}
