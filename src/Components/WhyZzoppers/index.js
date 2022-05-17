@@ -1,4 +1,5 @@
 import why_fox from "../../assets/images/why-fox.png";
+import { Parallax } from "react-scroll-parallax";
 import "./style.scss";
 
 const WhyZzoppers = () => {
@@ -17,7 +18,12 @@ const WhyZzoppers = () => {
               MANY!
             </p>
           </div>
-          <img src={why_fox} className={"right"} />
+          <div className="right">
+          <Parallax translateX={[88, -44]}>
+            <img src={why_fox} />
+          </Parallax>
+            </div>
+          
         </div>
       </div>
     </div>
