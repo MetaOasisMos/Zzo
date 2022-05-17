@@ -1,4 +1,4 @@
-import hero_img from "../../assets/images/hero image.svg";
+// import hero_img from "../../assets/images/hero image.svg";
 import hero_img_sm from "../../assets/images/hero image sm.svg";
 import "./style.scss";
 

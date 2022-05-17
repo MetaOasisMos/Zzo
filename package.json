@@ -29,7 +29,7 @@
   "scripts": {
     "dev": "cross-env NETWORK_ENV=rinkeby craco start",
     "start": "cross-env NETWORK_ENV=mainnet craco start",
-    "build:goerli": "cross-env NETWORK_ENV=rinkeby craco build",
+    "build:rinkeby": "cross-env NETWORK_ENV=rinkeby craco build",
     "build:mainnet": "cross-env NETWORK_ENV=mainnet craco build"
   },
   "eslintConfig": {
