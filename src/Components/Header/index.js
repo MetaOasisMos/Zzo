@@ -49,24 +49,26 @@ const Header = ({
       <div className={"header"}>
         <div className="container">
           <div style={{ width: "100%", display: "flex" }}>
-            {!openHeader ? (
-              <img
-                onClick={() => {
-                  setOpenHeader(!openHeader);
-                }}
-                src={header_nav}
-                className={"header-btn"}
-              />
-            ) : (
-              <img
-                onClick={() => {
-                  setOpenHeader(!openHeader);
-                }}
-                src={close_header}
-                className={"header-btn"}
-              />
-            )}
-            <img src={logo} style={{ marginLeft: "24px", width: 50 }} />
+            <div>
+              {!openHeader ? (
+                <img
+                  onClick={() => {
+                    setOpenHeader(!openHeader);
+                  }}
+                  src={header_nav}
+                  className={"header-btn"}
+                />
+              ) : (
+                <img
+                  onClick={() => {
+                    setOpenHeader(!openHeader);
+                  }}
+                  src={close_header}
+                  className={"header-btn"}
+                />
+              )}
+              <img src={logo} style={{ marginLeft: "24px", width: 50 }} />
+            </div>
 
             <button className={"btn metaoasis-header-btn"}>
               Back to MetaOasis DAO
