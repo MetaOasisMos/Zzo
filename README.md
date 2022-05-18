@@ -71,3 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Version
 7
+
+### Design
+[figma](https://www.figma.com/file/8BlWxgR2gSEbeIG9NTBerN/Zzoopers?node-id=747%3A1802)
