@@ -1,4 +1,5 @@
 import logo from "../../assets/images/Logo.png";
+import { socialLinks } from "../../config";
 import "./style.scss";
 import {
   FaDiscord,
@@ -26,10 +27,18 @@ const Footer = () => {
           </div>
           <div className="item socials">
             <div style={{ margin: "auto", display: "flex" }}>
-              <FaDiscord className={"join-us-icon"} />
-              <FaTwitter className={"join-us-icon"} />
-              <FaTelegramPlane className={"join-us-icon"} />
-              <FaMediumM className={"join-us-icon"} />
+              <a href={socialLinks.discord} className="hover-move" target="_blank">
+                <FaDiscord className={"join-us-icon"} />
+              </a>
+              <a href={socialLinks.twitter} className="hover-move" target="_blank">
+                <FaTwitter className={"join-us-icon"} />
+              </a>
+              <a href={socialLinks.telegram} className="hover-move" target="_blank">
+                <FaTelegramPlane className={"join-us-icon"} />
+              </a>
+              <a href={socialLinks.medium} className="hover-move" target="_blank">
+                <FaMediumM className={"join-us-icon"} />
+              </a>
             </div>
           </div>
         </div>
