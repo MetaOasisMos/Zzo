@@ -14,7 +14,7 @@ const Meet = () => {
             <img src={zzoppers} className="zzoppers-img" />
           </Parallax>
           <div className={"meet-text-3"}>
-            There are 10 unique animal characters in Zzoopers Genesis：
+            There are 10 unique animal characters in Zzoopers Genesis
           </div>
           <div className={"meet-meta-text"}>
             Tiger, Elephant, Panda, Unicorn, Leopard, Elk, Fox, Monkey, Penguin,
