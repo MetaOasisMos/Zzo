@@ -53,6 +53,23 @@
             display: inline-block;
         }
     }
+    .eth-amount{
+        display: inline-block;
+        margin: 0 auto;
+        position: relative;
+        &::after{
+            content: "+ Gas fee";
+            display: block;
+            font-weight: 400;
+            margin-top: 6px;
+            font-size: 16px;
+            line-height: 120%;
+            text-align: left;
+        }
+    }
+    // .fee-hint {
+       
+    // }
     @media (max-width: 576px) {
         .mint-header {
             font-size: 24px;

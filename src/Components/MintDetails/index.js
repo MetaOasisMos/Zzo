@@ -76,8 +76,9 @@ const MintDetails = () => {
               <p className={"mint-phase-detail-text"}>2</p>
             </div>
           </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3">
-            <p className={"eth-amount"}>0.1 ETH + Gas fee</p>
+          <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
+            <p className={"eth-amount"}>0.1 ETH</p>
+            {/* <div className="fee-hint">+ Gas fee</div> */}
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             <div className="text-right">
@@ -131,8 +132,10 @@ const MintDetails = () => {
               <p className={"mint-phase-detail-text"}>3</p>
             </div>
           </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3">
-            <p className={"eth-amount"}>0.15 ETH + Gas fee</p>
+          <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
+            <p className={"eth-amount"}>0.15 ETH</p>
+            {/* <div className="fee-hint">+ Gas fee</div> */}
+
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             <div className="text-right">
