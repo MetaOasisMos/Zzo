@@ -1,3 +1,4 @@
+import { Parallax } from "react-scroll-parallax";
 import zzoppers from "../../assets/images/zzoppers-img.png";
 
 import "./style.scss";
@@ -9,7 +10,9 @@ const Meet = () => {
         <div style={{ margin: "auto", textAlign: "center" }}>
           <div className={"meet-text-1"}>LET'S</div>
           <div className={"meet-text-2"}>MEET 5555</div>
-          <img src={zzoppers} className="zzoppers-img" />
+          <Parallax scale={[0.6, 1]}>
+            <img src={zzoppers} className="zzoppers-img" />
+          </Parallax>
           <div className={"meet-text-3"}>
             There are 10 unique animal characters in the Zzoopers.
           </div>

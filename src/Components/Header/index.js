@@ -70,7 +70,7 @@ const Header = ({
               <img src={logo} style={{ marginLeft: "24px", width: 50 }} />
             </div>
 
-            <button className={"btn metaoasis-header-btn"}>
+            <button className={"btn metaoasis-header-btn hover-move"}>
               Back to MetaOasis DAO
             </button>
 

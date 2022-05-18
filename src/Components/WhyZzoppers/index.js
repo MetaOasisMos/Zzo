@@ -19,11 +19,10 @@ const WhyZzoppers = () => {
             </p>
           </div>
           <div className="right">
-          <Parallax translateX={[88, -44]}>
-            <img src={why_fox} />
-          </Parallax>
-            </div>
-          
+            <Parallax translateX={[88, -44]}>
+              <img src={why_fox} />
+            </Parallax>
+          </div>
         </div>
       </div>
     </div>

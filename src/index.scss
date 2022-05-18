@@ -401,6 +401,9 @@ body {
     line-height: 26px;
     padding: 10px;
     display: inline-flex;
+    &:hover{
+        color: white;
+    }
 }
 
 .mint-header {
