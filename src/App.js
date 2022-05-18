@@ -1,5 +1,5 @@
 import Hero from "./Components/Hero";
-import tiger from "./assets/images/tiger.png";
+// import tiger from "./assets/images/tiger.png";
 import WhyZzoppers from "./Components/WhyZzoppers";
 import Utils from "./Components/Utils";
 import Meet from "./Components/Meet";
@@ -128,7 +128,8 @@ function App() {
           </div>
 
           {/* Tiger Image*/}
-          <img src={tiger} style={{ width: "100%", display: 'block' }} />
+          <video src="/ZZOvideo.mp4" loop={true} muted={true} controls={false} autoPlay={true} style={{width: '100%', display: 'block'}} />
+          {/* <img src={tiger} style={{ width: "100%", display: 'block' }} /> */}
           {/* Why Zzoppers section */}
           <div ref={whyRef}>
             <WhyZzoppers />

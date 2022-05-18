@@ -80,7 +80,7 @@ const MintDetails = () => {
             <p className={"eth-amount"}>0.1 ETH + Gas fee</p>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
-            {/* <div className="text-right">
+            <div className="text-right">
               <button
                 className={"btn mint-btn hover-move"}
                 onClick={() => {
@@ -89,7 +89,7 @@ const MintDetails = () => {
               >
                 Mint
               </button>
-            </div> */}
+            </div>
             <div className="text-right">
               <Countdown endTime={1654729200} />
             </div>

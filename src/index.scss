@@ -602,12 +602,18 @@ body {
     margin: auto;
     display: flex;
     width: 20px;
+    cursor: pointer;
     height: 20px;
     border: 2px solid black;
 }
 
+.count-min-container{
+    cursor:not-allowed;
+}
+
 .count-min-container {
     border: 2px solid #cbcccc;
+    box-sizing: border-box;
 }
 
 .count-min > path {
@@ -632,6 +638,7 @@ body {
     font-size: 16px;
     font-weight: 700;
     border-radius: 30px;
+    margin-top: 24px;
 }
 
 /* Reveal container */
