@@ -15,8 +15,7 @@ const Reveal = () => {
         <div className="desc">
           <div className="desc-line">
             There are 5 rounds to reveal Zzoopers Genesis after the public mint.
-            The exact reveal time is TBA. There are 5 rounds to reveal Zzoopers
-            Genesis after the public mint. The exact reveal time is TBA.
+            The exact reveal time is TBA.
           </div>
           <div className="desc-line">
             At each round of reveal, 2 out of the 10 animal characters will go
