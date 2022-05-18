@@ -88,7 +88,7 @@ function App() {
             <div style={{ margin: "auto", textAlign: "center" }}>
               <img src={welcome_text} className="welcome-text" />
               {/* when enter click, will be sent back to home page*/}
-              <img src={enter_btn} className="enter-btn" onClick={enter_clicked} />
+              <img src={enter_btn} className="enter-btn hover-move" onClick={enter_clicked} />
               {/* <button className={"btn enter-btn"} onClick={enter_clicked}>
                 Enter
               </button> */}
