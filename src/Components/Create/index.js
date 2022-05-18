@@ -1,5 +1,6 @@
-import vector from "../../assets/images/Vector.png";
+// import vector from "../../assets/images/Vector.png";
 import GoMetaIcon from "../../assets/images/go-metaoasis.svg";
+import { socialLinks } from "../../config";
 import "./style.scss";
 
 const Create = () => {
@@ -10,10 +11,10 @@ const Create = () => {
         <p className={"create-container-header"}>the Zzoopers?</p>
 
         <p className={"create-container-body"}>
-          MetaOasis DAO, one of the first DAOs focusing on the investment and
-          development of metaverse real estate, together with Season Studio, a
-          top-class metaverse designing house with 50+ seasoned 3D voxel artists
-          and creators.{" "}
+          <b>MetaOasis DAO</b>, one of the first DAOs focusing on the investment
+          and development of metaverse real estate, together with{" "}
+          <b>Season Studio</b>, a top-class metaverse designing house with 50+
+          seasoned 3D voxel artists and creators.
         </p>
 
         <p className={"create-container-body"}>
@@ -23,7 +24,7 @@ const Create = () => {
 
         <a
           target="_blank"
-          href="https://metaoasis.fun"
+          href={socialLinks.official}
           className="hover-move"
           style={{ display: "block" }}
         >

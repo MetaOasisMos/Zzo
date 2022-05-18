@@ -15,6 +15,7 @@ import slider8 from "./assets/images/slider 8.png";
 // import slider2 from "./assets/images/slider 9.png";
 import loaderimg from "./assets/images/loader.png";
 import welcome_text from "./assets/images/welcome-text.png";
+import enter_btn from "./assets/images/enter-btn.png";
 import MintDetails from "./Components/MintDetails";
 import Reveal from "./Components/Reveal";
 import RoadMap from "./Components/Roadmaps";
@@ -85,11 +86,12 @@ function App() {
         ) : (
           <div className={"welcome-page"}>
             <div style={{ margin: "auto", textAlign: "center" }}>
-              <img src={welcome_text} style={{ width: "100%" }} />
+              <img src={welcome_text} className="welcome-text" />
               {/* when enter click, will be sent back to home page*/}
-              <button className={"btn enter-btn"} onClick={enter_clicked}>
+              <img src={enter_btn} className="enter-btn" onClick={enter_clicked} />
+              {/* <button className={"btn enter-btn"} onClick={enter_clicked}>
                 Enter
-              </button>
+              </button> */}
             </div>
           </div>
         )

@@ -48,7 +48,7 @@ const Header = ({
     <>
       <div className={"header"}>
         <div className="container">
-          <div style={{ width: "100%", display: "flex" }}>
+          <div style={{ width: "100%", display: "flex", justifyContent: 'space-between' }}>
             <div>
               {!openHeader ? (
                 <img

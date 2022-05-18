@@ -1,4 +1,5 @@
 .hero {
+    padding: 126px 0 50px;
     .hero-content {
         display: flex;
         align-items: center;
@@ -56,7 +57,7 @@
     }
 
     @media (max-width: 576px) {
-        padding: 50px 0;
+    padding: 126px 0 50px;
         .hero-content {
             .right {
                 width: 100%;

@@ -401,7 +401,9 @@ body {
     line-height: 26px;
     padding: 10px;
     display: inline-flex;
-    &:hover{
+    justify-content: center;
+
+    &:hover {
         color: white;
     }
 }
@@ -1221,6 +1223,9 @@ body {
     background-color: black;
     padding: 15px 0;
     border-bottom: 1px solid #1a1b1d;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
 }
 
 .metaoasis-header-btn {

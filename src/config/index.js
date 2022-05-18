@@ -9,7 +9,17 @@ export const chainIdMapping = {
   97: "BSC Testnet",
 };
 
+export const socialLinks = {
+  official: "https://metaoasis.fun",
+  discord: "https://discord.com/invite/MXmgNwawVR",
+  telegram: 'https://t.me/MetaOasisOfcl',
+  twitter: "https://twitter.com/MetaOasisDAO",
+  medium: "https://medium.com/@MetaOasisDAO",
+  mirror: "https://mirror.xyz/0x1dc28C2fFdf88AB85464DE51aec1b98Bd30d506E",
+};
+
 export default {
   chainIdMapping,
+  socialLinks,
   ...envConf,
 };

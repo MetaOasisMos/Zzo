@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="left">
             <div className="subtitle">What is</div>
-            <div className="title">Zzoopers?</div>
+            <div className="title">Zzoopers Genesis?</div>
             <div className="desc">
               Zzoopers Genesis is a collection of 5555 unique animal avatars
               with different species and personalities. They are born on the

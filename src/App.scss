@@ -7,26 +7,26 @@
   pointer-events: none;
 }
 
-.mb-20{
+.mb-20 {
   margin-bottom: 20px;
 }
 
-.header-body-open{
+.header-body-open {
   z-index: 1000;
 }
 
-.text-right{
+.text-right {
   text-align: right;
 }
 
 .hover-move {
   transition: transform 0.3s;
   &:hover {
-      transform: translateY(-4px);
+    transform: translateY(-4px);
   }
 }
 
-img{
+img {
   max-width: 100%;
 }
 
@@ -61,9 +61,9 @@ img{
 }
 
 .container {
-  font-family:"DM Sans", "poppins", -apple-system, BlinkMacSystemFont, "PingFang SC", "Myriad Pro", "Hiragino Sans GB",
-      "Microsoft YaHei", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-      "Helvetica Neue", sans-serif;
+  font-family: "DM Sans", "poppins", -apple-system, BlinkMacSystemFont, "PingFang SC", "Myriad Pro", "Hiragino Sans GB",
+    "Microsoft YaHei", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   width: 100%;
   padding-right: 16px;
   padding-left: 16px;
@@ -72,38 +72,55 @@ img{
   position: relative;
 }
 
+.welcome-text {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  @media (max-width: 992px) {
+    width: 80%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.enter-btn {
+  cursor: pointer;
+  margin-top: 32px;
+}
+
 @media (min-width: 576px) {
   .container {
-      max-width: 540px;
+    max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-      max-width: 720px;
+    max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-      max-width: 960px;
+    max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-      max-width: 1150px;
+    max-width: 1150px;
   }
 }
 
 @media (min-width: 1440px) {
   .container {
-      max-width: 1300px;
+    max-width: 1300px;
   }
 }
 
 @media (min-width: 1600px) {
   .container {
-      max-width: 1400px;
+    max-width: 1400px;
   }
 }

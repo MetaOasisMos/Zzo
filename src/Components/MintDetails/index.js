@@ -5,6 +5,7 @@ import { useState } from "react";
 import "./style.scss";
 import Modal from "@mui/material/Modal";
 import Purchase from "../Modals/purchase";
+import Countdown from "../Countdown";
 import Waiting from "../Modals/waiting";
 import ConfirmPurchase from "../Modals/ConfirmPurchase";
 import Failed from "../Modals/Failed";
@@ -35,7 +36,8 @@ const MintDetails = () => {
       <div className="container">
         <div className={"mint-header"}>Mint Details</div>
         <div className={"mint-meta-text"}>
-          There are two phases to complete the mint of <b>5555 total supply.</b>
+          There are <b>two phases</b> to complete the mint of the 5555 Zzoopers
+          Evo.
         </div>
 
         <div className="row g-0 mint-item">
@@ -50,21 +52,21 @@ const MintDetails = () => {
                 <RiCalendar2Line className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Date</p>
               </div>
-              <p className={"mint-phase-detail-text"}>05:15 2022</p>
+              <p className={"mint-phase-detail-text"}>June 8th 2022</p>
             </div>
             <div style={{ display: "flex", marginBottom: 10 }}>
               <div className={"mint-phase-details-container"}>
                 <BiTime className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Time</p>
               </div>
-              <p className={"mint-phase-detail-text"}>08:00 UTC</p>
+              <p className={"mint-phase-detail-text"}>23:00 UTC</p>
             </div>
             <div style={{ display: "flex", marginBottom: 10 }}>
               <div className={"mint-phase-details-container"}>
                 <BiStopwatch className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Duration</p>
               </div>
-              <p className={"mint-phase-detail-text"}>12 hours</p>
+              <p className={"mint-phase-detail-text"}>24 hours</p>
             </div>
             <div style={{ display: "flex", marginBottom: 10 }}>
               <div className={"mint-phase-details-container"}>
@@ -75,10 +77,10 @@ const MintDetails = () => {
             </div>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3">
-            <p className={"eth-amount"}>0.1 ETH</p>
+            <p className={"eth-amount"}>0.1 ETH + Gas fee</p>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
-            <div className="text-right">
+            {/* <div className="text-right">
               <button
                 className={"btn mint-btn hover-move"}
                 onClick={() => {
@@ -87,11 +89,9 @@ const MintDetails = () => {
               >
                 Mint
               </button>
-            </div>
+            </div> */}
             <div className="text-right">
-              <button className={"btn time-btn hover-move"} disabled>
-                19h 52m 33s
-              </button>
+              <Countdown endTime={1654729200} />
             </div>
           </div>
         </div>
@@ -107,38 +107,39 @@ const MintDetails = () => {
                 <RiCalendar2Line className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Date</p>
               </div>
-              <p className={"mint-phase-detail-text"}>05:15 2022</p>
+              <p className={"mint-phase-detail-text"}>June 9th 2022</p>
             </div>
             <div className="info-item">
               <div className={"mint-phase-details-container"}>
                 <BiTime className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Time</p>
               </div>
-              <p className={"mint-phase-detail-text"}>08:00 UTC</p>
+              <p className={"mint-phase-detail-text"}>23:00 UTC</p>
             </div>
             <div className="info-item">
               <div className={"mint-phase-details-container"}>
                 <BiStopwatch className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Duration</p>
               </div>
-              <p className={"mint-phase-detail-text"}>12 hours</p>
+              <p className={"mint-phase-detail-text"}>Until sold out</p>
             </div>
             <div className="info-item">
               <div className={"mint-phase-details-container"}>
                 <RiStackLine className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Max Qty</p>
               </div>
-              <p className={"mint-phase-detail-text"}>2</p>
+              <p className={"mint-phase-detail-text"}>3</p>
             </div>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3">
-            <p className={"eth-amount"}>0.15 ETH</p>
+            <p className={"eth-amount"}>0.15 ETH + Gas fee</p>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             <div className="text-right">
-              <button className={"btn goto-btn hover-move"}>
-                Goto <img src={btn_img} className={"goto-btn-img"} />
-              </button>
+              {/* <button className={"btn goto-btn hover-move"}>
+                Go to <img src={btn_img} className={"goto-btn-img"} />
+              </button> */}
+              <Countdown endTime={1654815600} />
             </div>
           </div>
         </div>
