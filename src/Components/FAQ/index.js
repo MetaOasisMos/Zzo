@@ -32,20 +32,9 @@ const Faq = () => {
       open: false,
     },
     {
-      heading: "What is the minting price?",
-      body: "0.1E each for whitelist premint; 0.15E each for public mint.",
-      open: false,
-    },
-    {
       heading: "How many whitelists and how to get whitelisted?",
       body: `- 2000 in total. 800 out of 2000 are exclusively for whitelist winners in the MetaOasis DAO community. The rest are distributed to our collaborators and partners. We have over 40 IP and NFT collaborations on the list and the number keeps growing.<br/><br/>
             - Join our <a href="${socialLinks.discord}" target="_blank">Discord</a> and go to "Get-Whitelist" channel where the rules are posted. Or you can try to win in the events held by our collaborators and partners. Good luck! `,
-      open: false,
-    },
-    {
-      heading: "When to mint?",
-      body: `08:00 UTC, 15 May 2022 for whitelist premint; <br/>
-            20:00 UTC, 15 May 2022 for public mint.`,
       open: false,
     },
     {

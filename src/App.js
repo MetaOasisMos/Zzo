@@ -46,15 +46,15 @@ function App() {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const logKey = (e) => {
-    if (e.code === "KeyR") {
-      setRpressed(true);
-    }
-  };
+  // const logKey = (e) => {
+  //   if (e.code === "KeyR") {
+  //     setRpressed(true);
+  //   }
+  // };
   // listing for R key press
-  document.addEventListener("keydown", logKey);
+  // document.addEventListener("keydown", logKey);
 
-  const [rPressed, setRpressed] = useState(false);
+  const [rPressed, setRpressed] = useState(true);
   const [loader, setLoader] = useState(false);
 
   useEffect(() => {

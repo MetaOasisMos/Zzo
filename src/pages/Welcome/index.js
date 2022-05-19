@@ -20,7 +20,7 @@ const zooList = [
     id: "9",
     category: "Zzoopers",
     title: "Bomer",
-    desc: `"Who Says Elements Can't Dance?"`,
+    desc: `Who Says Elements Can't Dance?`,
   },
   {
     id: "8",

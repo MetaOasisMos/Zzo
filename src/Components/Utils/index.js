@@ -76,15 +76,10 @@ const Utils = () => {
                       src={exciting_experience_image}
                       style={{ width: "100%" }}
                     />
-                    <p className={"side-bar-header"}>Welcome here</p>
                     <p className={"side-bar-para"}>
-                      Through Zzoopers, you will come along with us and explore
-                      the limitless ocean in the metaverse.{" "}
-                    </p>
-                    <p className={"side-bar-para"}>
-                      Let's unlock many different kinds of metaverse experiences
-                      together! When MetaOasis DAO HQ is entirely completed, you
-                      can get early access to there!
+                      Which metaverse would you like to explore? The Sandbox,
+                      NFT Worlds, Decentraland, Worldwide Webb, Arcade land,…?
+                      Name it! Buckle up and LFG!
                     </p>
                   </>
                 )}
@@ -102,15 +97,10 @@ const Utils = () => {
                         style={{ margin: "0 0 0 auto" }}
                       />
                     </div>
-                    <p className={"side-bar-header"}>NFT Airdrop</p>
                     <p className={"side-bar-para"}>
-                      Alongside with the exciting experience, you will encounter
-                      with exclusive airdrop when we enter into some unknown
-                      metaverse.
-                    </p>
-                    <p className={"side-bar-para"}>
-                      A brand new NFT airdrop is a new identity either a key to
-                      embrace a new world.
+                      How to travel to different metaverses? Holding your
+                      Zzoopers is all you need to do! Exclusive airdrops will
+                      facilitate your cross-metaverse journeys.
                     </p>
                   </>
                 )}
@@ -121,11 +111,9 @@ const Utils = () => {
                       style={{ width: "100%" }}
                     />
                     <p className={"side-bar-para"}>
-                      In the wonderful journey, somewhere is for you to stake
-                      your Zzoopers NFT to harvest something pretty cool.{" "}
-                    </p>
-                    <p className={"side-bar-para"}>
-                      Let's play and harvest together! Coming soon!
+                      What happens if you hold more than one Zzoopers? Different
+                      Zzoopers may have different chemistry ganged together.
+                      Collect more and hold on to unravel all the fun behind.
                     </p>
                   </>
                 )}
@@ -136,12 +124,9 @@ const Utils = () => {
                       style={{ width: "100%" }}
                     />
                     <p className={"side-bar-para"}>
-                      To enhance the IP branding and community culture vibe, we
-                      are to develop physical Zzoopers.{" "}
-                    </p>
-                    <p className={"side-bar-para"}>
-                      Bring our Web3 spirit to the real life and we will airdrop
-                      them to our lovely owners as special gifts!
+                      Some Zzoopers may drop to you from the metaverse to the
+                      real world. Be ready to meet these creatures physically in
+                      the near future!
                     </p>
                   </>
                 )}
@@ -153,7 +138,9 @@ const Utils = () => {
       <div className="container utils-container-sm">
         <div className="row">
           <div className="col-sm-12 col-xs-12">
-            <p className={"utils-heading main-title"}>Unlock Unlimited Utilities</p>
+            <p className={"utils-heading main-title"}>
+              Unlock Unlimited Utilities
+            </p>
             {options_sm.map((option) => {
               return (
                 <div>
