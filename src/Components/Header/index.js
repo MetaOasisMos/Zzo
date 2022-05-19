@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { socialLinks } from "../../config";
 import header_nav from "../../assets/images/header-nav.svg";
 import close_header from "../../assets/images/header-close.svg";
 import logo from "../../assets/images/logo.svg";
@@ -24,7 +25,7 @@ const Header = ({
   const { account, connectWallet } = useContext(Web3Context);
 
   const header_links = [
-    { text: "What is Zzoopers?", ref: heroRef },
+    { text: "What is Zzoopers Genesis?", ref: heroRef },
     { text: "Why Zzoopers?", ref: whyRef },
     { text: "Meet 5555 Zzoopers", ref: meetRef },
     { text: "Mint Details", ref: detailRef },
@@ -48,7 +49,13 @@ const Header = ({
     <>
       <div className={"header"}>
         <div className="container">
-          <div style={{ width: "100%", display: "flex", justifyContent: 'space-between' }}>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <div>
               {!openHeader ? (
                 <img
@@ -70,9 +77,11 @@ const Header = ({
               <img src={logo} style={{ marginLeft: "24px", width: 50 }} />
             </div>
 
-            <button className={"btn metaoasis-header-btn hover-move"}>
-              Back to MetaOasis DAO
-            </button>
+            <a href={socialLinks.official} target="_blank" style={{marginLeft: 'auto'}}>
+              <button className={"btn metaoasis-header-btn hover-move"}>
+                Back to MetaOasis DAO
+              </button>
+            </a>
 
             {account ? (
               <button className={"btn connect-header-btn"}>
@@ -109,6 +118,7 @@ const Header = ({
                 return (
                   <p
                     className={"header-link"}
+                    style={{cursor: 'pointer'}}
                     onClick={() => {
                       scroll(link.ref);
                     }}

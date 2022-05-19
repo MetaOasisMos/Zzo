@@ -55,36 +55,37 @@ function App() {
   // document.addEventListener("keydown", logKey);
 
   const [rPressed, setRpressed] = useState(true);
-  const [loader, setLoader] = useState(false);
+  // const [loader, setLoader] = useState(false);
 
-  useEffect(() => {
-    // when R is pressed a 2 sec wait is added to show the loading screen, and then when loader is set to true,
-    // new screen gets loaded
-    if (rPressed) {
-      setTimeout(() => {
-        setLoader(true);
-      }, 2000);
-    }
-  }, [rPressed]);
+  // useEffect(() => {
+  //   // when R is pressed a 2 sec wait is added to show the loading screen, and then when loader is set to true,
+  //   // new screen gets loaded
+  //   if (rPressed) {
+  //     setTimeout(() => {
+  //       setLoader(true);
+  //     }, 2000);
+  //   }
+  // }, [rPressed]);
 
   const enter_clicked = () => {
-    setLoader(false);
+    // setLoader(false);
     setRpressed(false);
   };
 
   return (
     <>
       {rPressed ? (
-        // when R is pressed this section loads
-        !loader ? (
-          <div className={"loader-container"}>
-            <div style={{ margin: "auto" }}>
-              <img src={loaderimg} style={{ width: "100%" }} />
-            </div>
-          </div>
-        ) : (
         <WelcomePage enter_clicked={enter_clicked} />
-        )
+        // when R is pressed this section loads
+        // !loader ? (
+        //   <div className={"loader-container"}>
+        //     <div style={{ margin: "auto" }}>
+        //       <img src={loaderimg} style={{ width: "100%" }} />
+        //     </div>
+        //   </div>
+        // ) : (
+        // <WelcomePage enter_clicked={enter_clicked} />
+        // )
       ) : (
         // this home page loads by default, when R is pressed the above section loads
         <>

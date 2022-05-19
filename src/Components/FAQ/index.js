@@ -76,7 +76,7 @@ const Faq = () => {
     },
     {
       heading: "What IP rights do the holders of Zzoopers Genesis receive?",
-      body: "Holders have full commercial art rights for the Zzoopers Genesis they own.",
+      body: "Holders have full commercial art rights for the Zzoopers Genesis they own. Please refer to Terms and Conditions for further information.",
       open: false,
     },
     {
