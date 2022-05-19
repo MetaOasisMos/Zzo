@@ -1,0 +1,87 @@
+.welcome-page {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .welcome-bg {
+        cursor: pointer;
+    }
+    .click-me {
+        position: absolute;
+        right: 32px;
+        top: 420px;
+        width: 180px;
+        cursor: pointer;
+    }
+    .welcome-text {
+        position: absolute;
+        top: 160px;
+        left: 0;
+        right: 0;
+        width: 60%;
+        display: inline-block;
+        margin: auto;
+        @media (max-width: 992px) {
+            width: 80%;
+        }
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    .enter-btn {
+        cursor: pointer;
+        position: absolute;
+        bottom: 160px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        display: block;
+    }
+}
+
+.zoo-modal {
+    outline: none;
+    padding: 32px 38px;
+    text-align: center;
+    .icon-close {
+        position: absolute;
+        right: -16px;
+        top: -16px;
+        width: 44px;
+        cursor: pointer;
+    }
+    .category {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #000000;
+        margin: 12px auto 8px;
+    }
+    .title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+    .desc {
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.02em;
+        color: #979797;
+        margin-bottom: 32px;
+        height: 40px;
+    }
+    .actions {
+        text-align: center;
+        .icon-arrow {
+            cursor: pointer;
+            width: 42px;
+            margin: 0 10px;
+        }
+    }
+}

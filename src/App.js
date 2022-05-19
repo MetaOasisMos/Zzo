@@ -1,6 +1,7 @@
 import Hero from "./Components/Hero";
 // import tiger from "./assets/images/tiger.png";
 import WhyZzoppers from "./Components/WhyZzoppers";
+import WelcomePage from "./pages/Welcome"
 import Utils from "./Components/Utils";
 import Meet from "./Components/Meet";
 import Scrollers from "./Components/Scrollers";
@@ -14,8 +15,6 @@ import slider7 from "./assets/images/slider 7.png";
 import slider8 from "./assets/images/slider 8.png";
 // import slider2 from "./assets/images/slider 9.png";
 import loaderimg from "./assets/images/loader.png";
-import welcome_text from "./assets/images/welcome-text.png";
-import enter_btn from "./assets/images/enter-btn.png";
 import MintDetails from "./Components/MintDetails";
 import Reveal from "./Components/Reveal";
 import RoadMap from "./Components/Roadmaps";
@@ -84,16 +83,7 @@ function App() {
             </div>
           </div>
         ) : (
-          <div className={"welcome-page"}>
-            <div style={{ margin: "auto", textAlign: "center" }}>
-              <img src={welcome_text} className="welcome-text" />
-              {/* when enter click, will be sent back to home page*/}
-              <img src={enter_btn} className="enter-btn hover-move" onClick={enter_clicked} />
-              {/* <button className={"btn enter-btn"} onClick={enter_clicked}>
-                Enter
-              </button> */}
-            </div>
-          </div>
+        <WelcomePage enter_clicked={enter_clicked} />
         )
       ) : (
         // this home page loads by default, when R is pressed the above section loads
