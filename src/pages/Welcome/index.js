@@ -154,12 +154,12 @@ export default function WelcomePage({ enter_clicked }) {
             <div className="actions">
               <img
                 src={IconArrowLeft}
-                className="icon-arrow"
+                className="icon-arrow hover-move"
                 onClick={goPrev}
               />
               <img
                 src={IconArrowRight}
-                className="icon-arrow"
+                className="icon-arrow hover-move"
                 onClick={goNext}
               />
             </div>
