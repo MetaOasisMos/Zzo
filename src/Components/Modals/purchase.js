@@ -2,7 +2,7 @@ import {GrClose, GrFormAdd, GrFormSubtract} from "react-icons/gr";
 import {useState} from "react";
 import clsx from "clsx";
 
-const Purchase = ({modalOpen, setModalOpen}) => {
+const Purchase = ({modalOpen, setModalOpen, doMint}) => {
 
     const [zzopperCount, setZzopperCount] = useState(1)
 
@@ -45,7 +45,7 @@ const Purchase = ({modalOpen, setModalOpen}) => {
                 <div style={{marginLeft: 'auto', fontSize: 24, fontWeight: 700}}>{0.1 * zzopperCount} ETH</div>
             </div>
 
-            <button className={'btn confirm-purchase-btn'}>Confirm purchase</button>
+            <button className={'btn confirm-purchase-btn'} onClick={()=>doMint(zzopperCount)}>Confirm purchase</button>
 
             <p style={{color: '#7F8596', fontSize: 14, fontWeight: 600, marginTop: 40, textAlign: 'center'}}>
                 Corrupti et voluptas. Ut ipsum <span style={{color: 'black', fontWeight: 700}}>0.1 ETH</span> fugiat odio. Impedit ullam vel et est rror enim.</p>

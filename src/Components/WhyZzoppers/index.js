@@ -11,11 +11,15 @@ const WhyZzoppers = () => {
             <p className={"subtitle"}>Why</p>
             <p className={"title"}>Zzoopers?</p>
             <p className={"desc"}>
-              Creatures full of curiosity, Zzoopers do not settle in any one
-              place. They long for adventures. There are so many wonderful
-              metaverses that are blooming and prospering, and so many utopias
-              await travel and exploration. To be a Zzoopers, to experience the
-              MANY!
+              Whether kids or grown-ups, everyone can obtain joyful and
+              thought-provoking stories from fanscinating animations. Such as
+              Zootopia, where we see a world of acceptance, tolerance and
+              peaceful co-existence. <br />
+              <br />
+              What if we can deliver and develop such spirit vibe in the
+              metaverse? Together let's enter into the world of Zzoopers, where
+              we practice acceptance instead of prejudice, and we celebrate one
+              another for what makes us unique!
             </p>
           </div>
           <div className="right">

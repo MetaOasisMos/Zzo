@@ -6,16 +6,26 @@ import "./style.scss";
 import Modal from "@mui/material/Modal";
 import Purchase from "../Modals/purchase";
 import Countdown from "../Countdown";
+import useMintContract from "../../contract/useMintContract";
 import Waiting from "../Modals/waiting";
 import ConfirmPurchase from "../Modals/ConfirmPurchase";
 import Failed from "../Modals/Failed";
 
 const MintDetails = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const mintContract = useMintContract()
+
+  const doMint = async(amount) => {
+
+    const payAmount = amount * 0.1;
+
+    const result = await mintContract.whitelistMint(payAmount, 'merkleTree', amount)
+    console.log('111', result)
+  }
 
   const body = (
     <div className={"modal-body"}>
-      <Purchase modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <Purchase modalOpen={modalOpen} setModalOpen={setModalOpen} doMint={doMint} />
       {/*<Waiting />*/}
       {/*<ConfirmPurchase />*/}
       {/*<Failed />*/}

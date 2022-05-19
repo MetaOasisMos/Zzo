@@ -19,6 +19,7 @@ const web3Modal = new Web3Modal({
 });
 
 const actionMapping = {
+  mint: ['Minting', 'Minted', 'Failed to mint'],
   approve: ["Approving", "Approved", "Failed to approve"],
   stake: ["Staking", "Staked", "Failed to stake"],
   unstake: ["Unstaking", "Unsktaed", "Failed to unstake"],
