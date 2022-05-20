@@ -37,7 +37,7 @@ const ConfirmPurchase = ({ txHash, modalOpen, setModalOpen }) => {
       </p>
 
       <a
-        href={`${config.scanURL}/${txHash}`}
+        href={`${config.scanURL}/tx/${txHash}`}
         target="_blank"
         style={{
           marginTop: 20,
