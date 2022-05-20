@@ -1,11 +1,11 @@
 import {GrClose} from "react-icons/gr";
 import errorimg from "../../assets/images/error-img.png";
 
-const Failed = () => {
+const Failed = ({modalOpen, setModalOpen}) => {
     return (
         <>
              <div style={{display: 'flex'}}>
-                <GrClose style={{marginLeft: 'auto'}} />
+                <GrClose style={{marginLeft: 'auto', cursor: "pointer"}} onClick={() => {setModalOpen(!modalOpen)}} />
             </div>
 
             <div style={{display: 'flex', marginTop: 20, width: '100%'}}>

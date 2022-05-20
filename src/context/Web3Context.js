@@ -128,8 +128,7 @@ export const Web3ContextProvider = ({ children }) => {
    */
 
   const sendTx = async (func, actionType, value = 0) => {
-    const gasLimit = await estimateGas(func);
-    console.log("gas ", gasLimit);
+    const gasLimit = await estimateGas(func, value);
     if (!isNaN(gasLimit)) {
       return func
         .send({

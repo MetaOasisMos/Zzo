@@ -1,7 +1,7 @@
 import Hero from "./Components/Hero";
 // import tiger from "./assets/images/tiger.png";
 import WhyZzoppers from "./Components/WhyZzoppers";
-import WelcomePage from "./pages/Welcome"
+import WelcomePage from "./pages/Welcome";
 import Utils from "./Components/Utils";
 import Meet from "./Components/Meet";
 import Scrollers from "./Components/Scrollers";
@@ -40,7 +40,7 @@ function App() {
 
   // variable that control the header close and open funcationality
   const [openHeader, setOpenHeader] = useState(false);
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState(false);
 
   const scroll = (ref) => {
     setOpenHeader(false);
@@ -73,16 +73,20 @@ function App() {
     setRpressed(false);
   };
 
-  useEffect(()=>{
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-     setIsMobile(true)
-     }
-  }, [])
+  useEffect(() => {
+    // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    //  setIsMobile(true)
+    //  }
+    if (window.screen.availWidth < 1440) {
+      setIsMobile(true);
+    }
+  }, []);
 
   return (
     <>
       {rPressed && !isMobile ? (
         <WelcomePage enter_clicked={enter_clicked} />
+      ) : (
         // when R is pressed this section loads
         // !loader ? (
         //   <div className={"loader-container"}>
@@ -93,7 +97,6 @@ function App() {
         // ) : (
         // <WelcomePage enter_clicked={enter_clicked} />
         // )
-      ) : (
         // this home page loads by default, when R is pressed the above section loads
         <>
           {/* Floating Cude */}
@@ -126,7 +129,14 @@ function App() {
           </div>
 
           {/* Tiger Image*/}
-          <video src="/ZZOvideo.mp4" loop={true} muted={true} controls={false} autoPlay={true} style={{width: '100%', display: 'block'}} />
+          <video
+            src="/ZZOvideo.mp4"
+            loop={true}
+            muted={true}
+            controls={false}
+            autoPlay={true}
+            style={{ width: "100%", display: "block" }}
+          />
           {/* <img src={tiger} style={{ width: "100%", display: 'block' }} /> */}
           {/* Why Zzoppers section */}
           <div ref={whyRef}>

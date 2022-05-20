@@ -1,12 +1,12 @@
 import { RiCalendar2Line, RiStackLine } from "react-icons/ri";
 import { BiStopwatch, BiTime } from "react-icons/bi";
 import { Web3Context } from "../../context/Web3Context";
-import btn_img from "../../assets/images/btn-image.svg";
+// import btn_img from "../../assets/images/btn-image.svg";
 import { useState, useContext } from "react";
 import { toast } from "react-toastify";
 import "./style.scss";
 import Modal from "@mui/material/Modal";
-import axios from 'axios'
+import axios from "axios";
 import Purchase from "../Modals/purchase";
 import Countdown from "../Countdown";
 import useMintContract from "../../contract/useMintContract";
@@ -16,35 +16,77 @@ import Failed from "../Modals/Failed";
 
 const MintDetails = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [mintStep, setMintStep] = useState(0);
+  const [needToPay, setNeedToPay] = useState(0);
+  const [txHash, setTxHash] = useState("");
   const { account, connectWallet } = useContext(Web3Context);
   const mintContract = useMintContract();
 
-  const getMerkleTree = async() => {
-    const res = await axios.post('https://api.metaoasis.fun/metaoasismos/api/v1', {
-      
-    })
-  }
+  const getMerkleTree = async () => {
+    const res = await axios.post("http://localhost:8060/metaoasismos/api/v1", {
+      jsonrpc: "2.0",
+      method: "getWhitelistProof",
+      params: account,
+      id: 1,
+    });
+    const proof = res.data.result;
+    if (proof.length) {
+      return proof;
+    } else {
+      toast.error("You are not whitelisted");
+      return false;
+    }
+  };
 
   const doMint = async (amount) => {
-    const payAmount = amount * 0.1;
-
-    const result = await mintContract.whitelistMint(
-      payAmount,
-      "merkleTree",
-      amount
-    );
+    const merkleTree = await getMerkleTree();
+    if (!merkleTree) {
+      return;
+    }
+    try {
+      setMintStep(1);
+      const payAmount = amount * 0.1;
+      setNeedToPay(payAmount);
+      const result = await mintContract.whitelistMint(
+        payAmount,
+        merkleTree,
+        amount
+      );
+      // got result
+      setMintStep(result.status ? 2 : 3);
+      console.log("res", result);
+      setTxHash(result.transactionHash);
+    } catch (err) {
+      setMintStep(0);
+    }
   };
 
   const body = (
     <div className={"modal-body"}>
-      <Purchase
-        modalOpen={modalOpen}
-        setModalOpen={setModalOpen}
-        doMint={doMint}
-      />
-      {/*<Waiting />*/}
-      {/*<ConfirmPurchase />*/}
-      {/*<Failed />*/}
+      {mintStep === 0 && (
+        <Purchase
+          modalOpen={modalOpen}
+          setModalOpen={setModalOpen}
+          doMint={doMint}
+        />
+      )}
+      {mintStep === 1 && (
+        <Waiting
+          payAmount={needToPay}
+          modalOpen={modalOpen}
+          setModalOpen={setModalOpen}
+        />
+      )}
+      {mintStep === 2 && (
+        <ConfirmPurchase
+          txHash={txHash}
+          modalOpen={modalOpen}
+          setModalOpen={setModalOpen}
+        />
+      )}
+      {mintStep === 3 && (
+        <Failed modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      )}
     </div>
   );
 
@@ -53,7 +95,10 @@ const MintDetails = () => {
       <Modal
         open={modalOpen}
         onClose={() => {
+          setMintStep(0);
           setModalOpen(false);
+          setNeedToPay(0);
+          setTxHash("");
         }}
       >
         {body}

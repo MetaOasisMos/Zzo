@@ -10,7 +10,7 @@ const Purchase = ({modalOpen, setModalOpen, doMint}) => {
         <>
             <div style={{display: 'flex'}}>
                 <p style={{marginRight: 'auto', fontSize: 20, fontWeight: 700}}>Confirm purchase</p>
-                <GrClose onClick={() => {setModalOpen(!modalOpen)}}/>
+                <GrClose style={{cursor: "pointer"}} onClick={() => {setModalOpen(!modalOpen)}}/>
             </div>
             <div style={{padding: 16, backgroundColor: '#FBFBF7', display: 'flex', justifyContent: 'space-between', borderRadius: 15}}>
                 <div style={{ fontWeight: 700, fontSize: 24, letterSpacing: '-2%'}}>
