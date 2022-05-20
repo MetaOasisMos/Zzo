@@ -5,6 +5,7 @@ import { Web3Context } from "../../context/Web3Context";
 import { useState, useContext } from "react";
 import { toast } from "react-toastify";
 import "./style.scss";
+import config from '../../config'
 import Modal from "@mui/material/Modal";
 import axios from "axios";
 import Purchase from "../Modals/purchase";
@@ -23,12 +24,15 @@ const MintDetails = () => {
   const mintContract = useMintContract();
 
   const getMerkleTree = async () => {
-    const res = await axios.post("http://localhost:8060/metaoasismos/api/v1", {
-      jsonrpc: "2.0",
-      method: "getWhitelistProof",
-      params: account,
-      id: 1,
-    });
+    const res = await axios.post(
+      `${config.apiURL}/metaoasismos/api/v1`,
+      {
+        jsonrpc: "2.0",
+        method: "getWhitelistProof",
+        params: account,
+        id: 1,
+      }
+    );
     const proof = res.data.result;
     if (proof.length) {
       return proof;
@@ -54,7 +58,6 @@ const MintDetails = () => {
       );
       // got result
       setMintStep(result.status ? 2 : 3);
-      console.log("res", result);
       setTxHash(result.transactionHash);
     } catch (err) {
       setMintStep(0);
