@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Modal from "@mui/material/Modal";
 import { ReactComponent as WelcomeBg } from "../../assets/images/welcome-bg-1440.svg";
 import welcome_text from "../../assets/images/welcome-text.png";
-import axios from "axios";
 import enter_btn from "../../assets/images/enter-btn.png";
 import IconArrowLeft from "../../assets/images/arrow-left.svg";
 import IconArrowRight from "../../assets/images/arrow-right.svg";

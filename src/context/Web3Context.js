@@ -109,9 +109,9 @@ export const Web3ContextProvider = ({ children }) => {
       return Math.floor(gas * 1.2);
     } catch (error) {
       console.log("errr", error.message);
-      // const objStartIndex = error.message.indexOf("{");
-      // toast.error(error.message.slice(0, objStartIndex));
-      toast.error(error.message);
+      const objStartIndex = error.message.indexOf("{");
+      toast.error(error.message.slice(0, objStartIndex));
+      // toast.error(error.message);
     }
   };
 
