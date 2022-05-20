@@ -19,11 +19,7 @@ const web3Modal = new Web3Modal({
 });
 
 const actionMapping = {
-  mint: ['Minting', 'Minted', 'Failed to mint'],
-  approve: ["Approving", "Approved", "Failed to approve"],
-  stake: ["Staking", "Staked", "Failed to stake"],
-  unstake: ["Unstaking", "Unsktaed", "Failed to unstake"],
-  unstakeAll: ["Unstaking All", "Unsktaed All", "Failed to unstake all"],
+  mint: ["Minting", "Minted", "Failed to mint"],
   default: [
     "Transaction being processed",
     "Transaction Success",
@@ -112,8 +108,10 @@ export const Web3ContextProvider = ({ children }) => {
       });
       return Math.floor(gas * 1.2);
     } catch (error) {
-      const objStartIndex = error.message.indexOf("{");
-      toast.error(error.message.slice(0, objStartIndex));
+      console.log("errr", error.message);
+      // const objStartIndex = error.message.indexOf("{");
+      // toast.error(error.message.slice(0, objStartIndex));
+      toast.error(error.message);
     }
   };
 
@@ -131,6 +129,7 @@ export const Web3ContextProvider = ({ children }) => {
 
   const sendTx = async (func, actionType, value = 0) => {
     const gasLimit = await estimateGas(func);
+    console.log("gas ", gasLimit);
     if (!isNaN(gasLimit)) {
       return func
         .send({

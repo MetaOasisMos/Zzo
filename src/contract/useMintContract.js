@@ -7,7 +7,7 @@ import MintAbi from "./abi/Mint.json";
 
 export default function useMintContract() {
   const { sendTx } = useContext(Web3Context);
-  const contract = useContract(MintAbi, config.contracts.compoundStakingReward);
+  const contract = useContract(MintAbi, config.contracts.mint);
 
   return {
     async getStartBlock() {
@@ -15,11 +15,7 @@ export default function useMintContract() {
     },
 
     async whitelistMint(payAmount, merkleTree, amount) {
-      const func = contract.methods.whitelistMint(
-        payAmount,
-        merkleTree,
-        amount
-      );
+      const func = contract.methods.whiteListMint(merkleTree, amount);
       return await sendTx(func, "mint", payAmount);
     },
   };

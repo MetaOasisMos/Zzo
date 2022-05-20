@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { Web3ContextProvider } from "./context/Web3Context";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -14,6 +16,8 @@ root.render(
         <App />
       </ParallaxProvider>
     </Web3ContextProvider>
+    <ToastContainer closeOnClick={false} position="bottom-right" />
+
   </React.StrictMode>
 );
 

@@ -1,9 +1,12 @@
 import { RiCalendar2Line, RiStackLine } from "react-icons/ri";
 import { BiStopwatch, BiTime } from "react-icons/bi";
+import { Web3Context } from "../../context/Web3Context";
 import btn_img from "../../assets/images/btn-image.svg";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { toast } from "react-toastify";
 import "./style.scss";
 import Modal from "@mui/material/Modal";
+import axios from 'axios'
 import Purchase from "../Modals/purchase";
 import Countdown from "../Countdown";
 import useMintContract from "../../contract/useMintContract";
@@ -13,19 +16,32 @@ import Failed from "../Modals/Failed";
 
 const MintDetails = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const mintContract = useMintContract()
+  const { account, connectWallet } = useContext(Web3Context);
+  const mintContract = useMintContract();
 
-  const doMint = async(amount) => {
+  const getMerkleTree = async() => {
+    const res = await axios.post('https://api.metaoasis.fun/metaoasismos/api/v1', {
+      
+    })
+  }
 
+  const doMint = async (amount) => {
     const payAmount = amount * 0.1;
 
-    const result = await mintContract.whitelistMint(payAmount, 'merkleTree', amount)
-    console.log('111', result)
-  }
+    const result = await mintContract.whitelistMint(
+      payAmount,
+      "merkleTree",
+      amount
+    );
+  };
 
   const body = (
     <div className={"modal-body"}>
-      <Purchase modalOpen={modalOpen} setModalOpen={setModalOpen} doMint={doMint} />
+      <Purchase
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+        doMint={doMint}
+      />
       {/*<Waiting />*/}
       {/*<ConfirmPurchase />*/}
       {/*<Failed />*/}
@@ -92,14 +108,23 @@ const MintDetails = () => {
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             <div className="text-right">
-              <button
-                className={"btn mint-btn hover-move"}
-                onClick={() => {
-                  setModalOpen(true);
-                }}
-              >
-                Mint
-              </button>
+              {account ? (
+                <button
+                  className={"btn mint-btn hover-move"}
+                  onClick={() => {
+                    setModalOpen(true);
+                  }}
+                >
+                  Mint
+                </button>
+              ) : (
+                <button
+                  className={"btn mint-btn hover-move"}
+                  onClick={connectWallet}
+                >
+                  Connect Wallet
+                </button>
+              )}
             </div>
             <div className="text-right">
               <Countdown endTime={1654729200} />
@@ -145,7 +170,6 @@ const MintDetails = () => {
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
             <p className={"eth-amount"}>0.15 ETH</p>
             {/* <div className="fee-hint">+ Gas fee</div> */}
-
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             <div className="text-right">

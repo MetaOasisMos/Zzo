@@ -40,6 +40,7 @@ function App() {
 
   // variable that control the header close and open funcationality
   const [openHeader, setOpenHeader] = useState(false);
+  const [isMobile, setIsMobile] = useState(false)
 
   const scroll = (ref) => {
     setOpenHeader(false);
@@ -72,9 +73,15 @@ function App() {
     setRpressed(false);
   };
 
+  useEffect(()=>{
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+     setIsMobile(true)
+     }
+  }, [])
+
   return (
     <>
-      {rPressed ? (
+      {rPressed && !isMobile ? (
         <WelcomePage enter_clicked={enter_clicked} />
         // when R is pressed this section loads
         // !loader ? (
