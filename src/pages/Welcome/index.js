@@ -19,7 +19,7 @@ const zooList = [
   {
     id: "9",
     category: "Zzoopers",
-    title: "Bomer",
+    title: "Elephants",
     desc: `Who Says Elements Can't Dance?`,
   },
   {

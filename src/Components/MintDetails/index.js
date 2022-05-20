@@ -63,31 +63,35 @@ const MintDetails = () => {
     }
   };
 
+  const closeModal = () => {
+    setMintStep(0);
+    setModalOpen(false);
+    setNeedToPay(0);
+    setTxHash("");
+  }
+
   const body = (
     <div className={"modal-body"}>
       {mintStep === 0 && (
         <Purchase
-          modalOpen={modalOpen}
-          setModalOpen={setModalOpen}
+          closeModal={closeModal}
           doMint={doMint}
         />
       )}
       {mintStep === 1 && (
         <Waiting
           payAmount={needToPay}
-          modalOpen={modalOpen}
-          setModalOpen={setModalOpen}
+          closeModal={closeModal}
         />
       )}
       {mintStep === 2 && (
         <ConfirmPurchase
           txHash={txHash}
-          modalOpen={modalOpen}
-          setModalOpen={setModalOpen}
+          closeModal={closeModal}
         />
       )}
       {mintStep === 3 && (
-        <Failed modalOpen={modalOpen} setModalOpen={setModalOpen} />
+        <Failed closeModal={closeModal} />
       )}
     </div>
   );
@@ -96,12 +100,7 @@ const MintDetails = () => {
     <div className={"mint-details-container"}>
       <Modal
         open={modalOpen}
-        onClose={() => {
-          setMintStep(0);
-          setModalOpen(false);
-          setNeedToPay(0);
-          setTxHash("");
-        }}
+        onClose={closeModal}
       >
         {body}
       </Modal>

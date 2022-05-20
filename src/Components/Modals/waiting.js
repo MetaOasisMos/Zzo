@@ -1,11 +1,11 @@
 import { GrClose } from "react-icons/gr";
 import waitingimg from "../../assets/images/waiting-img.png";
 
-const Waiting = ({ payAmount, modalOpen, setModalOpen }) => {
+const Waiting = ({ payAmount, closeModal }) => {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <GrClose style={{ marginLeft: "auto", cursor: "pointer" }} onClick={() => {setModalOpen(!modalOpen)}} />
+        <GrClose style={{ marginLeft: "auto", cursor: "pointer" }} onClick={closeModal} />
       </div>
 
       <div style={{ display: "flex", marginTop: 20, width: "100%" }}>

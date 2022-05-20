@@ -2,7 +2,7 @@ import {GrClose, GrFormAdd, GrFormSubtract} from "react-icons/gr";
 import {useState} from "react";
 import clsx from "clsx";
 
-const Purchase = ({modalOpen, setModalOpen, doMint}) => {
+const Purchase = ({closeModal, doMint}) => {
 
     const [zzopperCount, setZzopperCount] = useState(1)
 
@@ -10,7 +10,7 @@ const Purchase = ({modalOpen, setModalOpen, doMint}) => {
         <>
             <div style={{display: 'flex'}}>
                 <p style={{marginRight: 'auto', fontSize: 20, fontWeight: 700}}>Confirm purchase</p>
-                <GrClose style={{cursor: "pointer"}} onClick={() => {setModalOpen(!modalOpen)}}/>
+                <GrClose style={{cursor: "pointer"}} onClick={closeModal}/>
             </div>
             <div style={{padding: 16, backgroundColor: '#FBFBF7', display: 'flex', justifyContent: 'space-between', borderRadius: 15}}>
                 <div style={{ fontWeight: 700, fontSize: 24, letterSpacing: '-2%'}}>

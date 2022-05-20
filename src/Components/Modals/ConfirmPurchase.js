@@ -3,11 +3,11 @@ import config from "../../config";
 
 import confirmimg from "../../assets/images/confirm-purchase-img.png";
 
-const ConfirmPurchase = ({ txHash, modalOpen, setModalOpen }) => {
+const ConfirmPurchase = ({ txHash, closeModal }) => {
   return (
     <>
       <div style={{ display: "flex" }}>
-        <GrClose style={{ marginLeft: "auto", cursor: "pointer" }} onClick={() => {setModalOpen(!modalOpen)}} />
+        <GrClose style={{ marginLeft: "auto", cursor: "pointer" }} onClick={closeModal} />
       </div>
 
       <div style={{ display: "flex", marginTop: 20, width: "100%" }}>
