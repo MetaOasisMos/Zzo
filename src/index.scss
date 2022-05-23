@@ -10,6 +10,18 @@
     src: url("./assets/fonts/DM_Sans/DMSans-Bold.ttf");
 }
 
+@font-face {
+    font-family: "Roboto";
+    font-weight: 400;
+    src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 700;
+    src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -606,8 +618,8 @@ body {
     border: 2px solid black;
 }
 
-.count-min-container{
-    cursor:not-allowed;
+.count-min-container {
+    cursor: not-allowed;
 }
 
 .count-min-container {
@@ -1205,6 +1217,7 @@ body {
     color: white;
     font-weight: 700;
     margin: auto;
+    text-decoration: none;
 }
 
 .footer-text {

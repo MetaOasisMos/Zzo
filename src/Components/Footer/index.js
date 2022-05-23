@@ -22,8 +22,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="item">
-            <p className={"footer-center-text"}>Term of Use</p>
-            <p className={"footer-center-text"}>Privacy Policy</p>
+            <a href="/terms" className={"footer-center-text"}>Terms and conditions</a>
+            <a href="/privacy" className={"footer-center-text"}>Privacy Policy</a>
           </div>
           <div className="item socials">
             <div style={{ margin: "auto", display: "flex" }}>

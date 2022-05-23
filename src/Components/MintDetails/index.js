@@ -3,6 +3,7 @@ import { BiStopwatch, BiTime } from "react-icons/bi";
 import { Web3Context } from "../../context/Web3Context";
 // import btn_img from "../../assets/images/btn-image.svg";
 import { useState, useContext } from "react";
+import MintComingImg from '../../assets/images/mint-coming.png';
 import { toast } from "react-toastify";
 import "./style.scss";
 import config from "../../config";
@@ -16,6 +17,8 @@ import ConfirmPurchase from "../Modals/ConfirmPurchase";
 import Failed from "../Modals/Failed";
 
 const MintDetails = () => {
+  return <img src={MintComingImg} className="mint-coming-img"/>
+
   const [modalOpen, setModalOpen] = useState(false);
   const [mintStep, setMintStep] = useState(0);
   const [needToPay, setNeedToPay] = useState(0);
@@ -95,6 +98,7 @@ const MintDetails = () => {
       )}
     </div>
   );
+
 
   return (
     <div className={"mint-details-container"}>

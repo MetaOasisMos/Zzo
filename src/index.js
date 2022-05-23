@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ParallaxProvider } from "react-scroll-parallax";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Web3ContextProvider } from "./context/Web3Context";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import "./index.scss";
 import App from "./App";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -13,11 +16,17 @@ root.render(
   <React.StrictMode>
     <Web3ContextProvider>
       <ParallaxProvider>
-        <App />
+        <Router>
+          <Switch>
+            <Route path="/" exact component={App} />
+            <Route path="/terms" component={Terms} />
+            <Route path="/privacy" component={Privacy} />
+          </Switch>
+        </Router>
+        {/* <App /> */}
       </ParallaxProvider>
     </Web3ContextProvider>
     <ToastContainer closeOnClick={false} position="bottom-right" />
-
   </React.StrictMode>
 );
 

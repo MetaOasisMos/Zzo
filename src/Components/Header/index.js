@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { socialLinks } from "../../config";
 import header_nav from "../../assets/images/header-nav.svg";
 import close_header from "../../assets/images/header-close.svg";
@@ -18,6 +19,7 @@ const Header = ({
   revealRef,
   mapRef,
   joinUsRef,
+  logoOnly,
   faqRef,
 }) => {
   const [displayLinks, setDisplayLinks] = useState(false);
@@ -74,26 +76,36 @@ const Header = ({
                   className={"header-btn"}
                 />
               )}
-              <img src={logo} style={{ marginLeft: "24px", width: 50 }} />
+              <a href="/">
+                <img src={logo} style={{ marginLeft: "24px", width: 50 }} />
+              </a>
             </div>
 
-            <a href={socialLinks.official} target="_blank" style={{marginLeft: 'auto'}}>
-              <button className={"btn metaoasis-header-btn hover-move"}>
-                Back to MetaOasis DAO
-              </button>
-            </a>
+            {!logoOnly && (
+              <>
+                <a
+                  href={socialLinks.official}
+                  target="_blank"
+                  style={{ marginLeft: "auto" }}
+                >
+                  <button className={"btn metaoasis-header-btn hover-move"}>
+                    Back to MetaOasis DAO
+                  </button>
+                </a>
 
-            {account ? (
-              <button className={"btn connect-header-btn"}>
-                {account.slice(0, 4)}...{account.slice(-4)}
-              </button>
-            ) : (
-              <button
-                className={"btn connect-header-btn hover-move"}
-                onClick={connectWallet}
-              >
-                Connect
-              </button>
+                {account ? (
+                  <button className={"btn connect-header-btn"}>
+                    {account.slice(0, 4)}...{account.slice(-4)}
+                  </button>
+                ) : (
+                  <button
+                    className={"btn connect-header-btn hover-move"}
+                    onClick={connectWallet}
+                  >
+                    Connect
+                  </button>
+                )}
+              </>
             )}
           </div>
         </div>
@@ -118,7 +130,7 @@ const Header = ({
                 return (
                   <p
                     className={"header-link"}
-                    style={{cursor: 'pointer'}}
+                    style={{ cursor: "pointer" }}
                     onClick={() => {
                       scroll(link.ref);
                     }}
