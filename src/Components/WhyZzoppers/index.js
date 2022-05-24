@@ -11,10 +11,10 @@ const WhyZzoppers = () => {
             <p className={"subtitle"}>Why</p>
             <p className={"title"}>Zzoopers?</p>
             <p className={"desc"}>
-              Whether kids or grown-ups, everyone can obtain joyful and
-              thought-provoking stories from fanscinating animations. Such as
-              Zootopia, where we see a world of acceptance, tolerance and
-              peaceful co-existence. <br />
+              Whether kids or grown-ups, many of us have enjoyed touching and
+              thought-provoking experiences in fascinating animations based on
+              animal stories. Such as Zootopia, where we see a world of
+              acceptance, tolerance and peaceful co-existence. <br />
               <br />
               What if we can deliver and develop such spirit vibe in the
               metaverse? Together let's enter into the world of Zzoopers, where

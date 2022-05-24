@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import clsx from "clsx";
 import "./style.scss";
 import exciting_experience_image from "../../assets/images/exciting experience image.png";
@@ -15,10 +15,12 @@ import utilicon4 from "../../assets/images/utils-icon-4.svg";
 const Utils = () => {
   const options = [
     "Cross-metaverse Experience",
-    "Future Drops",
     "Have Fun and Earn",
+    "Future Drops",
     "Physical Zzoopers",
   ];
+
+  const videoRef = useRef(null);
 
   const options_sm = [
     {
@@ -27,14 +29,14 @@ const Utils = () => {
       body: "Which metaverse would you like to explore? The Sandbox, NFT Worlds, Decentraland, Worldwide Webb, Arcade land,…? Name it! Buckle up and LFG!",
     },
     {
-      text: "Future Drops",
-      icon: utilicon4,
-      body: "How to travel to different metaverses? Holding your Zzoopers is all you need to do! Exclusive airdrops will facilitate your cross-metaverse journeys. ",
-    },
-    {
       text: "Have Fun and Earn",
       icon: utilicon3,
-      body: "What happens if you hold more than one Zzoopers? Different Zzoopers may have different chemistry ganged together. Collect more and hold on to unravel all the fun behind.",
+      body: "What happens if you hold more than one Zzoopers? Different Zzoopers may have different chemistry between them. There may be surprising outcomes when you pair different Zzoopers together. Collect more and hold on to unravel all the fun behind.",
+    },
+    {
+      text: "Future Drops",
+      icon: utilicon4,
+      body: "Minting your Zzoopers is only the beginning of a great journey. Holders of Zzoopers will be entitled to exclusive airdrops as we embark on cross-metaverse journeys together.",
     },
     {
       text: "Physical Zzoopers",
@@ -44,6 +46,14 @@ const Utils = () => {
   ];
 
   const [selected, setSelected] = useState("Cross-metaverse Experience");
+
+  const togglePlay = () => {
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  };
 
   return (
     <div className={"utils-container"}>
@@ -78,16 +88,36 @@ const Utils = () => {
                     /> */}
                     <video
                       src="/utils-video.mp4"
-                      autoPlay={true}
+                      poster="/utils-video-poster.png"
                       muted={true}
                       loop={true}
                       controls={false}
+                      ref={videoRef}
+                      onClick={togglePlay}
+                      style={{ width: "100%", cursor: "pointer" }}
+                    />
+                    <div className="tag">Cross-metaverse Experience</div>
+                    <p className={"side-bar-para"}>
+                      Which metaverse would you like to explore? <br />
+                      The Sandbox, NFT Worlds, Decentraland, Worldwide Webb,
+                      Arcade land,…?
+                    </p>
+                    <div className="slogan">Name it! Buckle up and LFG!</div>
+                  </>
+                )}
+                   {selected === "Have Fun and Earn" && (
+                  <>
+                    <img
+                      src={stakingandharvestingimg}
                       style={{ width: "100%" }}
                     />
+                    <div className="tag">Have Fun and Earn</div>
                     <p className={"side-bar-para"}>
-                      Which metaverse would you like to explore? The Sandbox,
-                      NFT Worlds, Decentraland, Worldwide Webb, Arcade land,…?
-                      Name it! Buckle up and LFG!
+                      What happens if you hold more than one Zzoopers? Different
+                      Zzoopers may have different chemistry between them. There
+                      may be surprising outcomes when you pair different
+                      Zzoopers together. Collect more and hold on to unravel all
+                      the fun behind.
                     </p>
                   </>
                 )}
@@ -105,32 +135,25 @@ const Utils = () => {
                         style={{ margin: "0 0 0 auto" }}
                       />
                     </div>
-                    <p className={"side-bar-para"}>
-                      How to travel to different metaverses? Holding your
-                      Zzoopers is all you need to do! Exclusive airdrops will
-                      facilitate your cross-metaverse journeys.
-                    </p>
+                    <div>
+                      <div className="tag">Future Drops</div>
+                      <p className={"side-bar-para"}>
+                        Minting your Zzoopers is only the beginning of a great
+                        journey. Holders of Zzoopers will be entitled to
+                        exclusive airdrops as we embark on cross-metaverse
+                        journeys together.
+                      </p>
+                    </div>
                   </>
                 )}
-                {selected === "Have Fun and Earn" && (
-                  <>
-                    <img
-                      src={stakingandharvestingimg}
-                      style={{ width: "100%" }}
-                    />
-                    <p className={"side-bar-para"}>
-                      What happens if you hold more than one Zzoopers? Different
-                      Zzoopers may have different chemistry ganged together.
-                      Collect more and hold on to unravel all the fun behind.
-                    </p>
-                  </>
-                )}
+             
                 {selected === "Physical Zzoopers" && (
                   <>
                     <img
                       src={PhysicalZzoopersAirdropImg}
                       style={{ width: "100%" }}
                     />
+                    <div className="tag">Physical Zzoopers</div>
                     <p className={"side-bar-para"}>
                       Some Zzoopers may drop to you from the metaverse to the
                       real world. Be ready to meet these creatures physically in

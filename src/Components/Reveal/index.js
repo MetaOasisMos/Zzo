@@ -19,8 +19,7 @@ const Reveal = () => {
           </div>
           <div className="desc-line">
             At each round of reveal, 2 out of the 10 animal characters will go
-            live. You can choose to claim, or wait. Better be hurry if you have
-            your favourite character.
+            live. You can choose to claim, or wait. Better be hurry when it's your favorite character's turn. 
           </div>
           <div className="desc-line">
             Join our{" "}
