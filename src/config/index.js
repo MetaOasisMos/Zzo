@@ -11,7 +11,7 @@ export const chainIdMapping = {
 
 export const socialLinks = {
   official: "https://metaoasis.fun",
-  discord: "https://discord.com/invite/MXmgNwawVR",
+  discord: "https://discord.com/invite/metaoasisdao",
   telegram: 'https://t.me/MetaOasisOfcl',
   twitter: "https://twitter.com/MetaOasisDAO",
   medium: "https://medium.com/@MetaOasisDAO",

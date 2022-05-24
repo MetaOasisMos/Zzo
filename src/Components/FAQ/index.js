@@ -50,7 +50,7 @@ const Faq = () => {
     {
       heading: "When and how to reveal?",
       body: `
-            - The revelation of the Zzoopers Genesis is expected to happen in late May or early June 2022. The exact time is TBA.<br/><br/>
+            - The revelation of the Zzoopers Genesis is expected to happen in late June or early July 2022. The exact time is TBA.<br/><br/>
             - There are 5 rounds to reveal Zzoopers Genesis after the public mint. At each round of reveal, 2 out of the 10 animal characters will go live. You can choose to claim, or wait. Better be hurry if you have your favourite character. <br/><br/>
             - Join our <a href="${socialLinks.discord}" target="_blank">Discord</a> to get first-hand updates on the reveal! 
             `,

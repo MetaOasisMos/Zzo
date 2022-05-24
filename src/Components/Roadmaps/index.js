@@ -24,7 +24,7 @@ const RoadMap = () => {
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img className={"roadmap-icon"} src={roadmapicon1} />
                   <p className={"road-map-name"}>
-                    Mint and Reveal - May to June 2022
+                    Mint and Reveal - Coming Soon
                   </p>
                 </div>
                 <p className={"road-map-text"}>
@@ -44,7 +44,7 @@ const RoadMap = () => {
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img className={"roadmap-icon"} src={roadmapicon2} />
                   <p className={"road-map-name"}>
-                    Have Fun and Earn – Q2 to Q3 2022
+                    Have Fun and Earn – Q3 2022
                   </p>
                 </div>
                 <p className={"road-map-text"}>

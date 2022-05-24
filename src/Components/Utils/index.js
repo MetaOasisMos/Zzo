@@ -72,8 +72,16 @@ const Utils = () => {
               <div className={"side-bar-container"}>
                 {selected === "Cross-metaverse Experience" && (
                   <>
-                    <img
+                    {/* <img
                       src={exciting_experience_image}
+                      style={{ width: "100%" }}
+                    /> */}
+                    <video
+                      src="/utils-video.mp4"
+                      autoPlay={true}
+                      muted={true}
+                      loop={true}
+                      controls={false}
                       style={{ width: "100%" }}
                     />
                     <p className={"side-bar-para"}>

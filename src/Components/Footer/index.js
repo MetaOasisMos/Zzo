@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="item">
-            <a href="/terms" className={"footer-center-text"}>Terms and conditions</a>
+            <a href="/terms" className={"footer-center-text"}>Terms and Conditions</a>
             <a href="/privacy" className={"footer-center-text"}>Privacy Policy</a>
           </div>
           <div className="item socials">

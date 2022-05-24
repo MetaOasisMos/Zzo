@@ -17,8 +17,8 @@ const Meet = () => {
             There are 10 unique animal characters in Zzoopers Genesis
           </div>
           <div className={"meet-meta-text"}>
-            Tiger, Elephant, Panda, Unicorn, Leopard, Elk, Fox, Monkey, Penguin,
-            and Rabbit.
+            Tiger, Elephant, Panda, Unicorn, Cheetah, Deer, Fox, Monkey,
+            Penguin, and Rabbit.
             <br /> Each Zzoopers has its own unique appearance, personality and
             storyline in different metaverses.
           </div>

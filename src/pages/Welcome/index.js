@@ -19,14 +19,14 @@ const zooList = [
   {
     id: "9",
     category: "Zzoopers",
-    title: "Elephants",
-    desc: `Who Says Elements Can't Dance?`,
+    title: "Bomer",
+    desc: `Who says elephants can't dance?`,
   },
   {
     id: "8",
     category: "Zzoopers",
     title: "Goldthwaite",
-    desc: `Be a lion at home and a fox abroad`,
+    desc: `Be a lion at home and a fox abroad.`,
   },
   {
     id: "7",
@@ -38,37 +38,37 @@ const zooList = [
     id: "6",
     category: "Zzoopers",
     title: "Dony",
-    desc: `Always be yourself unless you can be a penguin`,
+    desc: `Always be yourself unless you can be a penguin.`,
   },
   {
     id: "5",
     category: "Zzoopers",
     title: "Milius",
-    desc: `Everyone knows the monkey, but the monkey knows no one`,
+    desc: `Everyone knows the monkey, but the monkey knows no one.`,
   },
   {
     id: "4",
     category: "Zzoopers",
     title: "Reynoso",
-    desc: `Fast but not furious `,
+    desc: `Fast but not furious :)`,
   },
   {
     id: "3",
     category: "Zzoopers",
     title: "Driscoll",
-    desc: `A unicorn is a horse with a point of view`,
+    desc: `A unicorn is a horse with a point of view.`,
   },
   {
     id: "2",
     category: "Zzoopers",
     title: "Bila",
-    desc: `A rabbit aims for the moon`,
+    desc: `A rabbit aims for the moon.`,
   },
   {
     id: "1",
     category: "Zzoopers",
     title: "Yutema",
-    desc: `Proof that you can eat just bamboo and still be fat`,
+    desc: `Proof that you can eat just bamboo and still be fat.`,
   },
 ];
 
