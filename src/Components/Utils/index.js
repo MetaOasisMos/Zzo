@@ -17,7 +17,7 @@ const Utils = () => {
     "Cross-metaverse Experience",
     "Have Fun and Earn",
     "Future Drops",
-    "Physical Zzoopers",
+    "Exclusive Merch Access",
   ];
 
   const videoRef = useRef(null);
@@ -39,9 +39,9 @@ const Utils = () => {
       body: "Minting your Zzoopers is only the beginning of a great journey. Holders of Zzoopers will be entitled to exclusive airdrops as we embark on cross-metaverse journeys together.",
     },
     {
-      text: "Physical Zzoopers",
+      text: "Exclusive Merch Access",
       icon: utilicon2,
-      body: "Some Zzoopers may drop to you from the metaverse to the real world. Be ready to meet these creatures physically in the near future! ",
+      body: "Some Zzoopers may drop to you from the metaverse to the real world. Be ready to meet these creatures physically in the near future! More cool merchs will be developed with the inputs from our great community!",
     },
   ];
 
@@ -105,7 +105,7 @@ const Utils = () => {
                     <div className="slogan">Name it! Buckle up and LFG!</div>
                   </>
                 )}
-                   {selected === "Have Fun and Earn" && (
+                {selected === "Have Fun and Earn" && (
                   <>
                     <img
                       src={stakingandharvestingimg}
@@ -146,8 +146,8 @@ const Utils = () => {
                     </div>
                   </>
                 )}
-             
-                {selected === "Physical Zzoopers" && (
+
+                {selected === "Exclusive Merch Access" && (
                   <>
                     <img
                       src={PhysicalZzoopersAirdropImg}
@@ -157,7 +157,8 @@ const Utils = () => {
                     <p className={"side-bar-para"}>
                       Some Zzoopers may drop to you from the metaverse to the
                       real world. Be ready to meet these creatures physically in
-                      the near future!
+                      the near future! More cool merchs will be developed with
+                      the inputs from our great community!
                     </p>
                   </>
                 )}

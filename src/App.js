@@ -4,15 +4,7 @@ import WhyZzoppers from "./Components/WhyZzoppers";
 import WelcomePage from "./pages/Welcome";
 import Utils from "./Components/Utils";
 import Meet from "./Components/Meet";
-import Scrollers from "./Components/Scrollers";
-import slider1 from "./assets/images/slider 1.png";
-import slider2 from "./assets/images/slider 2.png";
-import slider3 from "./assets/images/slider 3.png";
-import slider4 from "./assets/images/slider 4.png";
-import slider5 from "./assets/images/slider 5.png";
-import slider6 from "./assets/images/slider 6.png";
-import slider7 from "./assets/images/slider 7.png";
-import slider8 from "./assets/images/slider 8.png";
+import Carousel from "./Components/Carousel";
 // import slider2 from "./assets/images/slider 9.png";
 import loaderimg from "./assets/images/loader.png";
 import MintDetails from "./Components/MintDetails";
@@ -151,69 +143,7 @@ function App() {
             <Meet />
           </div>
 
-          {/* Three scrollers for gallery*/}
-          <div className={"mb-20"}>
-            <Scrollers
-              scroller_images={[
-                slider2,
-                slider1,
-                slider5,
-                slider6,
-                slider3,
-                slider2,
-                slider4,
-                slider7,
-                slider8,
-                slider1,
-                slider2,
-                slider3,
-                slider4,
-                slider5,
-              ]}
-              reverse={true}
-            />
-          </div>
-          <div className={"mb-20"}>
-            <Scrollers
-              scroller_images={[
-                slider2,
-                slider1,
-                slider5,
-                slider6,
-                slider3,
-                slider2,
-                slider4,
-                slider7,
-                slider8,
-                slider1,
-                slider2,
-                slider3,
-                slider4,
-                slider5,
-              ]}
-            />
-          </div>
-          <div className={"mb-20"}>
-            <Scrollers
-              scroller_images={[
-                slider2,
-                slider1,
-                slider5,
-                slider6,
-                slider3,
-                slider2,
-                slider4,
-                slider7,
-                slider8,
-                slider1,
-                slider2,
-                slider3,
-                slider4,
-                slider5,
-              ]}
-              reverse={true}
-            />
-          </div>
+          <Carousel />
 
           {/* Mint Details Section */}
           <div ref={detailRef}>

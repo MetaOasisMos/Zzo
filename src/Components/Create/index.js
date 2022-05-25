@@ -18,8 +18,10 @@ const Create = () => {
         </p>
 
         <p className={"create-container-body"}>
-          Zzoopers Genesis is created by all the artists and developers with the
-          dream to free you from any ONE place to the MANY metaverses.
+          Zzoopers Genesis is created by a team of artists and developers who
+          love animal stories and believe that we should bring diversity,
+          inclusion and joyful vibe to the metaverse where everyone can
+          celebrate one another for each other's uniqueness.
         </p>
 
         <a
