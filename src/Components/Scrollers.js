@@ -14,7 +14,7 @@ const Scrollers = ({ scroller_images, reverse = false }) => {
   return (
     <Swiper
       slidesPerView={'auto'}
-      loopedSlides={6}
+      loopedSlides={10}
       allowTouchMove={false}
       autoplay={{
         delay: 0,
