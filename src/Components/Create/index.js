@@ -19,8 +19,8 @@ const Create = () => {
 
         <p className={"create-container-body"}>
           Zzoopers Genesis is created by a team of artists and developers who
-          love animal stories and believe that we should bring diversity,
-          inclusion and joyful vibe to the metaverse where everyone can
+          love animal stories and believe that we should bring diverse,
+          inclusive and joyful vibe to the metaverse where everyone can
           celebrate one another for each other's uniqueness.
         </p>
 
