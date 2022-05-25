@@ -11,12 +11,6 @@ import "./style.scss";
 
 const zooList = [
   {
-    id: "10",
-    category: "Zzoopers",
-    title: "Estill",
-    desc: `Dear you, Deer me.`,
-  },
-  {
     id: "9",
     category: "Zzoopers",
     title: "Bomer",
@@ -28,11 +22,12 @@ const zooList = [
     title: "Goldthwaite",
     desc: `Be a lion at home and a fox abroad.`,
   },
+
   {
-    id: "7",
+    id: "5",
     category: "Zzoopers",
-    title: "Tigre",
-    desc: `I've got the moves like tiger!`,
+    title: "Milius",
+    desc: `Everyone knows the monkey, but the monkey knows no one.`,
   },
   {
     id: "6",
@@ -40,12 +35,14 @@ const zooList = [
     title: "Dony",
     desc: `Always be yourself unless you can be a penguin.`,
   },
+
   {
-    id: "5",
+    id: "7",
     category: "Zzoopers",
-    title: "Milius",
-    desc: `Everyone knows the monkey, but the monkey knows no one.`,
+    title: "Tigre",
+    desc: `I've got the moves like tiger!`,
   },
+
   {
     id: "4",
     category: "Zzoopers",
@@ -69,6 +66,12 @@ const zooList = [
     category: "Zzoopers",
     title: "Yutema",
     desc: `Proof that you can eat just bamboo and still be fat.`,
+  },
+  {
+    id: "10",
+    category: "Zzoopers",
+    title: "Estill",
+    desc: `Dear you, Deer me.`,
   },
 ];
 
@@ -107,15 +110,15 @@ export default function WelcomePage({ enter_clicked }) {
   };
 
   const goPrev = () => {
-    setActiveItem(zooList[activeIndex]);
-    setActiveIndex((prev) =>
-      activeIndex === 0 ? zooList.length - 1 : prev - 1
-    );
+    const toSet = activeIndex === 0 ? zooList.length - 1 : activeIndex - 1
+    setActiveItem(zooList[toSet]);
+    setActiveIndex(toSet);
   };
 
   const goNext = () => {
-    setActiveItem(zooList[activeIndex]);
-    setActiveIndex((prev) => (prev === zooList.length - 1 ? 0 : prev + 1));
+    const toSet = activeIndex === zooList.length - 1 ? 0 : activeIndex + 1
+    setActiveItem(zooList[toSet]);
+    setActiveIndex(toSet);
   };
 
   return (

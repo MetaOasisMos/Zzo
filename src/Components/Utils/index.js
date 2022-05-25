@@ -61,9 +61,10 @@ const Utils = () => {
         <div className="content">
           <div className="left">
             <p className={"main-title"}>Unlock Unlimited Utilities</p>
-            {options.map((option) => {
+            {options.map((option, index) => {
               return (
                 <p
+                  key={index}
                   onClick={() => {
                     setSelected(option);
                   }}
@@ -173,9 +174,9 @@ const Utils = () => {
             <p className={"utils-heading main-title"}>
               Unlock Unlimited Utilities
             </p>
-            {options_sm.map((option) => {
+            {options_sm.map((option, index) => {
               return (
-                <div>
+                <div key={index}>
                   <div style={{ display: "flex" }}>
                     <img src={option.icon} className={"option-icon"} />
                     <p className={"option-text"}>{option.text}</p>

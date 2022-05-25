@@ -127,7 +127,7 @@ const Faq = () => {
 
       {faqs.map((faq, index) => {
         return (
-          <div className={faq.open && "faq-container-active"}>
+          <div key={index} className={clsx(faq.open && "faq-container-active")}>
             <div
               className={"container"}
               style={{ borderBottom: "1px solid #E7E7E1" }}

@@ -28,9 +28,9 @@ const Scrollers = ({ scroller_images, reverse = false }) => {
       modules={[Autoplay]}
       className={"mySwiper my-3 swiper-sm"}
     >
-      {scroller_images.map((slide) => {
+      {scroller_images.map((slide, index) => {
         return (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <img src={slide} alt={"offer-img"} />
           </SwiperSlide>
         );
