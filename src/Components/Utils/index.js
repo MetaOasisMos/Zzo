@@ -108,9 +108,16 @@ const Utils = () => {
                 )}
                 {selected === "Have Fun and Earn" && (
                   <>
-                    <img
-                      src={stakingandharvestingimg}
-                      style={{ width: "100%" }}
+                    <video
+                      src="/have-fun.mp4"
+                      // poster="/utils-video-poster.png"
+                      muted={true}
+                      autoPlay={true}
+                      loop={true}
+                      controls={false}
+                      ref={videoRef}
+                      onClick={togglePlay}
+                      style={{ width: "100%", cursor: "pointer" }}
                     />
                     <div className="tag">Have Fun and Earn</div>
                     <p className={"side-bar-para"}>
@@ -124,7 +131,7 @@ const Utils = () => {
                 )}
                 {selected === "Future Drops" && (
                   <>
-                    <div style={{ display: "flex" }}>
+                    {/* <div style={{ display: "flex" }}>
                       <img
                         src={nftairdropleftimg}
                         className={"nftleftimg"}
@@ -135,7 +142,18 @@ const Utils = () => {
                         className={"nftrightimg"}
                         style={{ margin: "0 0 0 auto" }}
                       />
-                    </div>
+                    </div> */}
+                    <video
+                      src="/future-drops.mp4"
+                      // poster="/utils-video-poster.png"
+                      autoPlay={true}
+                      muted={true}
+                      loop={true}
+                      controls={false}
+                      ref={videoRef}
+                      onClick={togglePlay}
+                      style={{ width: "100%", cursor: "pointer" }}
+                    />
                     <div>
                       <div className="tag">Future Drops</div>
                       <p className={"side-bar-para"}>
