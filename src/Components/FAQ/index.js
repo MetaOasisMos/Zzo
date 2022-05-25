@@ -82,7 +82,7 @@ const Faq = () => {
     {
       heading: "Who is the team behind Zzoopers?",
       body: `
-            <b>MetaOasis DAO</b>, one of the first DAOs focusing on the investment and development of metaverse real estate, together with <b>Season Studio</b>, a top-class metaverse designing house with 50+ seasoned 3D voxel artists and creators. The Zzoopers is created by all the artists and developers with the dream to free you from any ONE place to the MANY metaverses.
+            <b>MetaOasis DAO</b>, one of the first DAOs focusing on the investment and development of metaverse assets, together with <b>Season Studio</b>, a top-class metaverse design house with 50+ seasoned 3D voxel artists and creators. The Zzoopers is created by all the artists and developers with the dream to free you from any ONE place to the MANY metaverses.
             `,
       open: false,
     },

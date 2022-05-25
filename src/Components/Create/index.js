@@ -12,8 +12,8 @@ const Create = () => {
 
         <p className={"create-container-body"}>
           <b>MetaOasis DAO</b>, one of the first DAOs focusing on the investment
-          and development of metaverse real estate, together with{" "}
-          <b>Season Studio</b>, a top-class metaverse designing house with 50+
+          and development of metaverse assets, together with{" "}
+          <b>Season Studio</b>, a top-class metaverse design house with 50+
           seasoned 3D voxel artists and creators.
         </p>
 
