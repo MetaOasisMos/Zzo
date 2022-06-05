@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ParallaxProvider } from "react-scroll-parallax";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { Web3ContextProvider } from "./context/Web3Context";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -19,6 +19,9 @@ root.render(
         <Router>
           <Switch>
             <Route path="/" exact component={App} />
+            <Route path="/s3">
+              <Redirect to="/" />
+            </Route>
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={Privacy} />
           </Switch>

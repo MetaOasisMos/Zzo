@@ -18,7 +18,6 @@ const conf = {
   apiURL,
   infuraId,
   contracts,
-  tokens,
   scanURL,
 };
 
