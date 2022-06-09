@@ -93,7 +93,7 @@ const Faq = () => {
     },
     {
       heading: `What are the creator's royalties and what will the revenues be used for?`,
-      body: "The royalties on the secondary market are 6% of each sale, which will be shared between MetaOasis DAO and Season Studio at a 50/50 ratio. The creators will utilize the royalties to bring continuous surprises to our community.",
+      body: "The royalties on the secondary market are 7.5% of each sale, which will be shared between MetaOasis DAO and Season Studio at a 50/50 ratio. The creators will utilize the royalties to bring continuous surprises to our community.",
       open: false,
     },
     {
