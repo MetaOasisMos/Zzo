@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function Countdown({ endTime }) {
+export default function Countdown({ endTime, onComplete }) {
   const [countdownTimer, setCountdownTimer] = useState(null);
   const [countdown, setCountdown] = useState({
     days: "-",
@@ -11,6 +11,12 @@ export default function Countdown({ endTime }) {
 
   const calculateCountdown = () => {
     const timeGap = Math.floor(endTime - new Date().valueOf() / 1000);
+
+    if(timeGap < 0){
+      onComplete();
+      return
+    }
+
     const days = Math.floor(timeGap / 86400);
     const hours = String(Math.floor((timeGap % 86400) / 3600)).padStart(2, "0");
     const minutes = String(

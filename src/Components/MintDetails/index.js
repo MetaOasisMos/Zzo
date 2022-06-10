@@ -1,9 +1,9 @@
 import { RiCalendar2Line, RiStackLine } from "react-icons/ri";
 import { BiStopwatch, BiTime } from "react-icons/bi";
 import { Web3Context } from "../../context/Web3Context";
-// import btn_img from "../../assets/images/btn-image.svg";
+import btn_img from "../../assets/images/btn-image.svg";
 import { useState, useContext } from "react";
-import MintComingImg from '../../assets/images/mint-coming.png';
+// import MintComingImg from '../../assets/images/mint-coming.png';
 import { toast } from "react-toastify";
 import "./style.scss";
 import config from "../../config";
@@ -17,10 +17,12 @@ import ConfirmPurchase from "../Modals/ConfirmPurchase";
 import Failed from "../Modals/Failed";
 
 const MintDetails = () => {
-  return <img src={MintComingImg} className="mint-coming-img"/>
+  // return <img src={MintComingImg} className="mint-coming-img"/>
 
   const [modalOpen, setModalOpen] = useState(false);
   const [mintStep, setMintStep] = useState(0);
+  const [phase1Started, setPhase1Started] = useState(false);
+  const [phase2Started, setPhase2Started] = useState(false);
   const [needToPay, setNeedToPay] = useState(0);
   const [txHash, setTxHash] = useState("");
   const { account, connectWallet } = useContext(Web3Context);
@@ -120,7 +122,7 @@ const MintDetails = () => {
           <div className="col-xl-3 col-lg-3 col-md-12 col-xs-12 col-sm-12">
             <div className={"mint-phase"}>Phase 1</div>
             <div className={"mint-name"}>Whitelist Premint</div>
-            <div className={"detail-link"}>Details</div>
+            {/* <div className={"detail-link"}>Details</div> */}
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-5 col-sm-5 col-5">
             <div style={{ display: "flex", marginBottom: 10 }}>
@@ -128,14 +130,14 @@ const MintDetails = () => {
                 <RiCalendar2Line className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Date</p>
               </div>
-              <p className={"mint-phase-detail-text"}>June 8th 2022</p>
+              <p className={"mint-phase-detail-text"}>June 19th 2022</p>
             </div>
             <div style={{ display: "flex", marginBottom: 10 }}>
               <div className={"mint-phase-details-container"}>
                 <BiTime className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Time</p>
               </div>
-              <p className={"mint-phase-detail-text"}>23:00 UTC</p>
+              <p className={"mint-phase-detail-text"}>11:00 AM UTC</p>
             </div>
             <div style={{ display: "flex", marginBottom: 10 }}>
               <div className={"mint-phase-details-container"}>
@@ -154,10 +156,9 @@ const MintDetails = () => {
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
             <p className={"eth-amount"}>0.1 ETH</p>
-            {/* <div className="fee-hint">+ Gas fee</div> */}
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
-            <div className="text-right">
+            {phase1Started ? <div className="text-right">
               {account ? (
                 <button
                   className={"btn mint-btn hover-move"}
@@ -175,10 +176,10 @@ const MintDetails = () => {
                   Connect Wallet
                 </button>
               )}
-            </div>
-            <div className="text-right">
-              <Countdown endTime={1654729200} />
-            </div>
+            </div> : <div className="text-right">
+              {/** new Date('2022-06-19 19:00').valueOf()  */}
+              <Countdown endTime={1655636400} onComplete={()=>setPhase1Started(true)} />
+            </div>}
           </div>
         </div>
 
@@ -193,14 +194,14 @@ const MintDetails = () => {
                 <RiCalendar2Line className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Date</p>
               </div>
-              <p className={"mint-phase-detail-text"}>June 9th 2022</p>
+              <p className={"mint-phase-detail-text"}>June 20th 2022</p>
             </div>
             <div className="info-item">
               <div className={"mint-phase-details-container"}>
                 <BiTime className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Time</p>
               </div>
-              <p className={"mint-phase-detail-text"}>23:00 UTC</p>
+              <p className={"mint-phase-detail-text"}>11:00 AM UTC</p>
             </div>
             <div className="info-item">
               <div className={"mint-phase-details-container"}>
@@ -219,14 +220,12 @@ const MintDetails = () => {
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
             <p className={"eth-amount"}>0.15 ETH</p>
-            {/* <div className="fee-hint">+ Gas fee</div> */}
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             <div className="text-right">
-              {/* <button className={"btn goto-btn hover-move"}>
+              {phase2Started ? <button className={"btn goto-btn hover-move"}>
                 Go to <img src={btn_img} className={"goto-btn-img"} />
-              </button> */}
-              <Countdown endTime={1654815600} />
+              </button> : <Countdown endTime={1655722800} onComplete={()=>setPhase2Started(true)}  />}
             </div>
           </div>
         </div>
