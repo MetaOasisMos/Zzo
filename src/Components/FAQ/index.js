@@ -79,13 +79,6 @@ const Faq = () => {
       body: "Holders have full commercial art rights for the Zzoopers Genesis they own. Please refer to Terms and Conditions for further information.",
       open: false,
     },
-    // {
-    //   heading: "Who is the team behind Zzoopers?",
-    //   body: `
-    //         <b>MetaOasis DAO</b>, one of the first DAOs focusing on the investment and development of metaverse assets, together with <b>Season Studio</b>, a top-class metaverse design house with 50+ seasoned 3D voxel artists and creators. The Zzoopers is created by all the artists and developers with the dream to free you from any ONE place to the MANY metaverses.
-    //         `,
-    //   open: false,
-    // },
     {
       heading: "What will mint proceeds be used for?",
       body: "100% of the proceeds will go to MetaOasis DAO. Up to 50% will be used to cover the costs of designing, marketing campaigns and development, and the remaining proceeds will be used for team recruitment, future product development, and the cross-metaverse building. In short, the fund will be used to continuously add values to the IP branding of Zzoopers.",
@@ -93,7 +86,7 @@ const Faq = () => {
     },
     {
       heading: `What are the creator's royalties and what will the revenues be used for?`,
-      body: "The royalties on the secondary market are 7.5% of each sale, which will be shared between MetaOasis DAO and Season Studio at a 50/50 ratio. The creators will utilize the royalties to bring continuous surprises to our community.",
+      body: "The royalties on the secondary market are 7.5% of each sale, which will be shared between MetaOasis DAO and creators at a 50/50 ratio. The creators will utilize the royalties to bring continuous surprises to our community.",
       open: false,
     },
     {
