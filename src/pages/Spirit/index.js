@@ -1,10 +1,10 @@
 // import Header from "../../Components/Header";
 // import Footer from "../../Components/Footer";
 import { useEffect, useState, useContext } from "react";
-import IconUnknown from "../../assets/images/spirit/unknown.png";
+import IconUnknown from "../../assets/images/spirit/unknown.gif";
 import IconAvatar from "../../assets/images/spirit/avatar.png";
 import IconZzoopers from "../../assets/images/spirit/zzoopers.svg";
-import IconWalkingTiger from "../../assets/images/spirit/walking-tiger.png";
+import IconWalkingTiger from "../../assets/images/spirit/walking-tiger.gif";
 import IconKucoin from "../../assets/images/spirit/kucoin.svg";
 import IconCopied from "../../assets/images/copied-icon.svg";
 import { Web3Context } from "../../context/Web3Context";
