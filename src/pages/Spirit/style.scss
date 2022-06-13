@@ -10,6 +10,7 @@ $yellow: #ffc234;
     color: #797979;
     min-height: 100vh;
     .btn-yellow {
+        cursor: pointer;
         background: $yellow;
         border-radius: 25px;
         font-weight: 600;

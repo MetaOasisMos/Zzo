@@ -1,11 +1,14 @@
 // import Header from "../../Components/Header";
 // import Footer from "../../Components/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import IconUnknown from "../../assets/images/spirit/unknown.png";
 import IconAvatar from "../../assets/images/spirit/avatar.png";
 import IconZzoopers from "../../assets/images/spirit/zzoopers.svg";
 import IconWalkingTiger from "../../assets/images/spirit/walking-tiger.png";
 import IconKucoin from "../../assets/images/spirit/kucoin.svg";
+import IconCopied from "../../assets/images/copied-icon.svg";
+import { Web3Context } from "../../context/Web3Context";
+import Modal from "@mui/material/Modal";
 
 import clsx from "clsx";
 
@@ -100,10 +103,31 @@ const invitationList = [
 ];
 
 export default function Spirit() {
-  const [step, setStep] = useState(2);
+  const { account, connectWallet } = useContext(Web3Context);
+  const [step, setStep] = useState(0);
   const [qualified, setQualified] = useState(false);
   const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
+
+  const doCopy = () => {
+    const copied = document.createElement("input");
+    copied.setAttribute("value", "https://www.zzoopers.xyz/spirit");
+    document.body.appendChild(copied);
+    copied.select();
+    document.execCommand("copy");
+    document.body.removeChild(copied);
+
+    setCopyModalVisible(true);
+  };
+
+  const doAnalyze = () => {
+    setStep(1);
+
+    setTimeout(() => {
+      setStep(2);
+    }, 3000);
+  };
+
   return (
     <div>
       {/* <Header logoOnly={true} /> */}
@@ -130,9 +154,16 @@ export default function Spirit() {
               or embodies. It is also metaphor, often humorous, for someone or
               something a person relates to or admires.
             </div>
-            <a className="btn-yellow btn-discover" onClick={() => setStep(1)}>
-              Discover Now
-            </a>
+            {account ? (
+              <a className="btn-yellow btn-discover" onClick={doAnalyze}>
+                Discover Now
+              </a>
+            ) : (
+              <a className="btn-yellow btn-discover" onClick={connectWallet}>
+                Connect Wallet
+              </a>
+            )}
+
             <div className="connect-hint">
               *Your authorization is required to connect the wallet and retrieve
               your on-chain behavior, we will not touch your personal private
@@ -228,10 +259,7 @@ export default function Spirit() {
                 >
                   Join our Discord
                 </a>
-                <a
-                  className="btn-yellow"
-                  onClick={() => setCopyModalVisible(true)}
-                >
+                <a className="btn-yellow" onClick={doCopy}>
                   Invite friends
                 </a>
               </div>
@@ -275,6 +303,54 @@ export default function Spirit() {
       </div>
 
       {/* <Footer /> */}
+
+      {copyModalVisible && (
+        <Modal open={true} onClose={() => setCopyModalVisible(false)}>
+          <div className={"modal-body copy-modal"}>
+            <img src={IconCopied} className="icon-copied" />
+            <div className="title">The invitation link has been copied</div>
+            <div className="desc">
+              Please send the link to your friends to get free mint!!!
+            </div>
+            <a
+              className="btn-yellow"
+              onClick={() => setCopyModalVisible(false)}
+            >
+              Get
+            </a>
+          </div>
+        </Modal>
+      )}
+
+      {ruleModalVisible && (
+        <Modal open={true} onClose={() => setRuleModalVisible(false)}>
+          <div className={"modal-body rule-modal"}>
+            <div className="title">Rules</div>
+            <div className="rule-item">
+              <div className="rule-title">Rule 1</div>
+              <div className="rule-desc">
+                Please send the link to your friends to get free mint!!! Please
+                send the link to your friends to get free mint!!! Please send
+                the link to your friends to get free mint!!!
+              </div>
+            </div>
+            <div className="rule-item">
+              <div className="rule-title">Rule 1</div>
+              <div className="rule-desc">
+                Please send the link to your friends to get free mint!!! Please
+                send the link to your friends to get free mint!!! Please send
+                the link to your friends to get free mint!!!
+              </div>
+            </div>
+            <a
+              className="btn-yellow"
+              onClick={() => setRuleModalVisible(false)}
+            >
+              Get
+            </a>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 }
