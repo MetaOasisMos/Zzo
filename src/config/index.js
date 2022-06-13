@@ -10,6 +10,8 @@ export const chainIdMapping = {
 };
 
 export const socialLinks = {
+  zzopers: "http://zzoopers.xyz/",
+  kucoin: "https://www.kucoin.com/",
   official: "https://metaoasis.fun",
   discord: "https://discord.com/invite/metaoasisdao",
   telegram: 'https://t.me/MetaOasisOfcl',

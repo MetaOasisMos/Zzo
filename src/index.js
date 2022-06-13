@@ -10,6 +10,7 @@ import App from "./App";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Share from "./pages/Share";
+import Spirit from "./pages/Spirit";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -26,6 +27,7 @@ root.render(
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={Privacy} />
             <Route path="/share" component={Share} />
+            <Route path="/spirit" component={Spirit} />
           </Switch>
         </Router>
         {/* <App /> */}
