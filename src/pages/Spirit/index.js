@@ -111,7 +111,7 @@ export default function Spirit() {
 
   const doCopy = () => {
     const copied = document.createElement("input");
-    copied.setAttribute("value", "https://www.zzoopers.xyz/spirit");
+    copied.setAttribute("value", `A 5s TEST helps you match your Spirit Animal in the Web3 world! Together with your friends and get the chance to enjoy the big rewards! https://www.zzoopers.xyz/spirit?src=${account}`);
     document.body.appendChild(copied);
     copied.select();
     document.execCommand("copy");
@@ -240,13 +240,13 @@ export default function Spirit() {
                   Invite your friends to participate in the test, together with
                   your friends to collect{" "}
                   <span className="highlight">10 spirit animals</span> and you
-                  will have a chance to get a free mint.{" "}
-                  <a
+                  will have a chance to get a free mint.
+                  {/* <a
                     className="btn-rule"
                     onClick={() => setRuleModalVisible(true)}
                   >
                     more rules
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -276,7 +276,7 @@ export default function Spirit() {
                         )}
                       >
                         <img src={item.icon} />
-                        {item.num && <div className="num">{item.num}</div>}
+                        {item.num ? <div className="num">{item.num}</div> :''}
                       </div>
                     </div>
                   ))}
