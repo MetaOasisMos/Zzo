@@ -181,8 +181,12 @@ $yellow: #ffc234;
     }
     .free-chance {
         padding: 44px 0 30px;
-        background: url("../../assets/images/spirit/free-chance-bg.png");
+        background: url("../../assets/images/spirit/free-chance-bg.png") no-repeat;
         background-size: 100%;
+        @media (min-width: 768px){
+            background-size:50%;
+            background-position: center;
+        }
     }
     .free-chance-title {
         font-weight: 700;
