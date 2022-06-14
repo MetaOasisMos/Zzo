@@ -48,12 +48,6 @@ export const animalsMapping = {
     Show your Peace and Love.`,
     desc2: `You are a DAO Enthusiast!`,
   },
-  Milu: {
-    desc1: `You have the unique opinion and understanding about investing in DeFi.<br/>
-    Opportunity and risk are soul mates.<br/>
-    Don't forget it.`,
-    desc2: `You are a Seasoned DeFi Investor!`,
-  },
   Deer: {
     desc1: `You have the unique opinion and understanding about investing in DeFi.<br/>
     Opportunity and risk are soul mates.<br/>
