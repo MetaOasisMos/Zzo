@@ -9,6 +9,8 @@ import IconKucoin from "../../assets/images/spirit/kucoin.svg";
 import IconCopied from "../../assets/images/copied-icon.svg";
 import { Web3Context } from "../../context/Web3Context";
 import Modal from "@mui/material/Modal";
+import { animalsMapping } from "../../config";
+import { getAnimal } from "../../lib/graph";
 
 import clsx from "clsx";
 
@@ -106,12 +108,16 @@ export default function Spirit() {
   const { account, connectWallet } = useContext(Web3Context);
   const [step, setStep] = useState(0);
   const [qualified, setQualified] = useState(false);
+  const [animal, setAnimal] = useState("");
   const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
 
   const doCopy = () => {
     const copied = document.createElement("input");
-    copied.setAttribute("value", `A 5s TEST helps you match your Spirit Animal in the Web3 world! Together with your friends and get the chance to enjoy the big rewards! https://www.zzoopers.xyz/spirit?src=${account}`);
+    copied.setAttribute(
+      "value",
+      `A 5s TEST helps you match your Spirit Animal in the Web3 world! Together with your friends and get the chance to enjoy the big rewards! https://www.zzoopers.xyz/spirit?src=${account}`
+    );
     document.body.appendChild(copied);
     copied.select();
     document.execCommand("copy");
@@ -120,12 +126,10 @@ export default function Spirit() {
     setCopyModalVisible(true);
   };
 
-  const doAnalyze = () => {
+  const doAnalyze = async () => {
     setStep(1);
-
-    setTimeout(() => {
-      setStep(2);
-    }, 3000);
+    setAnimal(await getAnimal(account));
+    setStep(2);
   };
 
   return (
@@ -212,17 +216,23 @@ export default function Spirit() {
         {step === 2 && (
           <div className="step-2">
             <div className="safe-area">
-              <img src={IconAvatar} className="result-avatar" />
-              <div className="result-title">You are the Cheetah in Web 3.0</div>
+              {/** TODO, need elephant */}
+              <img src={`/animals/${animal}.png`} className="result-avatar" />
+              <div className="result-title">
+                You are the {animal} in Web 3.0
+              </div>
               <div className="result-desc">
-                <div>
-                  You paid great attention to your individual feeling and like
-                  pursuing the latest trend.
-                </div>
-                <div>
-                  As a long-term investor, you distinguish trends from fads.
-                </div>
-                <div className="highlight">You are a Insightful NFT Buyer!</div>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: animalsMapping[animal].desc1,
+                  }}
+                />
+                <div
+                  className="highlight"
+                  dangerouslySetInnerHTML={{
+                    __html: animalsMapping[animal].desc2,
+                  }}
+                />
               </div>
             </div>
 
@@ -276,7 +286,7 @@ export default function Spirit() {
                         )}
                       >
                         <img src={item.icon} />
-                        {item.num ? <div className="num">{item.num}</div> :''}
+                        {item.num ? <div className="num">{item.num}</div> : ""}
                       </div>
                     </div>
                   ))}
