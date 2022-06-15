@@ -241,7 +241,7 @@ export default function Spirit() {
                   <div className="qualified-title">You get free mint!!!</div>
                 ) : (
                   <div className="free-chance-title">
-                    Congratulations! You get a rebate offer!
+                    Congratulations!<br/> You get a rebate offer!
                   </div>
                 )}
 

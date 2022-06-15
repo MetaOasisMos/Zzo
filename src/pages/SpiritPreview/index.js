@@ -8,7 +8,7 @@ import "./style.scss";
 export default function Spirit() {
   return (
     <div>
-      <div className="spirit-page">
+      <div className="spirit-preview-page">
         {Object.keys(animalsMapping).map((key) => (
           <div className="safe-area" style={{marginBottom: '64px'}}>
             <img src={`/animals/${key}.png`} className="result-avatar" />
