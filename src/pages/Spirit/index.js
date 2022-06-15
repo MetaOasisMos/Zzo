@@ -216,7 +216,6 @@ export default function Spirit() {
         {step === 2 && (
           <div className="step-2">
             <div className="safe-area">
-              {/** TODO, need elephant */}
               <img src={`/animals/${animal}.png`} className="result-avatar" />
               <div className="result-title">
                 You are the {animal} in Web 3.0

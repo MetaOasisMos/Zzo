@@ -24,9 +24,9 @@ export const spiritApi = "https://api.orangeprotocol.io/orange2c/query";
 
 export const animalsMapping = {
   Cheetah: {
-    desc1: `You have paid great attention to your individual feeling and like pursuing the latest trend.`,
+    desc1: `You have paid great attention to your individual feeling and like pursuing the latest trend.<br/>As a long-term investor, you distinguish trends from fads.`,
     desc2: `
-      You are an Insightful NFT Buyer
+      You are an Insightful NFT Buyer!
     `,
   },
   Rabbit: {
