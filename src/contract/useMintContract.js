@@ -7,12 +7,12 @@ import MintAbi from "./abi/Mint.json";
 import BN from "bignumber.js";
 
 export default function useMintContract() {
-  const { sendTx } = useContext(Web3Context);
+  const { account, sendTx } = useContext(Web3Context);
   const contract = useContract(MintAbi, config.contracts.mint);
 
   return {
-    async getStartBlock() {
-      return await contract.methods.startBlock().call();
+    async getMintedNumber() {
+      return await contract.methods.numberMinted(account).call();
     },
 
     async whitelistMint(payAmount, merkleTree, amount) {

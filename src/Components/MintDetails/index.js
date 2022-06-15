@@ -2,7 +2,7 @@ import { RiCalendar2Line, RiStackLine } from "react-icons/ri";
 import { BiStopwatch, BiTime } from "react-icons/bi";
 import { Web3Context } from "../../context/Web3Context";
 import btn_img from "../../assets/images/btn-image.svg";
-import { useState, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 // import MintComingImg from '../../assets/images/mint-coming.png';
 import { toast } from "react-toastify";
 import "./style.scss";
@@ -21,6 +21,7 @@ const MintDetails = () => {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [mintStep, setMintStep] = useState(0);
+  const [mintedNum, setMintedNum] = useState(0);
   const [phase1Started, setPhase1Started] = useState(false);
   const [phase2Started, setPhase2Started] = useState(false);
   const [needToPay, setNeedToPay] = useState(0);
@@ -73,41 +74,36 @@ const MintDetails = () => {
     setModalOpen(false);
     setNeedToPay(0);
     setTxHash("");
-  }
+  };
+
+  const getMintedNum = async () => {
+    const res = await mintContract.getMintedNumber();
+    setMintedNum(res);
+  };
+
+  useEffect(() => {
+    if (!account) {
+      return;
+    }
+    getMintedNum();
+  }, [account]);
 
   const body = (
     <div className={"modal-body"}>
-      {mintStep === 0 && (
-        <Purchase
-          closeModal={closeModal}
-          doMint={doMint}
-        />
-      )}
+      {mintStep === 0 && <Purchase closeModal={closeModal} doMint={doMint} />}
       {mintStep === 1 && (
-        <Waiting
-          payAmount={needToPay}
-          closeModal={closeModal}
-        />
+        <Waiting payAmount={needToPay} closeModal={closeModal} />
       )}
       {mintStep === 2 && (
-        <ConfirmPurchase
-          txHash={txHash}
-          closeModal={closeModal}
-        />
+        <ConfirmPurchase txHash={txHash} closeModal={closeModal} />
       )}
-      {mintStep === 3 && (
-        <Failed closeModal={closeModal} />
-      )}
+      {mintStep === 3 && <Failed closeModal={closeModal} />}
     </div>
   );
 
-
   return (
     <div className={"mint-details-container"}>
-      <Modal
-        open={modalOpen}
-        onClose={closeModal}
-      >
+      <Modal open={modalOpen} onClose={closeModal}>
         {body}
       </Modal>
 
@@ -158,28 +154,43 @@ const MintDetails = () => {
             <p className={"eth-amount"}>0.1 ETH</p>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
-            {phase1Started ? <div className="text-right">
-              {account ? (
-                <button
-                  className={"btn mint-btn hover-move"}
-                  onClick={() => {
-                    setModalOpen(true);
-                  }}
-                >
-                  Mint
-                </button>
-              ) : (
-                <button
-                  className={"btn mint-btn hover-move"}
-                  onClick={connectWallet}
-                >
-                  Connect Wallet
-                </button>
-              )}
-            </div> : <div className="text-right">
-              {/** new Date('2022-06-19 19:00').valueOf()  */}
-              <Countdown endTime={1655636400} onComplete={()=>setPhase1Started(true)} />
-            </div>}
+            {phase1Started? (
+              <div className="text-right">
+                {account ? (
+                  <>
+                    <button
+                      className={"btn mint-btn hover-move"}
+                      onClick={() => {
+                        setModalOpen(true);
+                      }}
+                    >
+                      Mint
+                    </button>
+                    {mintedNum > 0 && (
+                      <div className="minted-num">
+                        You have minted {mintedNum} NFT
+                        {mintedNum > 1 ? "s" : ""}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <button
+                    className={"btn mint-btn hover-move"}
+                    onClick={connectWallet}
+                  >
+                    Connect Wallet
+                  </button>
+                )}
+              </div>
+            ) : (
+              <div className="text-right">
+                {/** new Date('2022-06-19 19:00').valueOf()  */}
+                <Countdown
+                  endTime={1655636400}
+                  onComplete={() => setPhase1Started(true)}
+                />
+              </div>
+            )}
           </div>
         </div>
 
@@ -223,9 +234,16 @@ const MintDetails = () => {
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             <div className="text-right">
-              {phase2Started ? <button className={"btn goto-btn hover-move"}>
-                Go to <img src={btn_img} className={"goto-btn-img"} />
-              </button> : <Countdown endTime={1655722800} onComplete={()=>setPhase2Started(true)}  />}
+              {phase2Started ? (
+                <button className={"btn goto-btn hover-move"}>
+                  Go to <img src={btn_img} className={"goto-btn-img"} />
+                </button>
+              ) : (
+                <Countdown
+                  endTime={1655722800}
+                  onComplete={() => setPhase2Started(true)}
+                />
+              )}
             </div>
           </div>
         </div>
