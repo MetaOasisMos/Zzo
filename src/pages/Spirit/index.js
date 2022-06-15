@@ -241,15 +241,12 @@ export default function Spirit() {
                   <div className="qualified-title">You get free mint!!!</div>
                 ) : (
                   <div className="free-chance-title">
-                    Congratulations you get a chance to Free Mint
+                    Congratulations! You get a rebate offer!
                   </div>
                 )}
 
                 <div className="free-chance-desc">
-                  Invite your friends to participate in the test, together with
-                  your friends to collect{" "}
-                  <span className="highlight">10 spirit animals</span> and you
-                  will have a chance to get a free mint.
+                Together with your friends to collect <span className="highlight">10 spirit animals</span> and you will be able to have rebate rewards.
                   {/* <a
                     className="btn-rule"
                     onClick={() => setRuleModalVisible(true)}
