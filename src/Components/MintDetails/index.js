@@ -126,14 +126,16 @@ const MintDetails = () => {
                 <RiCalendar2Line className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Date</p>
               </div>
-              <p className={"mint-phase-detail-text"}>June 19th 2022</p>
+              {/* <p className={"mint-phase-detail-text"}>June 19th 2022</p> */}
+              <p className={"mint-phase-detail-text"}>TBA</p>
             </div>
             <div style={{ display: "flex", marginBottom: 10 }}>
               <div className={"mint-phase-details-container"}>
                 <BiTime className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Time</p>
               </div>
-              <p className={"mint-phase-detail-text"}>11:00 AM UTC</p>
+              {/* <p className={"mint-phase-detail-text"}>11:00 AM UTC</p> */}
+              <p className={"mint-phase-detail-text"}>TBA</p>
             </div>
             <div style={{ display: "flex", marginBottom: 10 }}>
               <div className={"mint-phase-details-container"}>
@@ -153,7 +155,10 @@ const MintDetails = () => {
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
             <p className={"eth-amount"}>0.1 ETH</p>
           </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
+
+
+          {false && <>
+            <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             {phase1Started? (
               <div className="text-right">
                 {account ? (
@@ -192,6 +197,10 @@ const MintDetails = () => {
               </div>
             )}
           </div>
+          
+          
+          </>}
+        
         </div>
 
         <div className="row g-0 mint-item">
@@ -205,14 +214,16 @@ const MintDetails = () => {
                 <RiCalendar2Line className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Date</p>
               </div>
-              <p className={"mint-phase-detail-text"}>June 20th 2022</p>
+              {/* <p className={"mint-phase-detail-text"}>June 20th 2022</p> */}
+              <p className={"mint-phase-detail-text"}>TBA</p>
             </div>
             <div className="info-item">
               <div className={"mint-phase-details-container"}>
                 <BiTime className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Time</p>
               </div>
-              <p className={"mint-phase-detail-text"}>11:00 AM UTC</p>
+              {/* <p className={"mint-phase-detail-text"}>11:00 AM UTC</p> */}
+              <p className={"mint-phase-detail-text"}>TBA</p>
             </div>
             <div className="info-item">
               <div className={"mint-phase-details-container"}>
@@ -232,7 +243,8 @@ const MintDetails = () => {
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
             <p className={"eth-amount"}>0.15 ETH</p>
           </div>
-          <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
+          {false && <>
+            <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             <div className="text-right">
               {phase2Started ? (
                 <button className={"btn goto-btn hover-move"}>
@@ -246,6 +258,10 @@ const MintDetails = () => {
               )}
             </div>
           </div>
+          
+          
+          </>}
+        
         </div>
       </div>
     </div>

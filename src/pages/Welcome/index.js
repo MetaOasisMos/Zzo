@@ -9,6 +9,8 @@ import IconClose from "../../assets/images/close.svg";
 import IconClickMe from "../../assets/images/click-me.gif";
 import "./style.scss";
 
+
+// https://u7x7ubqmf7.larksuite.com/docs/docusicuSUwr2RXmMpxVVUfjFVe#A6Yv3n
 const zooList = [
   {
     id: "9",

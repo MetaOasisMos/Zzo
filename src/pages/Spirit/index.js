@@ -104,6 +104,8 @@ const invitationList = [
   },
 ];
 
+// https://u7x7ubqmf7.larksuite.com/docx/doxus1f9Lqxyuo9VRaOc1i4hDUb
+
 export default function Spirit() {
   const { account, connectWallet } = useContext(Web3Context);
   const [step, setStep] = useState(0);
