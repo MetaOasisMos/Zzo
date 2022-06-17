@@ -2,13 +2,15 @@
 // import Footer from "../../Components/Footer";
 import { useEffect, useState, useContext } from "react";
 import IconUnknown from "../../assets/images/spirit/unknown.gif";
-import IconAvatar from "../../assets/images/spirit/avatar.png";
-import IconZzoopers from "../../assets/images/spirit/zzoopers.svg";
+import { useLocation } from "react-router-dom";
+// import IconAvatar from "../../assets/images/spirit/avatar.png";
+import IconMetaoasis from "../../assets/images/spirit/metaoasis.svg";
 import IconWalkingTiger from "../../assets/images/spirit/walking-tiger.gif";
 import IconKucoin from "../../assets/images/spirit/kucoin.svg";
 import IconCopied from "../../assets/images/copied-icon.svg";
 import { Web3Context } from "../../context/Web3Context";
 import Modal from "@mui/material/Modal";
+import axios from "axios";
 import { animalsMapping } from "../../config";
 import { getAnimal } from "../../lib/graph";
 
@@ -27,6 +29,7 @@ import Icon9 from "../../assets/images/spirit/animals/9.png";
 
 import config from "../../config";
 import "./style.scss";
+import { setRef } from "@mui/material";
 
 const collectionList = [
   {
@@ -107,12 +110,16 @@ const invitationList = [
 // https://u7x7ubqmf7.larksuite.com/docx/doxus1f9Lqxyuo9VRaOc1i4hDUb
 
 export default function Spirit() {
-  const { account, connectWallet } = useContext(Web3Context);
+  const location = useLocation();
+  const { account, connectWallet, web3 } = useContext(Web3Context);
   const [step, setStep] = useState(0);
-  const [qualified, setQualified] = useState(false);
+  const [qualified, setQualified] = useState(true);
   const [animal, setAnimal] = useState("");
+  const [inviter, setInviter] = useState("");
   const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
+  // const [invitationList, setInvitationList] = useState([])
+  // const [collectionList, setcollectionList] = useState([])
 
   const doCopy = () => {
     const copied = document.createElement("input");
@@ -128,11 +135,106 @@ export default function Spirit() {
     setCopyModalVisible(true);
   };
 
-  const doAnalyze = async () => {
-    setStep(1);
-    setAnimal(await getAnimal(account));
-    setStep(2);
+  const saveResult = async (signature) => {
+    await axios.post(`${config.spiritRelationApi}/metaoasismos/api/v1`, {
+      jsonrpc: "2.0",
+      method: "newZzoopersAnimal",
+      params: {
+        owner: account,
+        inviter,
+        ownerSig: signature + "asdfawf",
+      },
+      id: 1,
+    });
   };
+
+  const doAnalyze = async () => {
+    const msgParams = JSON.stringify({
+      domain: {
+        name: "ZzoopersAnimal",
+      },
+      message: {
+        message:
+          "To verify your Spirit Animal in Web3, sign below to make the on-chain analysis without exposing your private key.",
+      },
+      primaryType: "Owner",
+      types: {
+        Owner: [
+          {
+            name: "message",
+            type: "string",
+          },
+        ],
+        EIP712Domain: [{ name: "name", type: "string" }],
+      },
+    });
+    await web3.currentProvider.sendAsync(
+      {
+        method: "eth_signTypedData_v4",
+        params: [account, msgParams],
+        from: account,
+      },
+      async (err, result) => {
+        if (err) {
+          console.dir(err);
+          return;
+        }
+        if (result.error) {
+          console.log(result.error.message);
+          return;
+        }
+        const signature = result.result;
+        console.log("Signature is", signature);
+
+        setStep(1);
+        setAnimal(await getAnimal(account));
+        setStep(2);
+        saveResult(signature);
+      }
+    );
+  };
+
+  const getReference = () => {
+    const src = new URLSearchParams(location.search).get("src");
+    console.log("reference addr:", src);
+    setInviter(src);
+  };
+
+  // const getCollections = async () => {
+  //   const res = await axios.post(`${config.spiritRelationApi}/metaoasismos/api/v1`, {
+  //     jsonrpc: "2.0",
+  //     method: "getZzoopersAnimal",
+  //     params: account,
+  //     id: 1,
+  //   });
+  //   console.log('collections', res)
+  // };
+
+  const getInvitations = async () => {
+    const res = await axios.post(
+      `${config.spiritRelationApi}/metaoasismos/api/v1`,
+      {
+        jsonrpc: "2.0",
+        method: "getZzoopersAnimalInviteResult",
+        params: account,
+        id: 1,
+      }
+    );
+    // setInvitationList(res.data)
+    console.log("invitations", res);
+  };
+
+  useEffect(() => {
+    getReference();
+  }, []);
+
+  useEffect(() => {
+    if (!account) {
+      return;
+    }
+    // getCollections();
+    getInvitations();
+  }, [account]);
 
   return (
     <div>
@@ -143,8 +245,8 @@ export default function Spirit() {
             <img src={IconUnknown} className="icon-unknown" />
 
             <div className="sponsors">
-              <a href={config.socialLinks.zzopers} target="_blank">
-                <img src={IconZzoopers} />
+              <a href={config.socialLinks.official} target="_blank">
+                <img src={IconMetaoasis} />
               </a>
               <a href={config.socialLinks.kucoin} target="_blank">
                 <img src={IconKucoin} />
@@ -171,10 +273,9 @@ export default function Spirit() {
             )}
 
             <div className="connect-hint">
-              *Your authorization is required to connect the wallet and retrieve
-              your on-chain behavior, we will not touch your personal private
-              key and protect your privacy. If you mind this behavior, Please
-              close this link.
+              *The test requires your authorization to have the on-chain
+              records. Connect the wallet and make the signature to meet your
+              spirit animal in Web3.
             </div>
           </div>
         )}
@@ -240,22 +341,31 @@ export default function Spirit() {
             <div className="free-chance">
               <div className="safe-area">
                 {qualified ? (
-                  <div className="qualified-title">You get free mint!!!</div>
+                  <>
+                    <div className="qualified-title">
+                      Congrats!
+                      <br /> You are eligible to get full mint rebate!
+                    </div>
+                    <div className="free-chance-desc">
+                      Join our Discord and follow our{" "}
+                      <span className="highlight">#Announcement</span> channel.
+                      Keep up with our latest news about rebate rewards!
+                    </div>
+                  </>
                 ) : (
-                  <div className="free-chance-title">
-                    Congratulations!<br/> You get a rebate offer!
-                  </div>
-                )}
+                  <>
+                    <div className="free-chance-title">
+                      Congratulations!
+                      <br /> You get a rebate offer!
+                    </div>
 
-                <div className="free-chance-desc">
-                Together with your friends to collect <span className="highlight">10 spirit animals</span> and you will be able to have rebate rewards.
-                  {/* <a
-                    className="btn-rule"
-                    onClick={() => setRuleModalVisible(true)}
-                  >
-                    more rules
-                  </a> */}
-                </div>
+                    <div className="free-chance-desc">
+                      Together with your friends to collect{" "}
+                      <span className="highlight">10 spirit animals</span> and
+                      you will be able to have rebate rewards.
+                    </div>
+                  </>
+                )}
               </div>
             </div>
             <div className="safe-area">

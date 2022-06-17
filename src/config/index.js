@@ -22,6 +22,8 @@ export const socialLinks = {
 
 export const spiritApi = "https://api.orangeprotocol.io/orange2c/query";
 
+export const spiritRelationApi = "https://spirit-api.zzoopers.xyz";
+
 export const animalsMapping = {
   Cheetah: {
     desc1: `You have paid great attention to your individual feeling <br/>
@@ -124,5 +126,6 @@ export default {
   spiritApi,
   chainIdMapping,
   socialLinks,
+  spiritRelationApi,
   ...envConf,
 };

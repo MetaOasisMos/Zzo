@@ -15,6 +15,8 @@ export const getAnimal = async (address) => {
 
   const result = await request(config.spiritApi, query);
 
+  console.log('get animal', result)
+
   return result.queryZzooper.profile;
 };
 
