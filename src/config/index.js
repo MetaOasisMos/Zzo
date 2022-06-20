@@ -26,46 +26,51 @@ export const spiritRelationApi = "https://spirit-api.zzoopers.xyz";
 
 export const animalsMapping = {
   Cheetah: {
-    desc1: `You have paid great attention to your individual feeling <br/>
-    and like pursuing the latest trend.<br/>
-    As a long-term investor, you distinguish trends from fads. `,
+    desc1: `
+    You have paid great attention to your instincts <br/>
+and like to pursue the latest trends.<br/>
+As a long-term investor, <br/>
+you distinguish trends from fads.
+    
+    
+    `,
     desc2: `
     You are an Insightful NFT Buyer!
     `,
   },
   Rabbit: {
     desc1: `
-    You are a freshman in the Web3 world. <br/>
-    Everything here is thrilling but unfamiliar to you. <br/>
-    Keep learning. Keep exploring. <br/>
-    Don't be fueled by the noisy voice.
+    You are a freshman in the Web3 world.<br/>
+Everything here is thrilling and novel to you.<br/>
+Keep learning. Keep exploring.<br/>
+Don't be distracted by the doubters 
     `,
     desc2: `You are a Crypto Newbie!`,
   },
   Unicorn: {
     desc1: `
     Web3 world is like a beautiful but challenging jungle.<br/>
-Have your own pace and <br/>
-find out the useful tools to grow up.<br/>
-Just enjoy your exclusive Metaverse journey.
+Be patient and find out the useful tools <br/>
+to help you advance.<br/>
+Enjoy your journey.
     `,
     desc2: `You are a Junior Web3 Inhabitant!`,
   },
   Panda: {
     desc1: `
-    You are excited about the development of DAO.<br/>
-It is cool to join the interesting DAO group <br/>
-and make it big together.<br/>
-Show your Peace and Love.
+    You are excited about the development of DAOs.<br/>
+    It excites you to join an interesting DAO<br/>
+     to make it grow big together.<br/>
+    Show your Passion and Talents.
     `,
     desc2: `You are a DAO Enthusiast!`,
   },
   Deer: {
     desc1: `
-    You have the unique opinion and understanding about <br/>
-    investing in DeFi.<br/>
-    But don't forget that <br/>
-    opportunity and risk are always soul mates.
+    You have good understanding and rich experience <br/>
+in using DeFi products. <br/>
+Just always keep in mind that <br/>
+risk and reward come side by side. 
     `,
     desc2: `You are a Seasoned DeFi Investor!`,
   },
@@ -73,19 +78,18 @@ Show your Peace and Love.
     desc1: `
     You seemingly know how to survive in the bear market.<br/>
 Think big and act small.<br/>
-Keeping your assets safe <br/>
-should always be the top priority.
-
+Keeping your assets safe<br/>
+is always the top priority.
 
     `,
-    desc2: `You are a Deep-minded Crypto Strategist!`,
+    desc2: `You are a Reliable Crypto Strategist!`,
   },
   Elephant: {
     desc1: `
-    You witnessed and engaged in <br/>
-the tremendous wave driven by Web3 world.<br/>
-Lots of fun and gains you have achieved from <br/>
-the fast-growing NFT space.
+    You have engaged closely <br/>
+    in the tremendous NFT waves in the Web3 world.<br/>
+    You have lots of fun and gains from<br/>
+    the fast-growing NFT space.
     `,
     desc2: `You are an Epic NFT Collector!`,
   },
@@ -93,28 +97,27 @@ the fast-growing NFT space.
   Penguin: {
     desc1: `
     You are keen on shopping for virtual lands.<br/>
-Track more. Explore more. <br/>
-Lots of opportunities behind virtual lands <br/>
-await you to check out.
+    90% of all millionaires become so through owning real estate, a wise man once said.<br/>
+    Lots of opportunities in virtual lands await you to check out.
     
     `,
-    desc2: `You are a Unique Metaverse-rich Landlord!`,
+    desc2: `You are a Rich Landlord in the Metaverse!`,
   },
   Tiger: {
     desc1: `
-    You are ignited a lot from the rise of X to Earn.<br/>
-    The complex gaming mechanism is piece of cake for you.<br/>
-    Gear up and ready for <br/>
-    the next amazing innovation of X to Earn.
+    You are exuberant for the rise of X to Earn.<br/>
+    The complex gaming mechanism is a piece of cake for you.<br/>
+    Gear up and get ready for<br/>
+    new innovation of X to Earn.
     `,
     desc2: `You are an Experienced X to Earn Player!`,
   },
   Monkey: {
     desc1: `
     You are interested in the Layer2 movement.<br/>
-In Math, We Trust.<br/>
-Your long-term contribution may finally <br/>
-blossom up one day.
+    In Math, We Trust.<br/>
+    Your long-term contribution may finally <br/>
+    blossom up one day.
     
     
     `,
