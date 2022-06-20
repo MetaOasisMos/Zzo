@@ -30,58 +30,57 @@ import Icon9 from "../../assets/images/spirit/animals/9.png";
 import config from "../../config";
 import "./style.scss";
 
-const collectionList = [
-  {
-    name: "Cheetah",
+const invitesMapping = {
+  Cheetah: {
     icon: Icon0,
-    num: 1,
+    count: 0,
   },
-  {
-    name: 'Deer',
+
+  Deer: {
     icon: Icon1,
-    num: 3,
+    count: 0,
   },
-  {
-    name: 'Elephant',
+
+  Elephant: {
     icon: Icon2,
-    num: 2,
+    count: 0,
   },
-  {
-    name: 'Fox',
+
+  Fox: {
     icon: Icon3,
-    num: 0,
+    count: 0,
   },
-  {
-    name: 'Monkey',
+
+  Monkey: {
     icon: Icon4,
-    num: 0,
+    count: 0,
   },
-  {
-    name: 'Panda',
+
+  Panda: {
     icon: Icon5,
-    num: 0,
+    count: 0,
   },
-  {
-    name: 'Penguin',
+
+  Penguin: {
     icon: Icon6,
-    num: 0,
+    count: 0,
   },
-  {
-    name: 'Rabbit',
+
+  Rabbit: {
     icon: Icon7,
-    num: 0,
+    count: 0,
   },
-  {
-    name: 'Tiger',
+
+  Tiger: {
     icon: Icon8,
-    num: 0,
+    count: 0,
   },
-  {
-    name: 'Unicorn',
+
+  Unicorn: {
     icon: Icon9,
-    num: 0,
+    count: 0,
   },
-];
+};
 
 // https://u7x7ubqmf7.larksuite.com/docx/doxus1f9Lqxyuo9VRaOc1i4hDUb
 
@@ -89,13 +88,13 @@ export default function Spirit() {
   const location = useLocation();
   const { account, connectWallet, web3 } = useContext(Web3Context);
   const [step, setStep] = useState(0);
-  const [qualified, setQualified] = useState(true);
+  const [qualified, setQualified] = useState(false);
   const [animal, setAnimal] = useState("");
   const [inviter, setInviter] = useState("");
   const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
   const [invitationList, setInvitationList] = useState([]);
-  const [invitedAnimals, setInvitedAnimals] = useState([]);
+  const [invitedMapping, setInvitedMapping] = useState(invitesMapping);
   // const [collectionList, setcollectionList] = useState([])
 
   const doCopy = () => {
@@ -180,16 +179,6 @@ export default function Spirit() {
     setInviter(src);
   };
 
-  // const getCollections = async () => {
-  //   const res = await axios.post(`${config.spiritRelationApi}/metaoasismos/api/v1`, {
-  //     jsonrpc: "2.0",
-  //     method: "getZzoopersAnimal",
-  //     params: account,
-  //     id: 1,
-  //   });
-  //   console.log('collections', res)
-  // };
-
   const getInvitations = async () => {
     const res = await axios.post(
       `${config.spiritRelationApi}/metaoasismos/api/v1`,
@@ -207,8 +196,30 @@ export default function Spirit() {
       }
     );
     setInvitationList(res.data.result.data);
-    setInvitedAnimals(res.data.result.animals);
-    console.log("invitations", res);
+    res.data.result.animals.forEach((item) => {
+      setInvitedMapping((prev) => {
+        console.log("prev", prev);
+        prev[item.animal].count = item.count;
+        return prev;
+      });
+    });
+  };
+
+  const getWinnerList = async () => {
+    const res = await axios.post(
+      `${config.spiritRelationApi}/metaoasismos/api/v1`,
+      {
+        jsonrpc: "2.0",
+        method: "getZzoopersInviteWinners",
+        params: "",
+        id: 1,
+      }
+    );
+    const winnerList = res.data.result.map((item) => item.owner);
+
+    if (winnerList.indexOf(account) > -1) {
+      setQualified(true);
+    }
   };
 
   useEffect(() => {
@@ -219,8 +230,8 @@ export default function Spirit() {
     if (!account) {
       return;
     }
-    // getCollections();
     getInvitations();
+    getWinnerList();
   }, [account]);
 
   return (
@@ -372,17 +383,21 @@ export default function Spirit() {
               <div className="my-collections">
                 <div className="section-title">My collection</div>
                 <div className="collection-list">
-                  {collectionList.map((item, index) => (
-                    <div className="collection-item-wrapper" key={index}>
+                  {Object.keys(invitedMapping).map((key) => (
+                    <div className="collection-item-wrapper" key={key}>
                       <div
                         className={clsx(
                           "collection-item",
-                          invitedAnimals.indexOf(item.name) === -1 && "empty"
+                          !invitedMapping[key].count && "empty"
                           // !item.num && "empty"
                         )}
                       >
-                        <img src={item.icon} />
-                        {/* {item.num ? <div className="num">{item.num}</div> : ""} */}
+                        <img src={invitedMapping[key].icon} />
+                        {invitedMapping[key].count ? (
+                          <div className="num">{invitedMapping[key].count}</div>
+                        ) : (
+                          ""
+                        )}
                       </div>
                     </div>
                   ))}
