@@ -97,16 +97,18 @@ is always the top priority.
   Penguin: {
     desc1: `
     You are keen on shopping for virtual lands.<br/>
-    90% of all millionaires become so through owning real estate, a wise man once said.<br/>
-    Lots of opportunities in virtual lands await you to check out.
-    
+    90% of all millionaires become so<br/>
+    through owning real estate, a wise man once said.<br/>
+    Lots of opportunities in virtual lands<br/>
+    await you to check out.
     `,
     desc2: `You are a Rich Landlord in the Metaverse!`,
   },
   Tiger: {
     desc1: `
     You are exuberant for the rise of X to Earn.<br/>
-    The complex gaming mechanism is a piece of cake for you.<br/>
+    The complex gaming mechanism<br/> 
+    is a piece of cake for you. <br/>
     Gear up and get ready for<br/>
     new innovation of X to Earn.
     `,
