@@ -29,81 +29,57 @@ import Icon9 from "../../assets/images/spirit/animals/9.png";
 
 import config from "../../config";
 import "./style.scss";
-import { setRef } from "@mui/material";
 
 const collectionList = [
   {
+    name: "Cheetah",
     icon: Icon0,
     num: 1,
   },
   {
+    name: 'Deer',
     icon: Icon1,
     num: 3,
   },
   {
+    name: 'Elephant',
     icon: Icon2,
     num: 2,
   },
   {
+    name: 'Fox',
     icon: Icon3,
     num: 0,
   },
   {
+    name: 'Monkey',
     icon: Icon4,
     num: 0,
   },
   {
+    name: 'Panda',
     icon: Icon5,
     num: 0,
   },
   {
+    name: 'Penguin',
     icon: Icon6,
     num: 0,
   },
   {
+    name: 'Rabbit',
     icon: Icon7,
     num: 0,
   },
   {
+    name: 'Tiger',
     icon: Icon8,
     num: 0,
   },
   {
+    name: 'Unicorn',
     icon: Icon9,
     num: 0,
-  },
-];
-
-const invitationList = [
-  {
-    address: "0x2a...2e2b",
-    icon: Icon0,
-    date: "2022.06.23 02:23:21",
-  },
-  {
-    address: "0x2a...2e2b",
-    icon: Icon1,
-    date: "2022.06.23 02:23:21",
-  },
-  {
-    address: "0x2a...2e2b",
-    icon: Icon2,
-    date: "2022.06.23 02:23:21",
-  },
-  {
-    address: "0x2a...2e2b",
-    icon: Icon3,
-    date: "2022.06.23 02:23:21",
-  },
-  {
-    address: "0x2a...2e2b",
-    icon: Icon4,
-    date: "2022.06.23 02:23:21",
-  },
-  {
-    address: "0x2a...2e2b",
-    icon: Icon5,
-    date: "2022.06.23 02:23:21",
   },
 ];
 
@@ -118,7 +94,8 @@ export default function Spirit() {
   const [inviter, setInviter] = useState("");
   const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
-  // const [invitationList, setInvitationList] = useState([])
+  const [invitationList, setInvitationList] = useState([]);
+  const [invitedAnimals, setInvitedAnimals] = useState([]);
   // const [collectionList, setcollectionList] = useState([])
 
   const doCopy = () => {
@@ -136,14 +113,17 @@ export default function Spirit() {
   };
 
   const saveResult = async (signature) => {
+    let params = {
+      owner: account,
+      ownerSig: signature,
+    };
+    if (inviter) {
+      params.inviter = inviter;
+    }
     await axios.post(`${config.spiritRelationApi}/metaoasismos/api/v1`, {
       jsonrpc: "2.0",
       method: "newZzoopersAnimal",
-      params: {
-        owner: account,
-        inviter,
-        ownerSig: signature + "asdfawf",
-      },
+      params,
       id: 1,
     });
   };
@@ -216,11 +196,18 @@ export default function Spirit() {
       {
         jsonrpc: "2.0",
         method: "getZzoopersAnimalInviteResult",
-        params: account,
+        params: {
+          owner: account,
+          page: {
+            pageNo: 0,
+            size: 200000,
+          },
+        },
         id: 1,
       }
     );
-    // setInvitationList(res.data)
+    setInvitationList(res.data.result.data);
+    setInvitedAnimals(res.data.result.animals);
     console.log("invitations", res);
   };
 
@@ -390,11 +377,12 @@ export default function Spirit() {
                       <div
                         className={clsx(
                           "collection-item",
-                          !item.num && "empty"
+                          invitedAnimals.indexOf(item.name) === -1 && "empty"
+                          // !item.num && "empty"
                         )}
                       >
                         <img src={item.icon} />
-                        {item.num ? <div className="num">{item.num}</div> : ""}
+                        {/* {item.num ? <div className="num">{item.num}</div> : ""} */}
                       </div>
                     </div>
                   ))}
@@ -403,14 +391,22 @@ export default function Spirit() {
 
               <div className="my-invitations">
                 <div className="section-title">My invitations</div>
+                {invitationList.length === 0 && <div>No invitations yet.</div>}
                 <div className="invitation-list">
                   {invitationList.map((item) => (
-                    <div className="invitation-item" key={item.address}>
+                    <div className="invitation-item" key={item.owner}>
                       <div>
-                        <div className="address">{item.address}</div>
-                        <div className="date">{item.date}</div>
+                        <div className="address">
+                          {item.owner.slice(0, 4)}...{item.owner.slice(-4)}
+                        </div>
+                        <div className="date">
+                          {new Date(item.createAt).toLocaleDateString()}
+                        </div>
                       </div>
-                      <img src={item.icon} className="icon" />
+                      <img
+                        src={`/animals/${item.animal}.png`}
+                        className="icon"
+                      />
                     </div>
                   ))}
                 </div>
