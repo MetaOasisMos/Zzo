@@ -134,7 +134,7 @@ export default function Spirit() {
       },
       message: {
         message:
-          "To verify your Spirit Animal in Web3, sign below to make the on-chain analysis without exposing your private key.",
+          "Sign below to get your Spirit Animal in Web3 based on on-chain analysis.  This will NOT approve any transactions and your private key will NOT be exposed in any means.",
       },
       primaryType: "Owner",
       types: {
@@ -342,12 +342,12 @@ export default function Spirit() {
                   <>
                     <div className="qualified-title">
                       Congrats!
-                      <br /> You are eligible to get full mint rebate!
+                      <br /> You are eligible to get Full Rebate on mint price!
                     </div>
                     <div className="free-chance-desc">
                       Join our Discord and follow our{" "}
                       <span className="highlight">#Announcement</span> channel.
-                      Keep up with our latest news about rebate rewards!
+                      Keep up with our latest news about rebates and rewards!
                     </div>
                   </>
                 ) : (
