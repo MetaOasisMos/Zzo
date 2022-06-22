@@ -89,9 +89,9 @@ const invitesMapping = {
 export default function Spirit() {
   const location = useLocation();
   const { account, connectWallet, web3 } = useContext(Web3Context);
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(0);
   const [qualified, setQualified] = useState(false);
-  const [animal, setAnimal] = useState("Deer");
+  const [animal, setAnimal] = useState("");
   const [inviter, setInviter] = useState("");
   const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
