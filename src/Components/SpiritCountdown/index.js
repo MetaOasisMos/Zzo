@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import "./style.scss";
 
-export default function Countdown({ endTime, onComplete }) {
+export default function SpiritCountdown({ endTime, onComplete }) {
   const [countdownTimer, setCountdownTimer] = useState(null);
   const [countdown, setCountdown] = useState({
     days: "-",
@@ -13,13 +14,15 @@ export default function Countdown({ endTime, onComplete }) {
     const timeGap = Math.floor(endTime - new Date().valueOf() / 1000);
 
     if (timeGap < 0) {
-      onComplete();
       setCountdown({
         days: 0,
         hours: 0,
         minutes: 0,
         seconds: 0,
       });
+      if (onComplete) {
+        onComplete();
+      }
       return;
     }
 
@@ -55,9 +58,19 @@ export default function Countdown({ endTime, onComplete }) {
   }, [endTime]);
 
   return (
-    <button className={"btn time-btn hover-move"} disabled>
-      {countdown.days}d {countdown.hours}h {countdown.minutes}m{" "}
-      {countdown.seconds}s
-    </button>
+    <div className="spirit-countdown">
+      <div className="countdown-item">
+        {countdown.days} <span className="unit">D</span>
+      </div>
+      <div className="countdown-item">
+        {countdown.hours} <span className="unit">H</span>
+      </div>
+      <div className="countdown-item">
+        {countdown.minutes} <span className="unit">M</span>
+      </div>
+      <div className="countdown-item">
+        {countdown.seconds} <span className="unit">S</span>
+      </div>
+    </div>
   );
 }

@@ -2,7 +2,9 @@
 // import Footer from "../../Components/Footer";
 import { useEffect, useState, useContext } from "react";
 import IconUnknown from "../../assets/images/spirit/unknown.gif";
-import { useLocation } from "react-router-dom";
+
+import Countdown from "../../Components/SpiritCountdown";
+import { useLocation, Link } from "react-router-dom";
 // import IconAvatar from "../../assets/images/spirit/avatar.png";
 import IconMetaoasis from "../../assets/images/spirit/metaoasis.svg";
 import IconWalkingTiger from "../../assets/images/spirit/walking-tiger.gif";
@@ -87,9 +89,9 @@ const invitesMapping = {
 export default function Spirit() {
   const location = useLocation();
   const { account, connectWallet, web3 } = useContext(Web3Context);
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(2);
   const [qualified, setQualified] = useState(false);
-  const [animal, setAnimal] = useState("");
+  const [animal, setAnimal] = useState("Deer");
   const [inviter, setInviter] = useState("");
   const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
@@ -333,6 +335,24 @@ export default function Spirit() {
                     __html: animalsMapping[animal].desc2,
                   }}
                 />
+              </div>
+
+              <div className="countdown-wrapper">
+                <div className="title">
+                  KuCoin NFT Marketplace
+                  <br />
+                  Windvane's first NFT Launchpad project
+                </div>
+                <div className="desc">"Zzoopers Genesis" Coming Soon</div>
+
+                <Countdown
+                  endTime={1657497600}
+                  // onComplete={() => setPhase2Started(true)}
+                />
+
+                <a href="/" className="btn-view-more" target="_blank">
+                  View more
+                </a>
               </div>
             </div>
 
