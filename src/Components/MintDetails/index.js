@@ -237,7 +237,7 @@ const MintDetails = () => {
                 <RiStackLine className={"mint-phase-icon"} />
                 <p className={"mint-phase-detail-name"}>Max Qty</p>
               </div>
-              <p className={"mint-phase-detail-text"}>3</p>
+              <p className={"mint-phase-detail-text"}>10</p>
             </div>
           </div>
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
