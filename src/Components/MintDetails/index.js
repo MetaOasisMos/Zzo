@@ -16,7 +16,9 @@ import Waiting from "../Modals/waiting";
 import ConfirmPurchase from "../Modals/ConfirmPurchase";
 import Failed from "../Modals/Failed";
 
-const MintDetails = () => {
+const MintDetails = ({
+  direct
+}) => {
   // return <img src={MintComingImg} className="mint-coming-img"/>
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -46,6 +48,8 @@ const MintDetails = () => {
   };
 
   const doMint = async (amount) => {
+    const payAmount = amount * 0.1;
+    setNeedToPay(payAmount);
     setMintStep(1);
 
     const merkleTree = await getMerkleTree();
@@ -54,8 +58,7 @@ const MintDetails = () => {
       return;
     }
     try {
-      const payAmount = amount * 0.1;
-      setNeedToPay(payAmount);
+  
       const result = await mintContract.whitelistMint(
         payAmount,
         merkleTree,
@@ -155,6 +158,38 @@ const MintDetails = () => {
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-3 col-sm-3 col-3 text-center">
             <p className={"eth-amount"}>0.1 ETH</p>
           </div>
+
+           
+          {direct &&  <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
+          <div className="text-right">
+                {account ? (
+                  <>
+                    <button
+                      className={"btn mint-btn hover-move"}
+                      onClick={() => {
+                        setModalOpen(true);
+                      }}
+                    >
+                      Mint
+                    </button>
+                    {mintedNum > 0 && (
+                      <div className="minted-num">
+                        You have minted {mintedNum} NFT
+                        {mintedNum > 1 ? "s" : ""}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <button
+                    className={"btn mint-btn hover-move"}
+                    onClick={connectWallet}
+                  >
+                    Connect Wallet
+                  </button>
+                )}
+              </div>
+            
+            </div>}
 
 
           {false && <>

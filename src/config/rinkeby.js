@@ -1,5 +1,8 @@
 const contracts = {
-  mint: '0x4a3d66aee445cb2bf8b21e05f2a638e5bcb903ef'
+  // original mint address
+  // mint: '0x4a3d66aee445cb2bf8b21e05f2a638e5bcb903ef',
+  mint: '0x36755850E92c98B6b020a9aBEBEeaBb52c48E9ce',
+
 };
 
 const chainId = 4;

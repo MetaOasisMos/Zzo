@@ -6,7 +6,7 @@ import Utils from "./Components/Utils";
 import Meet from "./Components/Meet";
 import Carousel from "./Components/Carousel";
 // import slider2 from "./assets/images/slider 9.png";
-import loaderimg from "./assets/images/loader.png";
+// import loaderimg from "./assets/images/loader.png";
 import MintDetails from "./Components/MintDetails";
 import Reveal from "./Components/Reveal";
 import RoadMap from "./Components/Roadmaps";
