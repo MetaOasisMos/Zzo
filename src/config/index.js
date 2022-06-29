@@ -18,6 +18,7 @@ export const socialLinks = {
   twitter: "https://twitter.com/MetaOasisDAO",
   medium: "https://medium.com/@MetaOasisDAO",
   mirror: "https://mirror.xyz/0x1dc28C2fFdf88AB85464DE51aec1b98Bd30d506E",
+  gleam: "https://gleam.io/tznHT/your-spirit-animal-test-rebate-raffle",
 };
 
 export const spiritApi = "https://api.orangeprotocol.io/orange2c/query";

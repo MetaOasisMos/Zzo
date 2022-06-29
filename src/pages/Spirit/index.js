@@ -135,8 +135,9 @@ export default function Spirit() {
         name: "ZzoopersAnimal",
       },
       message: {
-        message:
-          "Sign below to get your Spirit Animal in Web3 based on on-chain analysis.  This will NOT approve any transactions and your private key will NOT be exposed in any means.",
+        message: `Please sign below to let us verify that you are the owner of this address: ${String(
+          account
+        ).toLowerCase()}. This will NOT cost you any gas fees and your private key will NOT be exposed in any means.`,
       },
       primaryType: "Owner",
       types: {
@@ -362,25 +363,41 @@ export default function Spirit() {
                   <>
                     <div className="qualified-title">
                       Congrats!
-                      <br /> You are eligible to get Full Rebate on mint price!
+                      <br /> You have successfully completed two quests!
                     </div>
                     <div className="free-chance-desc">
-                      Join our Discord and follow our{" "}
-                      <span className="highlight">#Announcement</span> channel.
-                      Keep up with our latest news about rebates and rewards!
+                      JOIN our <span className="highlight">Discord</span> and
+                      follow the{" "}
+                      <span className="highlight">#Announcement</span> channel
+                      to unlock the final quest! May you're one of the lucky
+                      ones!
                     </div>
                   </>
                 ) : (
                   <>
                     <div className="free-chance-title">
                       Congratulations!
-                      <br /> You get a rebate offer!
+                      <br /> You have the chance to get a<br /> FULL MINT
+                      REBATE!
                     </div>
 
                     <div className="free-chance-desc">
-                      Together with your friends to collect{" "}
-                      <span className="highlight">10 spirit animals</span> and
-                      you will be able to have rebate rewards.
+                      If you wanna be eligible to get the FULL MINT REBATE,
+                      please complete the following quests:
+                      <br />
+                      1. Together with your friends to successfully collect{" "}
+                      <span className="highlight">
+                        10 different spirit animals.
+                      </span>
+                      <br />
+                      2.{" "}
+                      <span className="highlight">
+                        Complete the Gleam tasks
+                      </span>{" "}
+                      to unlock the final quest.
+                      <br />
+                      *Only 50 FULL MINT REBATEs available. First come, Fisrt
+                      served.
                     </div>
                   </>
                 )}
@@ -390,10 +407,10 @@ export default function Spirit() {
               <div className="actions-line">
                 <a
                   className="btn-black"
-                  href={config.socialLinks.discord}
+                  href={config.socialLinks.gleam}
                   target="_blank"
                 >
-                  Join our Discord
+                  Join Gleam
                 </a>
                 <a className="btn-yellow" onClick={doCopy}>
                   Invite friends
@@ -459,7 +476,9 @@ export default function Spirit() {
             <img src={IconCopied} className="icon-copied" />
             <div className="title">The invitation link has been copied</div>
             <div className="desc">
-              Please send the link to your friends to get free mint!!!
+              Share your exclusive link to{" "}
+              <strong>collect 10 different spirit animals</strong> together with
+              your frens! Good Luck!
             </div>
             <a
               className="btn-yellow"
