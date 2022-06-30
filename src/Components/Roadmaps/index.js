@@ -42,13 +42,14 @@ const RoadMap = () => {
               </div>
               <div style={{ color: "white" }}>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <img className={"roadmap-icon"} src={roadmapicon2} />
+                  <img className={"roadmap-icon"} src={roadmapicon3} />
                   <p className={"road-map-name"}>
-                    Have Fun and Earn – Q3 2022
+                    Exclusive Airdrops - Q3 2022
                   </p>
                 </div>
                 <p className={"road-map-text"}>
-                  Launch of various games to have fun and earn with Zzoopers.
+                Bridge Zzoopers PFP NFT into The Sandbox avatar environment.
+
                 </p>
               </div>
             </div>
@@ -61,13 +62,14 @@ const RoadMap = () => {
               </div>
               <div style={{ color: "white" }}>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <img className={"roadmap-icon"} src={roadmapicon3} />
+                  <img className={"roadmap-icon"} src={roadmapicon4} />
                   <p className={"road-map-name"}>
-                    Exclusive Airdrops – Q3 2022
+                    Journey to Different Metaverses - Q3 2022
                   </p>
                 </div>
                 <p className={"road-map-text"}>
-                  Airdrops of utility NFTs interoperable in leading metaverses.
+                  Continue to build upon the Zzoopers NFT IP through value
+                  adding initiatives such as cooperation with fashion brands.
                 </p>
               </div>
             </div>
@@ -80,14 +82,11 @@ const RoadMap = () => {
               </div>
               <div style={{ color: "white" }}>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <img className={"roadmap-icon"} src={roadmapicon4} />
-                  <p className={"road-map-name"}>
-                    Journey to Different Metaverses – Q3 2022
-                  </p>
+                  <img className={"roadmap-icon"} src={roadmapicon2} />
+                  <p className={"road-map-name"}>Have Fun and Earn - Q4 2022</p>
                 </div>
                 <p className={"road-map-text"}>
-                  Experiences built in different metaverses open to the Zzoopers
-                  holders.
+                  Launch NFT loyalty rewards program for Zzoopers holders.
                 </p>
               </div>
             </div>
