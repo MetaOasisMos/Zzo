@@ -347,7 +347,7 @@ export default function Spirit() {
                 <div className="desc">"Zzoopers Genesis" Coming Soon</div>
 
                 <Countdown
-                  endTime={1657497600}
+                  endTime={1657623600}
                   // onComplete={() => setPhase2Started(true)}
                 />
 
