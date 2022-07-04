@@ -4,7 +4,7 @@ import { useEffect, useState, useContext } from "react";
 import IconUnknown from "../../assets/images/spirit/unknown.gif";
 
 import Countdown from "../../Components/SpiritCountdown";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 // import IconAvatar from "../../assets/images/spirit/avatar.png";
 import IconMetaoasis from "../../assets/images/spirit/metaoasis.svg";
 import IconWalkingTiger from "../../assets/images/spirit/walking-tiger.gif";
@@ -93,7 +93,7 @@ export default function Spirit() {
   const [qualified, setQualified] = useState(false);
   const [animal, setAnimal] = useState("");
   const [inviter, setInviter] = useState("");
-  const [ruleModalVisible, setRuleModalVisible] = useState(false);
+  // const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
   const [invitationList, setInvitationList] = useState([]);
   const [invitedMapping, setInvitedMapping] = useState(invitesMapping);
@@ -363,14 +363,16 @@ export default function Spirit() {
                   <>
                     <div className="qualified-title">
                       Congrats!
-                      <br /> You have successfully completed two quests!
+                      <br /> You have successfully collected 10 different spirit
+                      animals!
                     </div>
                     <div className="free-chance-desc">
                       JOIN our <span className="highlight">Discord</span> and
                       follow the{" "}
                       <span className="highlight">#Announcement</span> channel
-                      to unlock the final quest! May you're one of the lucky
-                      ones!
+                      to check out the limited allowlists! Only 50 allowlists of
+                      FULL MINT REBATE available. First come, first served. May
+                      you're one of the lucky ones!
                     </div>
                   </>
                 ) : (
@@ -382,40 +384,50 @@ export default function Spirit() {
                     </div>
 
                     <div className="free-chance-desc">
-                      If you wanna be eligible to get the FULL MINT REBATE,
-                      please complete the following quests:
+                      If you wanna be eligible to get the allowlist of FULL MINT
+                      REBATE, please complete ANYONE from the following two
+                      quests.
                       <br />
-                      1. Together with your friends to successfully collect{" "}
                       <span className="highlight">
-                        10 different spirit animals.
+                        Quest 1: Complete the Gleam tasks and join the Raffle.
+                        Raffle winners can get allowlisted. Only 50 allowlists
+                        of FULL MINT REBATE available.
                       </span>
                       <br />
-                      2.{" "}
                       <span className="highlight">
-                        Complete the Gleam tasks
+                        Quest 2: Together with your friends to collect 10
+                        different spirit animals and you can get allowlisted.
                       </span>{" "}
-                      to unlock the final quest.
+                      Only 50 allowlists of FULL MINT REBATE available. First
+                      come, first served.
                       <br />
-                      *Only 50 FULL MINT REBATEs available. First come, Fisrt
-                      served.
+                      *Each participant only has one chance to get allowlisted
+                      of FULL MINT REBATE.
                     </div>
                   </>
                 )}
               </div>
             </div>
             <div className="safe-area">
-              <div className="actions-line">
-                <a
-                  className="btn-black"
-                  href={config.socialLinks.gleam}
-                  target="_blank"
-                >
-                  Join Gleam
-                </a>
-                <a className="btn-yellow" onClick={doCopy}>
-                  Invite friends
-                </a>
-              </div>
+              {!qualified && (
+                <div>
+                  <div className="actions-line">
+                    <a
+                      className="btn-black"
+                      href={config.socialLinks.gleam}
+                      target="_blank"
+                    >
+                      Quest 1: Join Gleam
+                    </a>
+                    <a className="btn-yellow" onClick={doCopy}>
+                      Quest 2: Invite friends
+                    </a>
+                  </div>
+                  <div className="quest-hint">
+                    Complete either Quest to get allowlisted.
+                  </div>
+                </div>
+              )}
 
               <div className="my-collections">
                 <div className="section-title">My collection</div>
@@ -490,7 +502,7 @@ export default function Spirit() {
         </Modal>
       )}
 
-      {ruleModalVisible && (
+      {/* {ruleModalVisible && (
         <Modal open={true} onClose={() => setRuleModalVisible(false)}>
           <div className={"modal-body rule-modal"}>
             <div className="title">Rules</div>
@@ -518,7 +530,7 @@ export default function Spirit() {
             </a>
           </div>
         </Modal>
-      )}
+      )} */}
     </div>
   );
 }
