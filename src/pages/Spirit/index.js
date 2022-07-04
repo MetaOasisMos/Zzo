@@ -390,9 +390,9 @@ export default function Spirit() {
                       <br />
                       <span className="highlight">
                         Quest 1: Complete the Gleam tasks and join the Raffle.
-                        Raffle winners can get allowlisted. Only 50 allowlists
-                        of FULL MINT REBATE available.
-                      </span>
+                        Raffle winners can get allowlisted.
+                      </span>{" "}
+                      Only 50 allowlists of FULL MINT REBATE available.
                       <br />
                       <span className="highlight">
                         Quest 2: Together with your friends to collect 10
