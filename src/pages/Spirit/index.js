@@ -488,9 +488,10 @@ export default function Spirit() {
             <img src={IconCopied} className="icon-copied" />
             <div className="title">The invitation link has been copied</div>
             <div className="desc">
-              Share your exclusive link to{" "}
+              A 5s TEST helps you match your Spirit Animal in the Web3 world! Together with your friends to win the FULL MINT REBATE!
+              {/* Share your exclusive link to{" "}
               <strong>collect 10 different spirit animals</strong> together with
-              your frens! Good Luck!
+              your frens! Good Luck! */}
             </div>
             <a
               className="btn-yellow"
