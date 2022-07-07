@@ -93,6 +93,7 @@ export default function Spirit() {
   const [qualified, setQualified] = useState(false);
   const [animal, setAnimal] = useState("");
   const [inviter, setInviter] = useState("");
+  const [myInviterId, setMyInviterId] = useState("");
   // const [ruleModalVisible, setRuleModalVisible] = useState(false);
   const [copyModalVisible, setCopyModalVisible] = useState(false);
   const [invitationList, setInvitationList] = useState([]);
@@ -103,7 +104,7 @@ export default function Spirit() {
     const copied = document.createElement("input");
     copied.setAttribute(
       "value",
-      `A quick TEST designed by MetaOasis DAO and KuCoin NFT Marketplace to help meet your Spirit Animal in the Web3 world! Join now and win the 0.1 ETH MINT rebate! https://www.zzoopers.xyz/spirit?src=${account}`
+      `A quick TEST designed by MetaOasis DAO and KuCoin to help meet your Spirit Animal in the Web3 world! JOIN now and WIN the 0.1 ETH MINT rebate! https://www.zzoopers.xyz/spirit?src=${myInviterId}`
     );
     document.body.appendChild(copied);
     copied.select();
@@ -119,7 +120,7 @@ export default function Spirit() {
       ownerSig: signature,
     };
     if (inviter) {
-      params.inviter = inviter;
+      params.inviterId = inviter;
     }
     await axios.post(`${config.spiritRelationApi}/metaoasismos/api/v1`, {
       jsonrpc: "2.0",
@@ -127,6 +128,7 @@ export default function Spirit() {
       params,
       id: 1,
     });
+    getMyId();
   };
 
   const doAnalyze = async () => {
@@ -178,7 +180,7 @@ export default function Spirit() {
 
   const getReference = () => {
     const src = new URLSearchParams(location.search).get("src");
-    console.log("reference addr:", src);
+    console.log("reference inviter id:", src);
     setInviter(src);
   };
 
@@ -222,6 +224,22 @@ export default function Spirit() {
 
     if (winnerList.indexOf(account) > -1) {
       setQualified(true);
+    }
+  };
+
+  const getMyId = async () => {
+    const res = await axios.post(
+      `${config.spiritRelationApi}/metaoasismos/api/v1`,
+      {
+        jsonrpc: "2.0",
+        method: "getZzoopersAnimal",
+        params: account,
+        id: 1,
+      }
+    );
+    console.log("my id", res.data);
+    if (res.data.result) {
+      setMyInviterId(res.data.result.inviterId);
     }
   };
 
