@@ -103,7 +103,7 @@ export default function Spirit() {
     const copied = document.createElement("input");
     copied.setAttribute(
       "value",
-      `A 5s TEST helps you match your Spirit Animal in the Web3 world! Together with your friends and get the chance to enjoy the big rewards! https://www.zzoopers.xyz/spirit?src=${account}`
+      `A quick TEST designed by MetaOasis DAO and KuCoin NFT Marketplace to help meet your Spirit Animal in the Web3 world! Join now and win the 0.1 ETH MINT rebate! https://www.zzoopers.xyz/spirit?src=${account}`
     );
     document.body.appendChild(copied);
     copied.select();
@@ -371,8 +371,8 @@ export default function Spirit() {
                       follow the{" "}
                       <span className="highlight">#Announcement</span> channel
                       to check out the limited allowlists! Only 50 allowlists of
-                      FULL MINT REBATE available. First come, first served. May
-                      you're one of the lucky ones!
+                      0.1 ETH MINT rebate for this quest. First come, first
+                      served. May you're one of the lucky ones!
                     </div>
                   </>
                 ) : (
@@ -384,25 +384,22 @@ export default function Spirit() {
                     </div>
 
                     <div className="free-chance-desc">
-                      If you wanna be eligible to get the allowlist of FULL MINT
-                      REBATE, please complete ANYONE from the following two
-                      quests.
+                      Complete either Quest and Earn 0.1 ETH MINT Rebate
                       <br />
                       <span className="highlight">
-                        Quest 1: Complete the Gleam tasks and join the Raffle.
-                        Raffle winners can get allowlisted.
+                        Quest 1: Complete the PREMINT tasks and join the Raffle.
                       </span>{" "}
-                      Only 50 allowlists of FULL MINT REBATE available.
+                      Raffle winners can get mint rebate.
                       <br />
                       <span className="highlight">
                         Quest 2: Together with your friends to collect 10
-                        different spirit animals and you can get allowlisted.
+                        different spirit animals
                       </span>{" "}
-                      Only 50 allowlists of FULL MINT REBATE available. First
-                      come, first served.
+                      and you can get mint rebate.
                       <br />
-                      *Each participant only has one chance to get allowlisted
-                      of FULL MINT REBATE.
+                      *Only 50 allowlists of 0.1 ETH MINT rebate available for
+                      each quest. First come, first served. Each participant
+                      only has one chance to get allowlisted.
                     </div>
                   </>
                 )}
@@ -414,10 +411,10 @@ export default function Spirit() {
                   <div className="actions-line">
                     <a
                       className="btn-black"
-                      href={config.socialLinks.gleam}
+                      href={config.socialLinks.premint}
                       target="_blank"
                     >
-                      Quest 1: Join Gleam
+                      Quest 1: Join PREMINT
                     </a>
                     <a className="btn-yellow" onClick={doCopy}>
                       Quest 2: Invite friends
@@ -488,7 +485,8 @@ export default function Spirit() {
             <img src={IconCopied} className="icon-copied" />
             <div className="title">The invitation link has been copied</div>
             <div className="desc">
-              A 5s TEST helps you match your Spirit Animal in the Web3 world! Together with your friends to win the FULL MINT REBATE!
+              Share your exclusive link to collect 10 different spirit animals
+              together with your friends! Good luck!
               {/* Share your exclusive link to{" "}
               <strong>collect 10 different spirit animals</strong> together with
               your frens! Good Luck! */}

@@ -9,6 +9,9 @@ const web3Modal = new Web3Modal({
   cacheProvider: true,
   // theme: "dark",
   providerOptions: {
+    bitkeep: {
+      package: true
+    },
     walletconnect: {
       package: WalletConnect,
       options: {
