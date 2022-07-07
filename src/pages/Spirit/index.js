@@ -200,6 +200,7 @@ export default function Spirit() {
         id: 1,
       }
     );
+    console.log('resssss', res)
     setInvitationList(res.data.result.data);
     res.data.result.animals.forEach((item) => {
       setInvitedMapping((prev) => {
@@ -403,19 +404,16 @@ export default function Spirit() {
                 
                       
                       <span className="highlight">
-                        Quest 1: Complete the PREMINT tasks and join the Raffle.
+                      Quest 1: Complete the PREMINT tasks and join the Raffle. 
                       </span>{" "}
-                      Raffle winners can get mint rebate.
+                      50 Raffle winners can get mint rebate.
+
                       <br />
                       <span className="highlight">
-                        Quest 2: Together with your friends to collect 10
-                        different spirit animals
-                      </span>{" "}
-                      and you can get mint rebate.
+                      Quest 2: Together with your friends to collect 10 different spirit animals and you can get mint rebate. 
+                      </span>{" "}Only 50 allowlists of 0.1 ETH MINT rebate available. First come, first served. 
                       <br />
-                      *Only 50 allowlists of 0.1 ETH MINT rebate available for
-                      each quest. First come, first served. Each participant
-                      only has one chance to get allowlisted.
+                      *Each participant only has one chance to get allowlisted.
                     </div>
                   </>
                 )}
