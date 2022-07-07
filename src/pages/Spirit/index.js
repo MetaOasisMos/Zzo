@@ -104,7 +104,7 @@ export default function Spirit() {
     const copied = document.createElement("input");
     copied.setAttribute(
       "value",
-      `A quick TEST designed by MetaOasis DAO and KuCoin to help meet your Spirit Animal in the Web3 world! JOIN now and WIN the 0.15 ETH FULL MINT rebate! https://www.zzoopers.xyz/spirit?src=${myInviterId}`
+      `A quick TEST designed by MetaOasis DAO and KuCoin to help meet your Spirit Animal in the Web3 world! JOIN now and WIN the 0.1 ETH MINT rebate! https://www.zzoopers.xyz/spirit?src=${myInviterId}`
     );
     document.body.appendChild(copied);
     copied.select();
@@ -390,28 +390,28 @@ export default function Spirit() {
                       follow the{" "}
                       <span className="highlight">#Announcement</span> channel
                       to check out the limited allowlists! Only 50 allowlists of
-                      FULL MINT rebate available. First come, first served. May
-                      you're one of the lucky ones!
+                      0.1 ETH MINT rebate available. First come, first served.
+                      May you're one of the lucky ones!
                     </div>
                   </>
                 ) : (
                   <>
                     <div className="free-chance-title">
-                      Complete either Quest and Earn 0.15 ETH FULL MINT Rebate
+                      Complete either Quest and Earn 0.1 ETH MINT Rebate
                     </div>
 
                     <div className="free-chance-desc">
                       <span className="highlight">
                         Quest 1: Complete the PREMINT tasks and join the Raffle.
                       </span>{" "}
-                      50 Raffle winners can get the limited allowlists of FULL
-                      MINT rebate.
+                      50 Raffle winners can get the limited allowlists of 0.1
+                      ETH MINT rebate.
                       <br />
                       <span className="highlight">
                         Quest 2: Together with your friends to collect 10
                         different spirit animals
                       </span>{" "}
-                      and you can get mint rebate. Only 50 allowlists of FULL
+                      and you can get mint rebate. Only 50 allowlists of 0.1 ETH
                       MINT rebate available. First come, first served.
                       <br />
                       *Each participant only has one chance to get allowlisted.
