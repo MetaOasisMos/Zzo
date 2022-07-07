@@ -378,14 +378,12 @@ export default function Spirit() {
                 ) : (
                   <>
                     <div className="free-chance-title">
-                      Congratulations!
-                      <br /> You have the chance to get a<br /> FULL MINT
-                      REBATE!
+                     Complete either Quest and Earn 0.1 ETH MINT Rebate
                     </div>
 
                     <div className="free-chance-desc">
-                      Complete either Quest and Earn 0.1 ETH MINT Rebate
-                      <br />
+                
+                      
                       <span className="highlight">
                         Quest 1: Complete the PREMINT tasks and join the Raffle.
                       </span>{" "}
