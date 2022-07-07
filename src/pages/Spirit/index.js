@@ -404,8 +404,8 @@ export default function Spirit() {
                       <span className="highlight">
                         Quest 1: Complete the PREMINT tasks and join the Raffle.
                       </span>{" "}
-                      50 Raffle winners can get the allowlist of FULL MINT
-                      rebate.
+                      50 Raffle winners can get the limited allowlists of FULL
+                      MINT rebate.
                       <br />
                       <span className="highlight">
                         Quest 2: Together with your friends to collect 10
