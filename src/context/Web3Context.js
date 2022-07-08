@@ -40,6 +40,7 @@ export const Web3Context = createContext({
   networkId: null,
   blockNumber: null,
   account: null,
+  allAccounts: null,
   connectWallet: async () => {},
   resetWallet: async () => {},
   estimateGas: async () => {},
@@ -49,6 +50,7 @@ export const Web3Context = createContext({
 export const Web3ContextProvider = ({ children }) => {
   const [web3, setWeb3] = useState("");
   const [account, setAccount] = useState("");
+  const [allAccounts, setAllAccounts] = useState([]);
   const [chainId, setChainId] = useState("");
   const [networkId, setnetworkId] = useState("");
   const [blockNumber, setBlockNumber] = useState("");
@@ -78,7 +80,9 @@ export const Web3ContextProvider = ({ children }) => {
       const accounts = await provider.request({
         method: 'eth_requestAccounts'
       })
-      
+
+      setAllAccounts(accounts)
+
       setAccount(accounts[0]);
 
       // get network id
@@ -203,6 +207,7 @@ export const Web3ContextProvider = ({ children }) => {
         chainId,
         networkId,
         account,
+        allAccounts,
         blockNumber,
         connectWallet,
         resetWallet,

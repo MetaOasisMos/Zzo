@@ -88,7 +88,7 @@ const invitesMapping = {
 
 export default function Spirit() {
   const location = useLocation();
-  const { account, connectWallet, web3 } = useContext(Web3Context);
+  const { account, allAccounts, connectWallet, web3 } = useContext(Web3Context);
   const [step, setStep] = useState(0);
   const [qualified, setQualified] = useState(false);
   const [animal, setAnimal] = useState("");
@@ -277,13 +277,9 @@ export default function Spirit() {
               {web3 && web3.eth ? 'web3 eth yes': 'web3 eth no'}<br/>
               {window.ethereum ? 'ethereum yes' : 'ethereum no'}<br/>
               {window.isBitKeep ? 'isBitkeep yes': 'isBitkeep no'}<br/>
-              {account? 'account' + account : 'no accounts'}
             </div>
             <div className="spirit-desc">
-              Spirit animal refers to a spirit which helps guide or protect a
-              person on a journey and whose characteristics that person shares
-              or embodies. It is also metaphor, often humorous, for someone or
-              something a person relates to or admires.
+            {JSON.stringify(allAccounts)}
             </div>
             {account ? (
               <a className="btn-yellow btn-discover" onClick={doAnalyze}>
