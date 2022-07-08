@@ -278,7 +278,6 @@ export default function Spirit() {
               {window.ethereum ? 'ethereum yes' : 'ethereum no'}<br/>
               {window.isBitKeep ? 'isBitkeep yes': 'isBitkeep no'}<br/>
               {account? 'account' + account : 'no accounts'}
-              {/* {window && JSON.stringify(window.ethereum)} */}
             </div>
             <div className="spirit-desc">
               Spirit animal refers to a spirit which helps guide or protect a
