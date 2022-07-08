@@ -274,8 +274,7 @@ export default function Spirit() {
             </div>
 
             <div className="spirit-title">
-              {web3 && web3.eth ? 'web3 eth yes': 'web3 eth no'}<br/>
-              {window.ethereum ? 'ethereum yes' : 'ethereum no'}<br/>
+              {window.bitkeep && window.bitkeep.ethereum ? 'bp ethereum yes' : 'bp ethereum no'}<br/>
               {window.isBitKeep ? 'isBitkeep yes': 'isBitkeep no'}<br/>
             </div>
             <div className="spirit-desc">
