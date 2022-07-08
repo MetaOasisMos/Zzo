@@ -78,6 +78,7 @@ export const Web3ContextProvider = ({ children }) => {
       const accounts = await provider.request({
         method: 'eth_requestAccounts'
       })
+      
       setAccount(accounts[0]);
 
       // get network id
