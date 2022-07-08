@@ -10,7 +10,7 @@ const web3Modal = new Web3Modal({
   // theme: "dark",
   providerOptions: {
     bitkeep: {
-      package: true
+      package: true,
     },
     walletconnect: {
       package: WalletConnect,
@@ -40,7 +40,6 @@ export const Web3Context = createContext({
   networkId: null,
   blockNumber: null,
   account: null,
-  allAccounts: null,
   connectWallet: async () => {},
   resetWallet: async () => {},
   estimateGas: async () => {},
@@ -50,7 +49,6 @@ export const Web3Context = createContext({
 export const Web3ContextProvider = ({ children }) => {
   const [web3, setWeb3] = useState("");
   const [account, setAccount] = useState("");
-  const [allAccounts, setAllAccounts] = useState([]);
   const [chainId, setChainId] = useState("");
   const [networkId, setnetworkId] = useState("");
   const [blockNumber, setBlockNumber] = useState("");
@@ -69,19 +67,21 @@ export const Web3ContextProvider = ({ children }) => {
 
   const connectWallet = useCallback(async () => {
     try {
-      const provider = await web3Modal.connect();
-
-      await provider.enable();
+      let provider = null;
+      if (window.bitkeep) {
+        provider = window.bitkeep.ethereum;
+      } else {
+        provider = await web3Modal.connect();
+        await provider.enable();
+      }
 
       const web3Raw = new Web3(provider);
       setWeb3(web3Raw);
 
       // get account, use this variable to detech if user is connected
       const accounts = await provider.request({
-        method: 'eth_requestAccounts'
-      })
-
-      setAllAccounts(accounts)
+        method: "eth_requestAccounts",
+      });
 
       setAccount(accounts[0]);
 
@@ -207,7 +207,6 @@ export const Web3ContextProvider = ({ children }) => {
         chainId,
         networkId,
         account,
-        allAccounts,
         blockNumber,
         connectWallet,
         resetWallet,

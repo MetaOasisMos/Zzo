@@ -278,7 +278,7 @@ export default function Spirit() {
               {window.isBitKeep ? 'isBitkeep yes': 'isBitkeep no'}<br/>
             </div>
             <div className="spirit-desc">
-            {JSON.stringify(allAccounts)}
+              {account}
             </div>
             {account ? (
               <a className="btn-yellow btn-discover" onClick={doAnalyze}>
