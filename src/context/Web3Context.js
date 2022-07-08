@@ -75,7 +75,9 @@ export const Web3ContextProvider = ({ children }) => {
       setWeb3(web3Raw);
 
       // get account, use this variable to detech if user is connected
-      const accounts = await web3Raw.eth.getAccounts();
+      const accounts = await provider.request({
+        method: 'eth_requestAccounts'
+      })
       setAccount(accounts[0]);
 
       // get network id
