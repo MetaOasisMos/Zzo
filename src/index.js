@@ -12,7 +12,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Share from "./pages/Share";
 import Spirit from "./pages/Spirit";
-// import SpiritPreview from "./pages/SpiritPreview";
+import SpiritPreview from "./pages/SpiritPreview";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -31,7 +31,7 @@ root.render(
             <Route path="/privacy" component={Privacy} />
             <Route path="/share" component={Share} />
             <Route path="/spirit" component={Spirit} />
-            {/* <Route path="/spirit-preview" component={SpiritPreview} /> */}
+            <Route path="/spirit-preview" component={SpiritPreview} />
           </Switch>
         </Router>
         {/* <App /> */}

@@ -5,10 +5,77 @@ $yellow: #ffc234;
     background: url("../../assets/images/Frame 427320168.png") repeat;
     font-weight: 400;
     font-size: 14px;
+    padding-top: 120px;
     line-height: 150%;
     text-align: center;
     color: #797979;
     min-height: 100vh;
+    .countdown-wrapper {
+        background: $yellow;
+        border: 2px dashed rgba(255, 255, 255, 0.7);
+        padding: 17px 10px 21px;
+        margin: 30px auto;
+        text-align: center;
+        position: relative;
+        &::before {
+            content: '“';
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 0;
+            font-weight: 700;
+            font-size: 41px;
+            line-height: 150%;
+            color: #000000;
+            opacity: 0.23;
+        }
+        &::after {
+            content: '“';
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            font-weight: 700;
+            font-size: 41px;
+            line-height: 150%;
+            color: #000000;
+            opacity: 0.23;
+        }
+        .title {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: -0.4px;
+            color: #382700;
+            margin-bottom: 6px;
+        }
+        .desc {
+            font-size: 14px;
+            line-height: 150%;
+            color: #87604a;
+            margin-bottom: 12px;
+        }
+        .btn-view-more {
+            padding: 10px 50px;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 12px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #000000;
+            background: #ffffff;
+            border-radius: 25px;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-top: 25px;
+            &:hover {
+                background: #f0f0f0;
+            }
+        }
+    }
+
     .btn-yellow {
         cursor: pointer;
         background: $yellow;
