@@ -1,5 +1,6 @@
 import Hero from "./Components/Hero";
 // import tiger from "./assets/images/tiger.png";
+import { Link } from "react-router-dom";
 import WhyZzoppers from "./Components/WhyZzoppers";
 import WelcomePage from "./pages/Welcome";
 import Utils from "./Components/Utils";
@@ -114,6 +115,15 @@ function App() {
             joinUsRef={joinUsRef}
             faqRef={faqRef}
           />
+
+          <div className="spirit-banner">
+            <div className="title1">Test online</div>
+            <div className="title2">What is your</div>
+            <div className="title2 title3">Spirit Animal in WEB 3.0?</div>
+            <a href="/spirit" target="_blank" className="start-btn hover-move">
+              Start Test!
+            </a>
+          </div>
 
           {/* Hero Section */}
           <div ref={heroRef}>

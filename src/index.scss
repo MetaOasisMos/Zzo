@@ -22,6 +22,18 @@
     src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
 }
 
+@font-face {
+    font-family: "Inter";
+    font-weight:400;
+    src: url("./assets/fonts/Inter/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight:900;
+    src: url("./assets/fonts/Inter/Inter-Black.ttf");
+}
+
 * {
     margin: 0;
     padding: 0;
