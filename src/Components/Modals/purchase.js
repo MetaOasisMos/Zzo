@@ -14,7 +14,7 @@ const Purchase = ({closeModal, doMint}) => {
             </div>
             <div style={{padding: 16, backgroundColor: '#FBFBF7', display: 'flex', justifyContent: 'space-between', borderRadius: 15}}>
                 <div style={{ fontWeight: 700, fontSize: 24, letterSpacing: '-2%'}}>
-                    Zzoppers
+                    Zzooppers
                 </div>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                 <div className={clsx('count-container', zzopperCount === 1 && 'count-min-container')}>
@@ -46,9 +46,9 @@ const Purchase = ({closeModal, doMint}) => {
             </div>
 
             <button className={'btn confirm-purchase-btn'} onClick={()=>doMint(zzopperCount)}>Confirm purchase</button>
-
+{/* 
             <p style={{color: '#7F8596', fontSize: 14, fontWeight: 600, marginTop: 40, textAlign: 'center'}}>
-                Corrupti et voluptas. Ut ipsum <span style={{color: 'black', fontWeight: 700}}>0.1 ETH</span> fugiat odio. Impedit ullam vel et est rror enim.</p>
+                Corrupti et voluptas. Ut ipsum <span style={{color: 'black', fontWeight: 700}}>0.1 ETH</span> fugiat odio. Impedit ullam vel et est rror enim.</p> */}
 
         </>
     );
