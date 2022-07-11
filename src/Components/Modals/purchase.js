@@ -14,7 +14,7 @@ const Purchase = ({closeModal, doMint}) => {
             </div>
             <div style={{padding: 16, backgroundColor: '#FBFBF7', display: 'flex', justifyContent: 'space-between', borderRadius: 15}}>
                 <div style={{ fontWeight: 700, fontSize: 24, letterSpacing: '-2%'}}>
-                    Zzooppers
+                    Zzoopers
                 </div>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                 <div className={clsx('count-container', zzopperCount === 1 && 'count-min-container')}>
