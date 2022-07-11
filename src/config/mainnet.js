@@ -1,5 +1,5 @@
 const contracts = {
-  mint: "0x36755850E92c98B6b020a9aBEBEeaBb52c48E9ce",
+  mint: "0x5499ee597543f528675Dd23DCfF05440dC3b1C6E",
 };
 
 const chainId = 1;

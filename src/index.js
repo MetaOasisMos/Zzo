@@ -7,7 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./index.scss";
 import App from "./App";
-// import MintTest from "./pages/MintTest";
+import MintTest from "./pages/MintTest";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Share from "./pages/Share";
@@ -27,7 +27,7 @@ root.render(
             <Route path="/s3">
               <Redirect to="/" />
             </Route>
-            {/* <Route path="/mint-test" exact component={MintTest} /> */}
+            <Route path="/mint-test" exact component={MintTest} />
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={Privacy} />
             <Route path="/share" component={Share} />

@@ -51,7 +51,7 @@ const ConfirmPurchase = ({ txHash, closeModal }) => {
           textDecoration: 'none',
         }}
       >
-        View on explore
+        View on explorer
       </a>
     </>
   );

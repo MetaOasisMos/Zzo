@@ -35,7 +35,7 @@
     "web3modal": "git+https://github.com/Web3Modal/web3modal"
   },
   "scripts": {
-    "dev": "cross-env NETWORK_ENV=rinkeby craco start",
+    "dev": "cross-env NETWORK_ENV=mainnet craco start",
     "start": "cross-env NETWORK_ENV=mainnet craco start",
     "build:rinkeby": "cross-env NETWORK_ENV=rinkeby craco build",
     "build:mainnet": "cross-env NETWORK_ENV=mainnet craco build"
