@@ -1,6 +1,7 @@
 import Hero from "./Components/Hero";
 // import tiger from "./assets/images/tiger.png";
 import { Link } from "react-router-dom";
+import BtnMint from "./assets/images/mint-btn.png";
 import WhyZzoppers from "./Components/WhyZzoppers";
 import WelcomePage from "./pages/Welcome";
 import Utils from "./Components/Utils";
@@ -116,14 +117,23 @@ function App() {
             faqRef={faqRef}
           />
 
-          <div className="spirit-banner">
+          <div className="mint-banner">
+            <div className="title1">Let's meet 5555 Zzoopers</div>
+            <div className="title2">Pre-mint is ongoing </div>
+            <div className="title2 title3">Duration: ONLY 24 hours</div>
+            <a href="#mint-details" className="btn-mint hover-move">
+              <img src={BtnMint} />
+            </a>
+          </div>
+
+          {/* <div className="spirit-banner">
             <div className="title1">Test online</div>
             <div className="title2">What is your</div>
             <div className="title2 title3">Spirit Animal in WEB 3.0?</div>
             <a href="/spirit" target="_blank" className="start-btn hover-move">
               Start Test!
             </a>
-          </div>
+          </div> */}
 
           {/* Hero Section */}
           <div ref={heroRef}>

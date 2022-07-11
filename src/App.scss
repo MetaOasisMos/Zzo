@@ -203,6 +203,78 @@ img {
   }
 }
 
+img {
+  max-width: 100%;
+}
+
+.mint-banner {
+  font-family: "Inter";
+  background: url("./assets/images/mint-banner-bg.png") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  flex-direction: column;
+  color: #fff;
+  .title1 {
+    margin-top: 76px;
+    font-weight: 900;
+    font-size: 53px;
+    line-height: 100%;
+    letter-spacing: 5px;
+    margin-bottom: 21px;
+  }
+  .title2 {
+    font-weight: 900;
+    font-size: 108px;
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+  .title3 {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 100%;
+    margin-bottom: 40px;
+  }
+  .btn-mint {
+    width: 600px;
+  }
+  @media (max-width: 992px) {
+    .title1 {
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 10px;
+      margin-bottom: 24px;
+    }
+    .title2 {
+      font-size: 36px;
+      margin-bottom: 24px;
+      letter-spacing: 0;
+    }
+    .btn-mint {
+      width: 240px;
+    }
+  }
+  @media (max-width: 576px) {
+    .title1 {
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 4px;
+      margin-bottom: 24px;
+    }
+    .title2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+    }
+    // .btn-mint {
+    //   width:240px;
+    // }
+  }
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;

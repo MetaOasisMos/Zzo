@@ -102,7 +102,7 @@ const MintDetails = ({ direct }) => {
   );
 
   return (
-    <div className={"mint-details-container"}>
+    <div className={"mint-details-container"} id="mint-details">
       <Modal open={modalOpen} onClose={closeModal}>
         {body}
       </Modal>
