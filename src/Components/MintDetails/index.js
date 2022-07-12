@@ -157,7 +157,15 @@ const MintDetails = ({ direct }) => {
           <div className="col-xl-3 col-lg-3 col-md-4 col-xs-4 col-sm-4 col-4">
             {phase1Started || direct ? (
               <div className="text-right">
-                {account ? (
+                  <button
+                    className={"btn mint-btn hover-move disabled"}
+                  >
+                    Mint
+                  </button>
+
+
+
+                {/* {account ? (
                   <>
                     <button
                       className={"btn mint-btn hover-move"}
@@ -181,7 +189,7 @@ const MintDetails = ({ direct }) => {
                   >
                     Connect Wallet
                   </button>
-                )}
+                )} */}
               </div>
             ) : (
               <div className="text-right">

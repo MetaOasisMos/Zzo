@@ -3,6 +3,10 @@
         display: block;
         width: 100%;
     }
+    .disabled{
+        color: #fff;
+        background:rgba(0, 0, 0, 0.4);
+    }
     .minted-num {
         font-size: 16px;
         line-height: 120%;
