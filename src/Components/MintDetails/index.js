@@ -237,9 +237,12 @@ const MintDetails = ({ direct }) => {
             {/** new Date('2022-07-12 19:00').valueOf()  */}
             <div className="text-right">
               {phase2Started ? (
-                <button className={"btn goto-btn hover-move"}>
-                  Go to <img src={btn_img} className={"goto-btn-img"} />
-                </button>
+                <a href="https://windvane.io/launchpad-detail/6" target="_blank" style={{textDecoration: 'none'}}>
+                  <button className={"btn goto-btn hover-move"}>
+                    Go to <img src={btn_img} className={"goto-btn-img"} />
+                  </button>
+                </a>
+          
               ) : (
                 <Countdown
                   endTime={1657623600}
