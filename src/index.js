@@ -31,7 +31,7 @@ root.render(
             <Route path="/terms" component={Terms} />
             <Route path="/privacy" component={Privacy} />
             <Route path="/share" component={Share} />
-            <Route path="/spirit" component={Spirit} />
+            <Route path="/spirit" component={App} />
             <Route path="/spirit-test" component={SpiritTest} />
             <Route path="/spirit-preview" component={SpiritPreview} />
           </Switch>
