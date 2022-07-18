@@ -44,12 +44,11 @@ const RoadMap = () => {
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img className={"roadmap-icon"} src={roadmapicon3} />
                   <p className={"road-map-name"}>
-                    Exclusive Airdrops - Q3 2022
+                  Activation of Zzoopers in the Sandbox 
                   </p>
                 </div>
                 <p className={"road-map-text"}>
-                Bridge Zzoopers PFP NFT into The Sandbox avatar environment.
-
+                  Bridge Zzoopers PFP NFT into The Sandbox avatar environment.
                 </p>
               </div>
             </div>
