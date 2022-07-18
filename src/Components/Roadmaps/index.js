@@ -24,7 +24,7 @@ const RoadMap = () => {
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <img className={"roadmap-icon"} src={roadmapicon1} />
                   <p className={"road-map-name"}>
-                    Mint and Reveal - Coming Soon
+                    Mint and Reveal - July & August
                   </p>
                 </div>
                 <p className={"road-map-text"}>
