@@ -9,7 +9,6 @@ function MintTest() {
   const detailRef = useRef(null);
   // variable that control the header close and open funcationality
   const [openHeader, setOpenHeader] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   const scroll = (ref) => {
     setOpenHeader(false);

@@ -18,6 +18,12 @@
 
 @font-face {
     font-family: "Roboto";
+    font-weight: 500;
+    src: url("./assets/fonts/Roboto/Roboto-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Roboto";
     font-weight: 700;
     src: url("./assets/fonts/Roboto/Roboto-Bold.ttf");
 }
@@ -43,6 +49,9 @@
 * {
     margin: 0;
     padding: 0;
+}
+a{
+    text-decoration: none;
 }
 
 body {

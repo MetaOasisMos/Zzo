@@ -11,9 +11,9 @@ import App from "./App";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Share from "./pages/Share";
-import Spirit from "./pages/Spirit";
-import SpiritTest from "./pages/SpiritTest";
-import SpiritPreview from "./pages/SpiritPreview";
+import Reveal from "./pages/Reveal";
+// import Spirit from "./pages/Spirit";
+// import SpiritPreview from "./pages/SpiritPreview";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -32,8 +32,8 @@ root.render(
             <Route path="/privacy" component={Privacy} />
             <Route path="/share" component={Share} />
             <Route path="/spirit" component={App} />
-            <Route path="/spirit-test" component={SpiritTest} />
-            <Route path="/spirit-preview" component={SpiritPreview} />
+            <Route path="/reveal" component={Reveal} />
+            {/* <Route path="/spirit-preview" component={SpiritPreview} /> */}
           </Switch>
         </Router>
         {/* <App /> */}
