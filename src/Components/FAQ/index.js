@@ -23,7 +23,7 @@ const Faq = () => {
     },
     // {
     //   heading: "How many Zzoopers Genesis?",
-    //   body: "5555 in total.",
+    //   body: "2929 in total.",
     //   open: false,
     // },
     // {
@@ -57,7 +57,7 @@ const Faq = () => {
     //   open: false,
     // },
     {
-      heading: "Are the 5555 Zzoopers Genesis randomly distributed?",
+      heading: "Are the 2929 Zzoopers Genesis randomly distributed?",
       body: `
                 - Yes. The team will have no control over the rarities distribution. <br/><br/>         
                 - However, since there are 10 animal characters that are revealed with a different schedule, you have a choice of when to claim to have a better chance to secure your favourite characters.

@@ -14,7 +14,7 @@ export default () => {
           </div>
           <div className="date">July 25th - August 10th</div>
           <div className="desc">
-            Zzoopers Genesis is a 3D PFP collection of 5555 unique animal
+            Zzoopers Genesis is a 3D PFP collection of 2929 unique animal
             avatars with different species and personalities. Now it's time to
             MEET them! Are you ready to embark on the cross-metaverse journey
             together with them?

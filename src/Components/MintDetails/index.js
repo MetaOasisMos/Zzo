@@ -110,7 +110,7 @@ const MintDetails = ({ direct }) => {
       <div className="container">
         <div className={"mint-header"}>Mint Details</div>
         <div className={"mint-meta-text"}>
-          There are <b>two phases</b> to complete the mint of the 5555 Zzoopers
+          There are <b>two phases</b> to complete the mint of the 2929 Zzoopers
           Evo.
         </div>
 

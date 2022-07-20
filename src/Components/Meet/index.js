@@ -9,7 +9,7 @@ const Meet = () => {
       <div className="container">
         <div style={{ margin: "auto", textAlign: "center" }}>
           <div className={"meet-text-1"}>LET'S</div>
-          <div className={"meet-text-2"}>MEET 5555</div>
+          <div className={"meet-text-2"}>MEET 2929</div>
           <Parallax scale={[0.6, 1]}>
             <img src={zzoppers} className="zzoppers-img" />
           </Parallax>

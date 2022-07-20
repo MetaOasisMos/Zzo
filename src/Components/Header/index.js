@@ -29,7 +29,7 @@ const Header = ({
   const header_links = [
     { text: "What is Zzoopers Genesis?", ref: heroRef },
     { text: "Why Zzoopers?", ref: whyRef },
-    { text: "Meet 5555 Zzoopers", ref: meetRef },
+    { text: "Meet 2929 Zzoopers", ref: meetRef },
     { text: "Mint Details", ref: detailRef },
     { text: "When to reveal?", ref: revealRef },
     { text: "Roadmap", ref: mapRef },

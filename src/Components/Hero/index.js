@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="subtitle">What is</div>
             <div className="title">Zzoopers Genesis?</div>
             <div className="desc">
-              Zzoopers Genesis is a collection of 5555 unique animal avatars
+              Zzoopers Genesis is a collection of 2929 unique animal avatars
               with different species and personalities. They are born on the
               Ethereum blockchain and ready to cross and explore the many
               metaverses!

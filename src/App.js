@@ -118,7 +118,7 @@ function App() {
           />
 
           {/* <div className="mint-banner">
-            <div className="title1">Let's meet 5555 Zzoopers</div>
+            <div className="title1">Let's meet 2929 Zzoopers</div>
             <div className="title2">Pre-mint is ongoing </div>
             <div className="title2 title3">Duration: ONLY 24 hours</div>
             <a href="#mint-details" className="btn-mint hover-move">
@@ -158,7 +158,7 @@ function App() {
           {/* Unlock Unlimited Utilities Section */}
           <Utils />
 
-          {/* MEET 5555 Section*/}
+          {/* MEET 2929 Section*/}
           <div ref={meetRef}>
             <Meet />
           </div>
