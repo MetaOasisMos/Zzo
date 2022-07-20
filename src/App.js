@@ -117,14 +117,14 @@ function App() {
             faqRef={faqRef}
           />
 
-          <div className="mint-banner">
+          {/* <div className="mint-banner">
             <div className="title1">Let's meet 5555 Zzoopers</div>
             <div className="title2">Pre-mint is ongoing </div>
             <div className="title2 title3">Duration: ONLY 24 hours</div>
             <a href="#mint-details" className="btn-mint hover-move">
               <img src={BtnMint} />
             </a>
-          </div>
+          </div> */}
 
           {/* <div className="spirit-banner">
             <div className="title1">Test online</div>
@@ -166,9 +166,9 @@ function App() {
           <Carousel />
 
           {/* Mint Details Section */}
-          <div ref={detailRef}>
+          {/* <div ref={detailRef}>
             <MintDetails />
-          </div>
+          </div> */}
 
           {/* When to Reveal Section */}
           <div ref={revealRef}>

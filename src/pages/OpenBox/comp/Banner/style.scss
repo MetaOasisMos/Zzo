@@ -1,0 +1,77 @@
+.open-box-banner {
+    color: #ffffff;
+    padding: 92px 0 24px;
+    margin-bottom: 40px;
+    background: url("../../../../assets/images/reveal/banner-bg.svg") no-repeat right center;
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    .title-1 {
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 122.02%;
+        letter-spacing: 0.015em;
+        margin-bottom: 10px;
+    }
+
+    .title-2 {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 122.02%;
+        letter-spacing: 0.015em;
+        margin-bottom: 10px;
+    }
+
+    .title-3 {
+        font-weight: 700;
+        font-size: 66.7826px;
+        line-height: 81px;
+        letter-spacing: 0.015em;
+
+        background: linear-gradient(97.86deg, #ff8d8d -38.38%, #f7fc0e 71.88%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: 60px;
+    }
+
+    .title-4 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 120%;
+        margin-bottom: 10px;
+    }
+
+    .title-5 {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 120%;
+        margin-bottom: 10px;
+        color: rgba(255, 255, 255, 0.5);
+        .current {
+            font-weight: 700;
+            font-size: 100px;
+            line-height: 120%;
+            color: #ffffff;
+            margin-right: 10px;
+        }
+    }
+
+    .title-6 {
+        font-size: 16.4895px;
+        line-height: 25px;
+        letter-spacing: 0.02em;
+        max-width: 460px;
+    }
+
+    .left{
+        width: 50%;
+    }
+
+    .img-banner {
+        width: 50%;
+    }
+}

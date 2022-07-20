@@ -12,6 +12,7 @@ import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Share from "./pages/Share";
 import Reveal from "./pages/Reveal";
+import OpenBox from "./pages/OpenBox";
 // import Spirit from "./pages/Spirit";
 // import SpiritPreview from "./pages/SpiritPreview";
 import reportWebVitals from "./reportWebVitals";
@@ -33,6 +34,7 @@ root.render(
             <Route path="/share" component={Share} />
             <Route path="/spirit" component={App} />
             <Route path="/reveal" component={Reveal} />
+            <Route path="/open-box" component={OpenBox} />
             {/* <Route path="/spirit-preview" component={SpiritPreview} /> */}
           </Switch>
         </Router>

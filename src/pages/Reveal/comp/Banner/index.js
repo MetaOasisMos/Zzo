@@ -1,5 +1,6 @@
 import ImgBanner from "../../../../assets/images/reveal/reveal-banner-img.png";
 import IconArrow from "../../../../assets/images/link-right.svg";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 export default () => {
@@ -18,7 +19,7 @@ export default () => {
             MEET them! Are you ready to embark on the cross-metaverse journey
             together with them?
           </div>
-          <a className="btn-go-reveal hover-up">
+          <a href="/open-box" className="btn-go-reveal hover-up">
             Go to Reveal <img src={IconArrow} />
           </a>
         </div>
