@@ -16,7 +16,7 @@ const Reveal = () => {
           <div className="desc-line">
           There are 5 rounds to reveal Zzoopers Genesis. The redemption of Zzoopers Genesis begins on July 25th.<br/><br/>
 At each round of reveal, 2 out of the 10 animal characters will go live. You can choose to claim, or wait. Better be hurry when it's your favorite character's turn.<br/><br/>
-<strong>Here is the FULL revelation schedule.</strong><br/><br/>
+<strong>Here is the FULL reveal schedule.</strong><br/><br/>
 <div>
 July 25th - Fox & Unicorn
 
