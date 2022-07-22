@@ -1,0 +1,23 @@
+.rules {
+    margin-bottom: 240px;
+    .title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -0.02em;
+        color: #fcfcf9;
+        margin-bottom: 24px;
+    }
+    .desc {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        color: #7f8596;
+        .desc-item {
+            margin-bottom: 20px;
+        }
+    }
+}

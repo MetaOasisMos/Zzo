@@ -2,7 +2,8 @@ import { useState } from "react";
 import Footer from "../../Components/Footer";
 import Header from "../../Components/Header";
 import Banner from "./comp/Banner";
-import Balances from "./comp/Balances";
+import Rules from "./comp/Rules";
+import BlindBoxes from "./comp/BlindBoxes";
 import "./style.scss";
 
 export default () => {
@@ -19,7 +20,8 @@ export default () => {
         scroll={scroll}
       />
       <Banner />
-      <Balances />
+      <BlindBoxes />
+      <Rules />
 
       <Footer />
     </div>

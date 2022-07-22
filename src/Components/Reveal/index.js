@@ -14,36 +14,33 @@ const Reveal = () => {
         <img className={"reveal-zzoppers-heading-lg"} src={heading} />
         <div className="desc">
           <div className="desc-line">
-          There are 5 rounds to reveal Zzoopers Genesis. The redemption of Zzoopers Genesis begins on July 25th.<br/><br/>
-At each round of reveal, 2 out of the 10 animal characters will go live. You can choose to claim, or wait. Better be hurry when it's your favorite character's turn.<br/><br/>
-<strong>Here is the FULL revelation schedule.</strong><br/><br/>
-<div>
-July 25th - Fox & Unicorn
-
-</div>
-<div>
-July 29th - Tiger & Elephant
-  
-</div>
-<div>
-August 2rd - Cheetah & Rabbit
-  
-</div>
-<div>
-August 6th - Deer & Monkey
-  
-</div>
-<div>
-August 10th - Penguin & Panda<br/><br/>
-  
-</div>
+            There are 4 rounds to reveal Zzoopers Genesis. The redemption of
+            Zzoopers Genesis begins on July 25th.
+            <br />
+            <br />
+            You can choose to claim, or wait. Better be in a hurry when it's
+            your favorite character's turn.
+            <br />
+            <br />
+            <strong>Here is the FULL reveal schedule.</strong>
+            <br />
+            <br />
+            <div>July 25th - Fox & Unicorn</div>
+            <div>July 29th - Tiger & Elephant</div>
+            <div>August 3rd - Monkey & Rabbit & Deer</div>
+            <div>
+              August 7th - Cheetah & Penguin & Panda
+              <br />
+              <br />
+            </div>
           </div>
-          {/* <div className="desc-line">
-            
-          </div> */}
           <div className="desc-line">
             Join our{" "}
-            <a href={socialLinks.discord} target="_blank" className="discord-link">
+            <a
+              href={socialLinks.discord}
+              target="_blank"
+              className="discord-link"
+            >
               Discord
             </a>{" "}
             to get more first-hand updates on the reveal!

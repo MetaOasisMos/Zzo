@@ -1,6 +1,20 @@
 import ImgBanner from "../../../../assets/images/reveal/reveal-banner-img.png";
-import IconArrow from "../../../../assets/images/link-right.svg";
+import Avatar0 from "../../../../assets/images/open-box/0.png";
+import Avatar1 from "../../../../assets/images/open-box/1.png";
 import "./style.scss";
+
+const rounds = [
+  {
+    avatar: Avatar0,
+    title: "Goldthwaite",
+    desc: "Be a lion at home and a fox abroad.",
+  },
+  {
+    avatar: Avatar1,
+    title: "Driscoll",
+    desc: "A unicorn is a horse with a point of view.",
+  },
+];
 
 export default () => {
   return (
@@ -25,12 +39,16 @@ export default () => {
       </div>
 
       <div className="container">
-        
-        
-        
+        <div className="current-round">
+          {rounds.map((item, index) => (
+            <div className="round-item" key={index}>
+              <img src={item.avatar} className="avatar" />
+              <div className="title">{item.title}</div>
+              <div className="desc">{item.desc}</div>
+            </div>
+          ))}
         </div>
-
-
+      </div>
     </div>
   );
 };

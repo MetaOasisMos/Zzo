@@ -1,7 +1,7 @@
 .open-box-banner {
     color: #ffffff;
-    padding: 92px 0 24px;
-    margin-bottom: 40px;
+    padding: 92px 0 0;
+    margin-bottom: 60px;
     background: url("../../../../assets/images/reveal/banner-bg.svg") no-repeat right center;
     .container {
         display: flex;
@@ -67,11 +67,37 @@
         max-width: 460px;
     }
 
-    .left{
+    .left {
         width: 50%;
     }
 
     .img-banner {
         width: 50%;
+    }
+    .current-round {
+        margin-top: 16px;
+        display: flex;
+        width: 100%;
+        .round-item {
+            width: 50%;
+            .avatar {
+                width: 178px;
+                height: 178px;
+                margin-bottom: 20px;
+                border-radius: 40px;
+            }
+            .title {
+                font-family: "Inter";
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 122.02%;
+                letter-spacing: 0.015em;
+                margin-bottom: 10px;
+            }
+            .desc {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
     }
 }
